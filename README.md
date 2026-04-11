@@ -2,11 +2,12 @@
 
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                          | Organ    | Tasks                                                | Classes                                                    | Split        | Last Accessed   | Quick Link                                                           |
-|--------------------------------------------------------------------------------------------------------------------------------------------------|----------|------------------------------------------------------|------------------------------------------------------------|--------------|-----------------|----------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification) | 🧠 Brain | 🏷️ Classification, 🎭 Segmentation                  | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation) | ✅ Train/Test | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/) |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                     | 🧠 Brain | 🏷️ Classification                                   | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)   | ✅ Train/Test | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)         |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                     | 🦴 Bone  | 🏷️ Classification, 🎭 Segmentation, 📍 Localization | Multiple (see details)                                     | ❌ No split   | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)            |
+| Dataset                                                                                                                                          | Organ     | Tasks                                                | Classes                                                                           | Split            | Last Accessed   | Quick Link                                                           |
+|--------------------------------------------------------------------------------------------------------------------------------------------------|-----------|------------------------------------------------------|-----------------------------------------------------------------------------------|------------------|-----------------|----------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification) | 🧠 Brain  | 🏷️ Classification, 🎭 Segmentation                  | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                        | ✅ Train/Test     | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/) |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                     | 🧠 Brain  | 🏷️ Classification                                   | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                          | ✅ Train/Test     | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)         |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                     | 🦴 Bone   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization | Multiple (see details)                                                            | ❌ No split       | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)            |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                      | 🫘 Kidney | 🏷️ Classification                                   | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC) | ✅ Train/Val/Test | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                  |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -38,7 +39,7 @@ Annotated dataset for brain tumor segmentation and classification. Scientific Da
 | **🧠 Target Organ**     | Brain                                                                               |
 | **📅 Last Accessed**    | March 28, 2026                                                                      |
 | **🎯 Supported Tasks**  | 🏷️ Classification, 🎭 Segmentation                                                 |
-| **📐 Image Size**       | 512 × 512 pixels                                                                    |
+| **📐 Image Size**       | 512 x 512 pixels                                                                    |
 | **📁 Data Format**      | JPG (.jpg) for images, PNG (.png) for masks                                         |
 | **👥 Demographics**     | ❌ Not included                                                                      |
 | **🔄 Train/Test Split** | ✅ Yes                                                                               |
@@ -170,7 +171,7 @@ Annotated dataset for brain tumor segmentation and classification. Scientific Da
 1. **Load directory structure**: Utilize framework-native dataset utilities (e.g., `torchvision.datasets.ImageFolder`)
    to ingest labeled subfolders.
 2. **Standardize input format**: Convert all images to a consistent color space (e.g., single-channel grayscale) and
-   fixed resolution (e.g., 224×224 or 256×256).
+   fixed resolution (e.g., 224x224 or 256x256).
 3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
    deviation.
 4. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
@@ -280,11 +281,121 @@ for the Classification, Localization, and segmentation of primary bone tumors. S
 
 1. **Parse metadata**: Load `dataset.xlsx` to extract demographic and label information per `image_id`.
 2. **Link annotations**: Match each JPEG with its corresponding LabelMe JSON for segmentation masks.
-3. **Standardize geometry**: Resize images to a fixed resolution (e.g., 512×512 or 1024×1024) while preserving aspect
+3. **Standardize geometry**: Resize images to a fixed resolution (e.g., 512x512 or 1024x1024) while preserving aspect
    ratio.
 4. **Encode labels**: Convert one-hot or multi-hot vectors for classification; rasterize polygons for segmentation
    masks.
 5. **Stratify splits**: Partition data by center, age group, or tumor type to mitigate domain shift.
+
+---
+
+### 🔬 Dartmouth Kidney Cancer Histology Dataset
+
+**Study**: Zhu, M., Ren, B., Richards, R., Suriawinata, M., Tomita, N., & Hassanpour, S. (2021). Development and
+Evaluation of a Deep Neural Network for Histologic Classification of Renal Cell Carcinoma on Biopsy and Surgical
+Resection Slides. *Scientific Reports*, 11, 7080.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                 |
+|-------------------------|-------------------------------------------------------------------------|
+| **📛 Title**            | Dartmouth Kidney Cancer Histology Dataset                               |
+| **🔗 Source**           | https://bmirds.github.io/KidneyCancer/                                  |
+| **🫘 Target Organ**     | Kidney (Renal)                                                          |
+| **📅 Last Accessed**    | April 11, 2026                                                          |
+| **🎯 Supported Tasks**  | 🏷️ Classification                                                      |
+| **📐 Image Size**       | Variable (WSIs downsampled to 5x magnification from original 20x scans) |
+| **📁 Data Format**      | PNG (.png) for whole-slide images; CSV (.csv) for metadata              |
+| **👥 Demographics**     | ❌ Not included (de-identified per IRB approval)                         |
+| **🔄 Train/Test Split** | ✅ Yes (provided in MetaData.csv)                                        |
+
+#### 📊 Dataset Composition
+
+| Category                | Details                                                                    |
+|-------------------------|----------------------------------------------------------------------------|
+| **🖼️ Total Images**    | 563 whole-slide images (H&E-stained FFPE tissue sections)                  |
+| **🏥 Imaging Modality** | Brightfield histopathology (Hematoxylin & Eosin stain)                     |
+| **🔬 Scanner**          | Aperio AT2 whole-slide scanner (original 20x; converted to 5x via libvips) |
+| **📦 File Structure**   | 11 ZIP archives (DHMC_wsi_01.zip – DHMC_wsi_11.zip) + MetaData.csv         |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of renal cell carcinoma subtypes
+- **Number of Classes**: 4️⃣
+    - 🟠 Renal Oncocytoma
+    - 🟣 Chromophobe RCC
+    - 🔵 Clear cell RCC
+    - 🟢 Papillary RCC
+
+**📊 Slide Distribution by Type**:
+
+| Slide Type         | Slide IDs | Archive File       | Approx. Size |
+|--------------------|-----------|--------------------|--------------|
+| Surgical Resection | 001–484   | DHMC_wsi_01–10.zip | ~85.8 GB     |
+| Biopsy (Test Set)  | 485–563   | DHMC_wsi_11.zip    | ~4.7 GB      |
+| **Metadata**       | All 563   | MetaData.csv       | —            |
+
+**📋 Metadata Contents** (`MetaData.csv`):
+
+- Slide identifier
+- Histologic class label
+- Slide type (resection/biopsy)
+- Dataset split assignment (train/validation/test)
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for whole-slide image classification
+- ✅ Includes both resection and biopsy specimens for domain generalization studies
+- ✅ Pre-defined train/validation/test splits enable reproducible evaluation
+- 📚 Required to cite the original *Scientific Reports* publication when using this dataset
+- 🔐 Access requires completion of a Research Use Agreement (non-commercial use only)
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                                                         |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **🔐 Access Protocol**     | Dataset requires form submission; download links expire after 4 hours                                                  |
+| **⚖️ Licensing**           | Non-commercial research use only; redistribution prohibited without permission                                         |
+| **🔍 Class Distribution**  | Verify class balance via MetaData.csv; consider stratified sampling if needed                                          |
+| **📐 Resolution Handling** | Images are downsampled to 5x; account for magnification in model architecture                                          |
+| **🧪 Domain Shift**        | Biopsy slides (DHMC_wsi_11.zip) may exhibit different characteristics than resection slides; evaluate generalizability |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Request access**: Complete the registration form at the source URL to receive download links.
+2. **Parse metadata**: Load `MetaData.csv` to map slide identifiers to labels and dataset splits.
+3. **Organize data**: Extract ZIP archives into structured directories (e.g., by split or class).
+4. **Patch extraction **(optional): For memory-efficient training, extract fixed-size patches from WSIs using libraries
+   such as `OpenSlide` or `libvips`.
+5. **Normalization**: Apply stain normalization (e.g., Macenko or Vahadane methods) to mitigate inter-slide variability.
+6. **Augmentation**: Incorporate rotation, flipping, and color jittering to improve model robustness.
+7. **Evaluation**: Report per-subtype metrics (precision, recall, F1-score) alongside overall accuracy.
+
+#### 🔗 Associated Resources
+
+- **Code Repository**: [DeepSlide](https://github.com/hassanpourlab/DeepSlide) – PyTorch framework for WSI
+  classification
+- **Related Datasets**: [Dartmouth Lung Cancer Histology Dataset](https://bmirds.github.io/LungCancer/) (same research
+  group)
+- **Contact**: 📧 BMIRDS team via the contact form on the dataset homepage
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{zhu2021development,
+  title={Development and evaluation of a deep neural network for histologic classification of renal cell carcinoma on biopsy and surgical resection slides},
+  author={Zhu, Mengdan and Ren, Bing and Richards, Ryland and Suriawinata, Matthew and Tomita, Naofumi and Hassanpour, Saeed},
+  journal={Scientific Reports},
+  volume={11},
+  number={1},
+  pages={7080},
+  year={2021},
+  publisher={Nature Publishing Group UK London}
+  doi={10.1038/s41598-021-86747-7}
+}
+```
 
 ---
 
