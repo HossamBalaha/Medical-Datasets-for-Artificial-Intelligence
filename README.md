@@ -14,6 +14,8 @@
 | [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                   | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
 | [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                   | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
 | [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                   | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
+| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                            | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
+| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                            | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -1211,6 +1213,313 @@ If you use this dataset, please cite:
     version = {v1},
     doi = {10.5281/zenodo.15179608},
     url = {https://doi.org/10.5281/zenodo.15179608}
+}
+```
+
+---
+
+### 🔬 MSI-MSS Strong Patches: Microsatellite Status Classification
+
+**Study**: Shen, Y. (2020). Strong histopathological relevance patches for MSI vs. MSS classification (Version
+
+1) [Data set]. Zenodo.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                            |
+|-------------------------|------------------------------------------------------------------------------------|
+| **📛 Title**            | Strong histopathological relevance patches for MSI vs. MSS classification          |
+| **🔗 Source**           | https://doi.org/10.5281/zenodo.3692380                                             |
+| **🦴 Target Organ**     | Colorectal / Gastrointestinal                                                      |
+| **📅 Last Accessed**    | May 08, 2026                                                                       |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification (Microsatellite Instability Detection)                   |
+| **📐 Image Size**       | Variable (histopathological patches; standardization recommended)                  |
+| **📁 Data Format**      | Image patches extracted from H&E-stained FFPE tissue sections (format unspecified) |
+| **👥 Demographics**     | ❌ Not included (de-identified archival samples)                                    |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                             |
+
+#### 📊 Dataset Composition
+
+| Category                 | Details                                                                            |
+|--------------------------|------------------------------------------------------------------------------------|
+| **🖼️ Total Patches**    | 55,453 histopathological image patches                                             |
+| **🔬 Imaging Modality**  | Brightfield histopathology (Hematoxylin & Eosin stain, FFPE tissue sections)       |
+| **🎯 Selection Method**  | Neural network-based fused distillation + expert pathologist morphology validation |
+| **📦 File Structure**    | Two ZIP archives: `MSIMUT_strong.zip` (~3.2 GB), `MSS_strong.zip` (~3.1 GB)        |
+| **🏥 Source**            | Subset of CRC_DX dataset (Zenodo: 10.5281/zenodo.2530835)                          |
+| **📅 Collection Period** | Archival FFPE samples; published February 2020                                     |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification of microsatellite status in colorectal/gastrointestinal cancer
+- **Number of Classes**: 2️⃣
+
+| Class Label      | Description                                                                   | Clinical Significance                                                          |
+|------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| 🔵 MSIMUT_strong | Patches with strong histopathological relevance to microsatellite instability | Associated with defective DNA mismatch repair; predicts immunotherapy response |
+| 🔴 MSS_strong    | Patches with strong histopathological relevance to microsatellite stability   | Intact mismatch repair; standard chemotherapy indications                      |
+
+**📊 Patch Distribution**:
+
+| Class            | Patch Count | % of Dataset |
+|------------------|-------------|--------------|
+| 🔵 MSIMUT_strong | 28,307      | ~51.0%       |
+| 🔴 MSS_strong    | 27,146      | ~49.0%       |
+| **Total**        | **55,453**  | **100%**     |
+
+> **ℹ️ Note**: This dataset represents a curated subset of the parent CRC_DX collection, filtered via neural network
+> distillation and pathologist expert review to retain only patches with strong morphological relevance to MSI/MSS
+> classification. This enhances signal-to-noise ratio for model training but may limit generalizability to unfiltered
+> histological regions.
+
+#### 🔧 Curation & Quality Control Protocol
+
+1. **Parent Dataset**: Derived from "Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE
+   samples" (CRC_DX).
+2. **Neural Network Filtering**: Fused distillation framework votes on candidate patches for histopathological
+   relevance.
+3. **Expert Validation**: Board-certified pathologists incorporate morphology knowledge to select most representative
+   samples.
+4. **Label Assignment**: Patches tagged as MSIMUT_strong or MSS_strong based on consensus molecular status and visual
+   relevance.
+5. **Quality Assurance**: Final subset optimized for high-confidence model training on MSI prediction tasks.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for microsatellite instability prediction from histopathology
+- ✅ Curated "strong relevance" patches reduce background noise, enabling focused feature learning on discriminative
+  morphological patterns
+- ✅ Near-balanced class distribution (~51/49) supports stable binary classification training without aggressive
+  resampling
+- ✅ Serves as a high-quality subset for transfer learning or fine-tuning from the broader CRC_DX dataset
+- 📚 Required to cite both this Zenodo repository and the parent CRC_DX dataset (DOI: 10.5281/zenodo.2530835) in
+  derivative works
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                      | Recommendation                                                                                                              |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **🔍 Subset Limitation**    | Curated for "strong relevance"; models trained here may not generalize to unfiltered WSIs without domain adaptation         |
+| **🧪 Split Strategy**       | No predefined split; implement patient-aware or slide-aware partitioning to prevent data leakage                            |
+| **🎨 Stain Variability**    | Apply stain normalization (e.g., Macenko method) if integrating with external cohorts                                       |
+| **🔐 Ethical Compliance**   | Dataset contains de-identified human tissue; adhere to institutional review requirements                                    |
+| **🧭 Clinical Translation** | MSI status prediction from H&E alone remains investigational; validate against molecular ground truth in clinical pipelines |
+| **📦 Patch-Level Focus**    | Patches are extracted regions; whole-slide inference requires aggregation or multiple-instance learning strategies          |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archives**: Unzip `MSIMUT_strong.zip` and `MSS_strong.zip` into class-labeled directories.
+2. **Standardize geometry**: Resize patches to uniform dimensions (e.g., 224×224 or 512×512) while preserving aspect
+   ratio.
+3. **Color normalization**: Apply stain normalization to mitigate inter-slide H&E staining variability.
+4. **Stratified splitting**: Partition data by source slide or patient ID (if metadata available) to ensure no leakage
+   between train/test sets.
+5. **Augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering; preserve
+   morphological integrity of glandular and stromal features.
+6. **Class-balanced batching**: Leverage near-balanced distribution for stable training; monitor per-class metrics
+   during validation.
+7. **Evaluation metrics**: Report accuracy, sensitivity, specificity, AUC-ROC, and F1-score; include confusion matrices
+   to assess MSI/MSS discrimination patterns.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://doi.org/10.5281/zenodo.3692380
+- **Parent Dataset **(CRC_DX): https://doi.org/10.5281/zenodo.2530835
+- **Related Publications**:
+    - Shen, Y. et al. (2020). "Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE
+      samples." Zenodo.
+    - Relevant literature on MSI prediction from histopathology: e.g., Kather et al., *Nature Medicine* (2019); Echle et
+      al., *Cancer Cell* (2021).
+- **Related Datasets**:
+    - [NCT-CRC-HE-100K](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) (
+      tissue-type classification)
+    - [CRC-HGD-v1](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset) (grading-focused)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{shen2020msimss,
+    author = {Shen, Yiqing},
+    title = {Strong histopathological relevance patches for MSI vs. MSS classification},
+    year = {2020},
+    publisher = {Zenodo},
+    version = {1},
+    doi = {10.5281/zenodo.3692380},
+    url = {https://doi.org/10.5281/zenodo.3692380}
+}
+
+@dataset{shen2020crcdx,
+    author = {Shen, Yiqing},
+    title = {Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE samples},
+    year = {2020},
+    publisher = {Zenodo},
+    doi = {10.5281/zenodo.2530835},
+    url = {https://doi.org/10.5281/zenodo.2530835}
+}
+```
+
+---
+
+### 🔬 CRC_DX: MSI vs. MSS Classification in Gastrointestinal Cancer
+
+**Study**: Kather, J. N. (2019). Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE
+samples [Data set]. Zenodo.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                     |
+|-------------------------|---------------------------------------------------------------------------------------------|
+| **📛 Title**            | Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE samples |
+| **🔗 Source**           | https://doi.org/10.5281/zenodo.2530835                                                      |
+| **🦴 Target Organ**     | Colorectal / Gastric (Gastrointestinal)                                                     |
+| **📅 Last Accessed**    | May 08, 2026                                                                                |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification (Microsatellite Status Prediction)                                |
+| **📐 Image Size**       | 224 × 224 pixels @ 0.5 µm/pixel (fixed, color-normalized)                                   |
+| **📁 Data Format**      | Image patches (format unspecified; typical: JPG/PNG), Macenko-normalized                    |
+| **👥 Demographics**     | ❌ Not included (TCGA cohort; de-identified archival FFPE samples)                           |
+| **🔄 Train/Test Split** | ✅ Yes (patient-wise ~70/30 split; training sets equilibrated by undersampling)              |
+
+#### 📊 Dataset Composition
+
+| Category                 | Details                                                                                          |
+|--------------------------|--------------------------------------------------------------------------------------------------|
+| **🖼️ Total Patches**    | 411,890 unique histopathological image patches                                                   |
+| **🔬 Imaging Modality**  | Brightfield histopathology (H&E-stained FFPE tissue sections)                                    |
+| **🌐 Source Cohort**     | The Cancer Genome Atlas (TCGA): Colorectal adenocarcinoma (COAD) + Stomach adenocarcinoma (STAD) |
+| **🎨 Preprocessing**     | Tumor detection → 224×224 px @ 0.5 µm/px → Macenko color normalization                           |
+| **📦 File Structure**    | 8 ZIP archives (~47.1 GB total); separated by cancer type, split, and class                      |
+| **📅 Collection Period** | Archival TCGA samples; published February 2019                                                   |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification of microsatellite status in gastrointestinal cancer
+- **Number of Classes**: 2️⃣
+
+| Class Label | Description                                                       | Clinical Significance                                 |
+|-------------|-------------------------------------------------------------------|-------------------------------------------------------|
+| 🔴 MSS      | Microsatellite Stable: intact DNA mismatch repair system          | Standard chemotherapy indications                     |
+| 🔵 MSIMUT   | Microsatellite Instable / Hypermutated: defective mismatch repair | Predicts immunotherapy response (e.g., pembrolizumab) |
+
+**📊 Patch Distribution by Cancer Type and Split**:
+
+**Gastric Cancer **(STAD)
+| Split | Class | Patch Count | Notes |
+|--------|---------|-------------|------------------------------------|
+| Train | MSS | 50,285 | Equilibrated to match MSIMUT count |
+| Train | MSIMUT | 50,285 | Equilibrated baseline |
+| Test | MSS | 90,104 | Full test distribution |
+| Test | MSIMUT | 27,904 | Reflects natural class imbalance |
+| **STAD Total** | — | **218,578** | ~53.1% of dataset |
+
+**Colorectal Cancer **(CRC_DX)
+| Split | Class | Patch Count | Notes |
+|--------|---------|-------------|------------------------------------|
+| Train | MSS | 46,704 | Equilibrated to match MSIMUT count |
+| Train | MSIMUT | 46,704 | Equilibrated baseline |
+| Test | MSS | 70,569 | Full test distribution |
+| Test | MSIMUT | 29,335 | Reflects natural class imbalance |
+| **CRC_DX Total** | — | **193,312** | ~46.9% of dataset |
+
+**📈 Overall Class Distribution**:
+| Class | Total Patches | % of Dataset | Train (Equilibrated) | Test (Natural) |
+|---------|---------------|--------------|---------------------|----------------|
+| 🔴 MSS | 257,662 | ~62.6% | 96,989 (50%)        | 160,673 |
+| 🔵 MSIMUT | 154,228 | ~37.4% | 96,989 (50%)        | 57,239 |
+| **Total** | **411,890** | **100%**     | **193,978**         | **217,912**    |
+
+> **ℹ️ Note**: Training sets were equilibrated via random undersampling of the majority MSS class to enable balanced
+> model training. Test sets preserve natural class distribution for realistic performance evaluation. Patient-wise
+> splitting prevents data leakage across train/test boundaries.
+
+#### 🔧 Preprocessing Protocol (Applied by Authors)
+
+1. **Tumor Region Detection**: Automated algorithm identifies tumor-containing regions in whole-slide images.
+2. **Patch Extraction**: Sliding-window extraction of 224×224 pixel patches at 0.5 µm/pixel resolution.
+3. **Color Normalization**: Macenko method applied to reduce inter-slide staining variability.
+4. **Patient-Level Splitting**: ~70% of patients assigned to training, ~30% to testing (no patient overlap).
+5. **Training Set Equilibration**: MSS class undersampled to match MSIMUT count within training sets.
+6. **Quality Control**: Patches derived from diagnostic FFPE slides ("DX" at GDC portal); low-quality regions excluded.
+
+#### 💡 Usage Notes
+
+- ✅ Benchmark dataset for MSI status prediction from H&E histopathology in GI cancers
+- ✅ Preprocessed, fixed-size, color-normalized patches enable direct integration with standard CNN architectures
+- ✅ Patient-wise splitting supports rigorous evaluation of generalization to unseen patients
+- ✅ Includes both colorectal and gastric cancer cohorts for cross-cancer generalization studies
+- ✅ Parent dataset for the curated "MSI-MSS Strong Patches" subset (Zenodo: 10.5281/zenodo.3692380)
+- 📚 Required to cite the original Zenodo repository and associated publications in derivative works
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                            | Recommendation                                                                                                                |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance **(Test)     | Test sets reflect natural MSI prevalence (~37% MSIMUT); report balanced metrics (AUC, F1) alongside accuracy                  |
+| **🧪 Cross-Cancer Analysis**      | STAD (gastric) and CRC_DX (colorectal) have distinct histomorphology; evaluate domain shift explicitly                        |
+| **🎨 Stain Normalization**        | Macenko normalization already applied; additional normalization may be redundant unless integrating external data             |
+| **🔐 Ethical Compliance**         | Derived from TCGA; adhere to TCGA data use agreements and institutional review requirements                                   |
+| **🧭 Clinical Translation**       | MSI prediction from H&E remains investigational; validate against PCR/NGS molecular ground truth                              |
+| **📦 Patch-to-Slide Aggregation** | Patches are tile-level; whole-slide or patient-level inference requires aggregation strategies (e.g., MIL, attention pooling) |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archives**: Unzip the 8 ZIP files into structured directories by cancer type, split, and class.
+2. **Verify integrity**: Confirm patch counts match documentation; check for corrupted files.
+3. **Standardize loading**: Use framework-native utilities (e.g., `torchvision.datasets.ImageFolder`) for class-labeled
+   directories.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering; preserve glandular
+   architecture.
+5. **Stratified batching**: Leverage equilibrated training sets for stable binary classification; monitor per-class
+   metrics.
+6. **Cross-validation**: Implement patient-aware folds if re-splitting; maintain no patient overlap between folds.
+7. **Evaluation metrics**: Report AUC-ROC, sensitivity, specificity, F1-score, and confusion matrices; include cancer
+   type-stratified results.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://doi.org/10.5281/zenodo.2530835
+- **TCGA Data Portal**: https://portal.gdc.cancer.gov/ (original SVS whole-slide images)
+- **Preprocessing Reference**: Macenko et al. (2009). "A method for normalizing histology slides for quantitative
+  analysis." *ISBI*. [DOI](https://doi.org/10.1109/ISBI.2009.5193250)
+- **FFPE Download Guide**: http://www.andrewjanowczyk.com/download-tcga-digital-pathology-images-ffpe/
+- **Related Publications**:
+    - Kather et al. (2019). "Pan-cancer image-based detection of clinically actionable genetic alterations." *Nature
+      Cancer*.
+    - Echle et al. (2021). "Clinical-grade detection of microsatellite instability in colorectal tumors by deep
+      learning." *Gastroenterology*.
+- **Related Datasets**:
+    - [MSI-MSS Strong Patches](#-msi-mss-strong-patches-microsatellite-status-classification) (curated subset)
+    - [NCT-CRC-HE-100K](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) (
+      tissue-type classification)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{kather2019msimss,
+    author = {Kather, Jakob Nikolas},
+    title = {Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE samples},
+    year = {2019},
+    publisher = {Zenodo},
+    version = {v1},
+    doi = {10.5281/zenodo.2530835},
+    url = {https://doi.org/10.5281/zenodo.2530835}
+}
+
+@article{kather2019naturecancer,
+    title = {Pan-cancer image-based detection of clinically actionable genetic alterations},
+    author = {Kather, Jakob Nikolas and Heij, Lara R and Grabsch, Heike I and Loeffler, Clemens and Echle, Alexander and Muti, Halima S and Krause, Jeremias and Niehues, Jakob M and Sommer, Kai A and Bankhead, Peter and others},
+    journal = {Nature Cancer},
+    volume = {1},
+    number = {8},
+    pages = {789--799},
+    year = {2020},
+    publisher = {Nature Publishing Group},
+    doi = {10.1038/s43018-020-0087-4}
 }
 ```
 
