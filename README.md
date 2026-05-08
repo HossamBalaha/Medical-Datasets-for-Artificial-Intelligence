@@ -2,15 +2,18 @@
 
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                               | Organ           | Tasks                                                | Classes                                                                           | Split            | Last Accessed   | Quick Link                                                           |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------|-----------------------------------------------------------------------------------|------------------|-----------------|----------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain        | 🏷️ Classification, 🎭 Segmentation                  | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                        | ✅ Train/Test     | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/) |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain        | 🏷️ Classification                                   | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                          | ✅ Train/Test     | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)         |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone         | 🏷️ Classification, 🎭 Segmentation, 📍 Localization | Multiple (see details)                                                            | ❌ No split       | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)            |
-| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney       | 🏷️ Classification                                   | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC) | ✅ Train/Val/Test | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                  |
-| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal   | 🏷️ Classification (Grading)                         | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                             | ❌ No split       | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)         |
-| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal   | 🏷️ Multiclass Classification                        | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                    | ✅ Train/Val      | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                  |
-| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity | 🏷️ Binary Classification                            | 2️⃣ Binary (Normal Epithelium, OSCC)                                              | ❌ No split       | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)         |
+| Dataset                                                                                                                                               | Organ                     | Tasks                                                | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                  | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                   | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                   | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
+| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                         | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
+| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                        | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
+| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                            | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
+| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                   | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
+| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                   | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
+| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                   | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -388,15 +391,15 @@ If you use this dataset, please cite:
 
 ```bibtex
 @article{zhu2021development,
-  title={Development and evaluation of a deep neural network for histologic classification of renal cell carcinoma on biopsy and surgical resection slides},
-  author={Zhu, Mengdan and Ren, Bing and Richards, Ryland and Suriawinata, Matthew and Tomita, Naofumi and Hassanpour, Saeed},
-  journal={Scientific Reports},
-  volume={11},
-  number={1},
-  pages={7080},
-  year={2021},
-  publisher={Nature Publishing Group UK London}
-  doi={10.1038/s41598-021-86747-7}
+    title = {Development and evaluation of a deep neural network for histologic classification of renal cell carcinoma on biopsy and surgical resection slides},
+    author = {Zhu, Mengdan and Ren, Bing and Richards, Ryland and Suriawinata, Matthew and Tomita, Naofumi and Hassanpour, Saeed},
+    journal = {Scientific Reports},
+    volume = {11},
+    number = {1},
+    pages = {7080},
+    year = {2021},
+    publisher = {Nature Publishing Group UK London},
+    doi = {10.1038/s41598-021-86747-7}
 }
 ```
 
@@ -500,13 +503,13 @@ If you use this dataset, please cite:
 
 ```bibtex
 @dataset{amjadi2024crchgd,
-  author = {Amjadi, Elham and Bahreini, Amin and Hakimian, Sayyed Mohammadreza and Emami, Mohammad Hasan and Fahim, Alireza and Rahimi, Hojjatollah and Bolhasani, Hamidreza},
-  title = {CRC-HGD-v1: A Histopathological Image Dataset for Grading Colorectal Cancer},
-  year = {2024},
-  publisher = {Mendeley Data},
-  version = {2},
-  doi = {10.17632/yfp5sfj47m.2},
-  url = {https://data.mendeley.com/datasets/yfp5sfj47m/2}
+    author = {Amjadi, Elham and Bahreini, Amin and Hakimian, Sayyed Mohammadreza and Emami, Mohammad Hasan and Fahim, Alireza and Rahimi, Hojjatollah and Bolhasani, Hamidreza},
+    title = {CRC-HGD-v1: A Histopathological Image Dataset for Grading Colorectal Cancer},
+    year = {2024},
+    publisher = {Mendeley Data},
+    version = {2},
+    doi = {10.17632/yfp5sfj47m.2},
+    url = {https://data.mendeley.com/datasets/yfp5sfj47m/2}
 }
 ```
 
@@ -623,25 +626,25 @@ If you use this dataset, please cite:
 
 ```bibtex
 @dataset{kather2018nctcrc,
-  author = {Kather, Jakob Nikolas and Halama, Niels and Marx, Alexander},
-  title = {100,000 histological images of human colorectal cancer and healthy tissue},
-  year = {2018},
-  publisher = {Zenodo},
-  version = {v0.1},
-  doi = {10.5281/zenodo.1214456},
-  url = {https://doi.org/10.5281/zenodo.1214456}
+    author = {Kather, Jakob Nikolas and Halama, Niels and Marx, Alexander},
+    title = {100,000 histological images of human colorectal cancer and healthy tissue},
+    year = {2018},
+    publisher = {Zenodo},
+    version = {v0.1},
+    doi = {10.5281/zenodo.1214456},
+    url = {https://doi.org/10.5281/zenodo.1214456}
 }
 
 @article{kather2019plosmed,
-  title = {Predicting survival from colorectal cancer histology slides using deep learning: A retrospective multicenter study},
-  author = {Kather, Jakob Nikolas and Krisam, Johannes and Charoentong, Pornpimol and Luedde, Tom and Herpel, Esther and Weis, Cleo-Aron and Gaiser, Timo and Marx, Alexander and Valous, Nektarios A and Ferber, Dyke and others},
-  journal = {PLOS Medicine},
-  volume = {16},
-  number = {1},
-  pages = {e1002730},
-  year = {2019},
-  publisher={Public Library of Science San Francisco, CA USA}
-  doi = {10.1371/journal.pmed.1002730}
+    title = {Predicting survival from colorectal cancer histology slides using deep learning: A retrospective multicenter study},
+    author = {Kather, Jakob Nikolas and Krisam, Johannes and Charoentong, Pornpimol and Luedde, Tom and Herpel, Esther and Weis, Cleo-Aron and Gaiser, Timo and Marx, Alexander and Valous, Nektarios A and Ferber, Dyke and others},
+    journal = {PLOS Medicine},
+    volume = {16},
+    number = {1},
+    pages = {e1002730},
+    year = {2019},
+    publisher = {Public Library of Science San Francisco, CA USA},
+    doi = {10.1371/journal.pmed.1002730}
 }
 ```
 
@@ -736,8 +739,8 @@ cancer analysis. *Data in Brief*, 29, 105114.
 
 #### 🔗 Associated Resources
 
-- **GitHub Repository
-  **: https://github.com/Tabassum2019/A-histopathological-image-repository-of-normal-epithelium-of-Oral-Cavity-and-OSCC
+- **GitHub Repository**:
+  https://github.com/Tabassum2019/A-histopathological-image-repository-of-normal-epithelium-of-Oral-Cavity-and-OSCC
 - **Related Publications**:
     - Rahman, T. Y., Mahanta, L. B., Chakraborty, C., Das, A. K., & Sarma, J. D. (2018). Textural pattern classification
       for oral squamous cell carcinoma. Journal of microscopy, 269(1), 85-93. [DOI](https://doi.org/10.1111/jmi.12611)
@@ -752,24 +755,462 @@ If you use this dataset, please cite:
 
 ```bibtex
 @dataset{rahman2023oralcancer,
-  author = {Rahman, Tabassum Yesmin and Mahanta, Lipi B. and Das, Anup K. and Sarma, Jagannath D.},
-  title = {Histopathological imaging database for Oral Cancer analysis},
-  year = {2023},
-  publisher = {Mendeley Data},
-  version = {2},
-  doi = {10.17632/ftmp4cvtmb.2},
-  url = {https://data.mendeley.com/datasets/ftmp4cvtmb/2}
+    author = {Rahman, Tabassum Yesmin and Mahanta, Lipi B. and Das, Anup K. and Sarma, Jagannath D.},
+    title = {Histopathological imaging database for Oral Cancer analysis},
+    year = {2023},
+    publisher = {Mendeley Data},
+    version = {2},
+    doi = {10.17632/ftmp4cvtmb.2},
+    url = {https://data.mendeley.com/datasets/ftmp4cvtmb/2}
 }
 
 @article{rahman2020dib,
-  title = {Histopathological imaging database for oral cancer analysis},
-  author = {Rahman, Tabassum Yesmin and Mahanta, Lipi B. and Das, Anup K. and Sarma, Jagannath D.},
-  journal = {Data in Brief},
-  volume = {29},
-  pages = {105114},
-  year = {2020},
-  publisher = {Elsevier},
-  doi = {10.1016/j.dib.2020.105114}
+    title = {Histopathological imaging database for oral cancer analysis},
+    author = {Rahman, Tabassum Yesmin and Mahanta, Lipi B. and Das, Anup K. and Sarma, Jagannath D.},
+    journal = {Data in Brief},
+    volume = {29},
+    pages = {105114},
+    year = {2020},
+    publisher = {Elsevier},
+    doi = {10.1016/j.dib.2020.105114}
+}
+```
+
+---
+
+### 🔬 DeepHisto: Dataset for Glioma Subtype Classification from Whole Slide Images
+
+**Study**: Mittelbronn, M., Hau, A.-C., Kim, S.-Y., Nazarov, P. V., Despotovic, V., Kakoichankava, A., Borgmann, F. B.
+K., & Klamminger, G. G. (2023). DeepHisto: Dataset for glioma subtype classification from Whole Slide Images (
+0.1) [Data set]. Zenodo.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                              |
+|-------------------------|--------------------------------------------------------------------------------------|
+| **📛 Title**            | DeepHisto: Dataset for glioma subtype classification from Whole Slide Images         |
+| **🔗 Source**           | https://doi.org/10.5281/zenodo.7941080                                               |
+| **🧠 Target Organ**     | Brain                                                                                |
+| **📅 Last Accessed**    | May 08, 2026                                                                         |
+| **🎯 Supported Tasks**  | 🏷️ Classification                                                                   |
+| **📐 Image Size**       | 512 × 512 pixels (tile patches)                                                      |
+| **📁 Data Format**      | Image tiles extracted from Whole Slide Images (format unspecified; typical: JPG/PNG) |
+| **👥 Demographics**     | ❌ Not included (de-identified archival samples; N=28 patients)                       |
+| **🔄 Train/Test Split** | ✅ Yes (patient-wise partitioning)                                                    |
+
+#### 📊 Dataset Composition
+
+| Category                 | Details                                                                         |
+|--------------------------|---------------------------------------------------------------------------------|
+| **🖼️ Total Tiles**      | 42,718 tiles extracted from 28 adult-type diffuse glioma cases                  |
+| **🔬 Imaging Modality**  | Brightfield histopathology (Hematoxylin & Eosin stain)                          |
+| **🔍 Scanner**           | IntelliSite Ultra Fast digital slide scanner (Philips), 20x/0.75 NA Plan Apo    |
+| **📏 Resolution**        | 0.25 µm/pixel (average slide resolution)                                        |
+| **📦 File Structure**    | train.zip (~19.2 GB), test.zip (~2.1 GB), readme.txt (1.5 kB)                   |
+| **🏥 Source**            | National Center of Pathology (NCP), Luxembourg National Health Laboratory (LNS) |
+| **📅 Collection Period** | 2017–2021                                                                       |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of diffuse glioma subtypes per WHO CNS5 classification
+- **Number of Classes**: 5️⃣ (4 tumor entities + necrosis; normal brain as control)
+    - 🟤 IDH-mutant astrocytoma
+    - 🔴 IDH-wildtype glioblastoma
+    - 🟣 IDH-mutant, 1p/19q codeleted oligodendroglioma
+    - ⚪ Normal brain tissue (white and gray matter controls)
+    - ⚫ Necrosis (annotated regions)
+
+**📊 Tile Distribution by Class and Split**:
+
+| Class                | Train Tiles | Test Tiles | Total Tiles |
+|----------------------|-------------|------------|-------------|
+| 🟤 Astrocytoma       | 3,755       | 465        | 4,220       |
+| 🔴 Glioblastoma      | 1,633       | 241        | 1,874       |
+| 🟣 Oligodendroglioma | 3,384       | 431        | 3,815       |
+| ⚪ Normal Brain       | 29,383      | 2,947      | 32,330      |
+| ⚫ Necrosis           | 389         | 90         | 479         |
+| **Total**            | **38,544**  | **4,174**  | **42,718**  |
+
+> **ℹ️ Note**: Tile counts reflect patient-wise partitioning to prevent data leakage. Normal brain tissue tiles
+> constitute the majority class; consider class-weighted loss functions or stratified sampling during training.
+
+**📋 Annotation Protocol**:
+
+- Region annotation performed by board-certified pathologists
+- Regions of interest divided into square 512×512 pixel tiles
+- Each tile associated with a class label denoting tumor entity, normal tissue, or necrosis
+- Patient-wise split into training and test subsets to ensure subject-level independence
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for histopathological glioma classification
+- ✅ High-resolution WSI tiles (0.25 µm/pixel) enable fine-grained morphological analysis
+- ✅ Patient-wise train/test split ensures robust evaluation without subject-level data leakage
+- ✅ WHO CNS5-aligned classification supports clinically relevant subtype prediction
+- ✅ Explicit necrosis class enables research on tumor microenvironment and tissue viability
+- 📚 Required to cite the original Zenodo repository (DOI: 10.5281/zenodo.7941080) in publications
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                                        |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**       | Normal brain tiles dominate (~75%); apply class-weighted loss or oversampling for minority classes                    |
+| **🎨 Stain Variability**     | Apply stain normalization (e.g., Macenko method) to mitigate inter-slide variation                                    |
+| **🧪 Patch-Level vs. WSI**   | Tiles are extracted patches; whole-slide inference requires aggregation strategies                                    |
+| **🔐 Ethical Compliance**    | Dataset contains anonymized human tissue; adhere to institutional review requirements                                 |
+| **🧭 Domain Generalization** | Single-center Luxembourg cohort; validate on external cohorts for clinical deployment                                 |
+| **⚠️ Necrosis Handling**     | Necrosis class is sparse (~1%); consider treating as auxiliary task or excluding if not relevant to research question |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archives**: Unzip `train.zip` and `test.zip` into structured directories by split.
+2. **Organize by label**: Arrange tiles into class-labeled subfolders for framework-native data loading.
+3. **Standardize resolution**: Confirm uniform 512×512 pixel dimensions; resize if preprocessing pipelines require fixed
+   input sizes.
+4. **Color normalization**: Apply stain normalization (e.g., Macenko or Vahadane methods) to reduce inter-slide color
+   variability.
+5. **Class-aware augmentation **(training only): Incorporate rotation, flipping, and mild intensity jittering; apply
+   stronger augmentation to minority classes (glioblastoma, necrosis) to improve generalization.
+6. **Patient-aware validation**: Maintain patient-wise separation during cross-validation to prevent data leakage.
+7. **Evaluation metrics**: Report per-subtype precision, recall, F1-score, and confusion matrices; compute
+   macro-averaged metrics to account for class imbalance.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://doi.org/10.5281/zenodo.7941080
+- **WHO Classification Reference**: WHO Classification of Tumours Editorial Board. Central Nervous System Tumours. 5th
+  ed. Vol 6. Lyon (France): International Agency for Research on Cancer; 2021.
+- **Funding Acknowledgment**: This work was supported by the Luxembourg National Research Fund (FNR) grants
+  C21/BM/15739125/DIOMEDES and PEARL P16/BM/11192868.
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{mittelbronn2023deephisto,
+    author = {Mittelbronn, Michel and Hau, Ann-Christin and Kim, Sang-Yoon and Nazarov, Petr V. and Despotovic, Vladimir and Kakoichankava, Aliaksandra and Borgmann, Felix Bruno Kleine and Klamminger, Gilbert Georg},
+    title = {DeepHisto: Dataset for glioma subtype classification from Whole Slide Images},
+    year = {2023},
+    publisher = {Zenodo},
+    version = {0.1},
+    doi = {10.5281/zenodo.7941080},
+    url = {https://doi.org/10.5281/zenodo.7941080}
+}
+```
+
+---
+
+### 🔬 GastroVision: Gastrointestinal Disease Detection
+
+**Study**: Jha, D., Sharma, V., Riegler, M., Halvorsen, P., & Bagci, U. (2024). GastroVision: A Compact GI Endoscopy
+Dataset. Kaggle.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------|
+| **📛 Title**            | GastroVision: Gastrointestinal Disease Detection                                       |
+| **🔗 Source**           | https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection |
+| **🦴 Target Organ**     | Gastrointestinal Tract (Esophagus, Stomach, Small Bowel, Colon, Rectum)                |
+| **📅 Last Accessed**    | May 08, 2026                                                                           |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification                                                          |
+| **📐 Image Size**       | Variable (endoscopy frames; standardization recommended)                               |
+| **📁 Data Format**      | JPEG/PNG (.jpg/.png) organized in class-labeled subdirectories                         |
+| **👥 Demographics**     | ❌ Not included (de-identified clinical endoscopy footage)                              |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                                 |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                                                                    |
+|----------------------------|----------------------------------------------------------------------------|
+| **🖼️ Total Images**       | 8,000 gastrointestinal endoscopy images                                    |
+| **🔬 Imaging Modality**    | White-light endoscopy (WLE) and narrow-band imaging (NBI) frames           |
+| **🏥 Source Institutions** | Baerum Hospital (Norway), Karolinska University Hospital (Sweden)          |
+| **📦 File Structure**      | 27 class-labeled directories + Google Drive download (~1.81 GB compressed) |
+| **👨‍⚕️ Annotation**       | Expert endoscopist-verified labels                                         |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of gastrointestinal findings
+- **Number of Classes**: 2️⃣7️⃣ organized into four conceptual groups:
+
+**🔍 Anatomical Landmarks **(10 classes)
+| Class | Image Count | Description |
+|-------|-------------|-------------|
+| Cecum | 113 | Ileocecal region identification |
+| Duodenal bulb | 205 | First part of duodenum |
+| Gastroesophageal_junction_normal z-line | 330 | GEJ landmark |
+| Ileocecal valve | 200 | Valve between ileum and cecum |
+| Pylorus | 393 | Gastric outlet |
+| Retroflex rectum | 67 | Rectal view in retroflexion |
+| Small bowel_terminal ileum | 846 | Distal small intestine |
+| Normal esophagus | 140 | Healthy esophageal mucosa |
+| Normal stomach | 969 | Healthy gastric mucosa |
+| Normal mucosa and vascular pattern in the large bowel | 1,467 | Healthy colonic mucosa |
+
+**⚠️ Pathological Findings **(11 classes)
+| Class | Image Count | Description |
+|-------|-------------|-------------|
+| Angiectasia | 17 | Vascular ectasia/bleeding source |
+| Barretts esophagus | 95 | Metaplastic esophageal epithelium |
+| Blood in lumen | 171 | Active or recent hemorrhage |
+| Colon diverticula | 29 | Colonic outpouchings |
+| Colorectal cancer | 139 | Malignant colonic lesions |
+| Erythema | 15 | Mucosal inflammation/redness |
+| Esophageal varices | 7 | Dilated submucosal veins |
+| Esophagitis | 107 | Esophageal inflammation |
+| Gastric polyps | 65 | Gastric mucosal protrusions |
+| Mucosal inflammation large bowel | 29 | Colonic inflammatory changes |
+| Ulcer | 6 | Mucosal defect with fibrinous base |
+
+**🩺 Polyp-Related Interventions **(5 classes)
+| Class | Image Count | Description |
+|-------|-------------|-------------|
+| Colon polyps | 820 | Untreated colonic polyps |
+| Dyed-lifted-polyps | 141 | Polyps prepared for resection |
+| Dyed-resection-margins | 246 | Post-resection margin assessment |
+| Resected polyps | 92 | Removed polyp specimens |
+| Resection margins | 25 | Margins after polypectomy |
+
+**🛠️ Procedural/Accessory **(1 class)
+| Class | Image Count | Description |
+|-------|-------------|-------------|
+| Accessory tools | 1,266 | Endoscopic instruments, caps, clips |
+
+**📊 Class Distribution Summary**:
+
+| Category                                | Total Images | % of Dataset |
+|-----------------------------------------|--------------|--------------|
+| Normal Findings                         | ~2,576       | ~32.2%       |
+| Pathological Findings                   | ~588         | ~7.4%        |
+| Polyp-Related                           | ~1,324       | ~16.6%       |
+| Accessory Tools                         | ~1,266       | ~15.8%       |
+| Anatomical Landmarks (excluding normal) | ~2,246       | ~28.1%       |
+| **Total**                               | **~8,000**   | **100%**     |
+
+> **ℹ️ Note**: Significant class imbalance exists (e.g., Ulcer: n=6 vs. Normal mucosa large bowel: n=1,467). Stratified
+> sampling or class-weighted loss functions are strongly recommended.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking endoscopic image classification and computer-aided diagnosis (CAD) systems
+- ✅ Multi-institutional sourcing (Norway/Sweden) supports cross-center generalization studies
+- ✅ Expert-annotated labels enhance clinical validity for translational research
+- ✅ Includes procedural and post-intervention classes for comprehensive workflow modeling
+- 📚 Required to cite the original Kaggle repository and associated publications when using this dataset
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                            | Recommendation                                                                                                           |
+|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **🔍 Severe Class Imbalance**     | Apply class-weighted cross-entropy loss, focal loss, or oversampling for rare classes (e.g., Ulcer, Esophageal varices)  |
+| **🎨 Image Resolution Variance**  | Endoscopy frames vary in resolution; standardize to fixed dimensions (e.g., 224×224) prior to training                   |
+| **🧪 Clinical Context Awareness** | Some classes represent procedural states (e.g., dyed-lifted-polyps); ensure task alignment with research objectives      |
+| **🔐 Ethical Compliance**         | Dataset contains de-identified clinical imagery; adhere to institutional review requirements for derivative works        |
+| **🧭 Domain Generalization**      | Sourced from two European centers; validate on external cohorts (e.g., Asian, North American) before clinical deployment |
+| **📦 Data Organization**          | Class directories include "Accessory tools"; consider excluding or treating as auxiliary class depending on task         |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Download and extract**: Access via Google Drive link; unzip into structured directory preserving class subfolders.
+2. **Filter optional classes**: Optionally exclude "Accessory tools" if focus is purely on diagnostic classification.
+3. **Standardize geometry**: Resize all images to uniform dimensions (e.g., 256×256 or 512×512) while preserving aspect
+   ratio.
+4. **Color normalization**: Apply histogram equalization or adaptive contrast enhancement to mitigate endoscope-specific
+   color variation.
+5. **Class-aware augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering; apply
+   stronger augmentation to underrepresented classes.
+6. **Stratified splitting**: Partition data by class to maintain distribution balance; ensure no patient-level leakage
+   if metadata permits.
+7. **Evaluation metrics**: Report macro-averaged precision, recall, and F1-score alongside per-class metrics to account
+   for imbalance; consider hierarchical evaluation grouping related classes.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection
+- **Google Drive Download**: https://drive.google.com/drive/folders/1T35gqO7jIKNxC-gVA2YVOMdsL7PSqeAa
+- **Related Datasets**:
+    - [Kvasir-V2](https://datasets.simula.no/kvasir-v2/) (8,000 GI images, 8 classes)
+    - [Kvasir-SEG](https://datasets.simula.no/kvasir-seg/) (Polyp segmentation benchmark)
+    - [HyperKvasir](https://datasets.simula.no/hyper-kvasir/) (Multi-label GI classification)
+- **Contributors**: Debesh Jha, Vanshali Sharma, Michael Riegler, Pål Halvorsen, Ulas Bagci
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{jha2024gastrovision,
+    author = {Jha, Debesh and Sharma, Vanshali and Riegler, Michael and Halvorsen, P{\aa}l and Bagci, Ulas},
+    title = {GastroVision: Gastrointestinal Disease Detection},
+    year = {2024},
+    publisher = {Kaggle},
+    url = {https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection},
+    note = {Accessed: May 08, 2026}
+}
+```
+
+---
+
+### 🔬 HER2-IHC-40x: High-Resolution Histopathology Image Dataset for HER2 Scoring in Breast Cancer
+
+**Study**: Nabi, M. S., Fauzi, M. F. A., Rehman, Z. U., Karim, H. B. A., Cheah, P. L., Chiew, S. F., & Looi, L. M. (
+2025). HER2-IHC-40x: A High-Resolution Histopathology Dataset for HER2 IHC Scoring in Breast Cancer. *Data in Brief*,
+
+111922.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                      |
+|-------------------------|----------------------------------------------------------------------------------------------|
+| **📛 Title**            | HER2-IHC-40x: High-Resolution Histopathology Image Dataset for HER2 Scoring in Breast Cancer |
+| **🔗 Source**           | https://doi.org/10.5281/zenodo.15179608                                                      |
+| **🫀 Target Organ**     | Breast                                                                                       |
+| **📅 Last Accessed**    | May 08, 2026                                                                                 |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (HER2 IHC Scoring)                                                |
+| **📐 Image Size**       | 1024 × 1024 pixels (fixed patch size)                                                        |
+| **📁 Data Format**      | PNG/JPEG patches extracted from Whole Slide Images (.svs); ROI masks in PNG                  |
+| **👥 Demographics**     | ❌ Not included (de-identified archival samples; N=107 patients)                              |
+| **🔄 Train/Test Split** | ✅ Yes (80/20 split; two variants: WSI-level and patch-level partitioning)                    |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                                                |
+|---------------------------|----------------------------------------------------------------------------------------|
+| **🖼️ Total Patches**     | Variant 1: 9,940 patches; Variant 2: 10,997 patches                                    |
+| **🔬 Imaging Modality**   | Brightfield immunohistochemistry (HER2-stained FFPE tissue sections)                   |
+| **🔍 Magnification**      | 40× objective (high-resolution)                                                        |
+| **📦 File Structure**     | Two ZIP archives: `her2-ihc-40x-patch.zip` (~1.7 GB), `her2-ihc-40x-wsi.zip` (~1.5 GB) |
+| **🏥 Source Institution** | Multimedia University, Malaysia; collaborating clinical centers                        |
+| **👨‍⚕️ Annotation**      | Expert pathologist-annotated ROIs using Cytomine platform                              |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Ordinal multiclass classification of HER2 immunohistochemistry (IHC) scoring per ASCO/CAP guidelines
+- **Number of Classes**: 4️⃣ (ordered severity scale)
+
+| HER2 Score | Description                                              | Clinical Interpretation               |
+|------------|----------------------------------------------------------|---------------------------------------|
+| 🔘 0       | No observable staining                                   | Negative                              |
+| 🟡 1+      | Weak/incomplete membrane staining in ≤10% of tumor cells | Negative                              |
+| 🟠 2+      | Moderate circumferential staining in >10% of tumor cells | Equivocal (requires ISH confirmation) |
+| 🔴 3+      | Strong circumferential staining in >10% of tumor cells   | Positive                              |
+
+**📊 Dataset Variants & Statistics**:
+
+**Variant 1: HER2-IHC-40x **(WSI-Level Split)
+> Whole-slide images partitioned 80/20 *before* patch extraction to prevent patient-level data leakage.
+
+| HER2 Class | WSIs    | ROIs      | Train Patches | Test Patches | Total Patches |
+|------------|---------|-----------|---------------|--------------|---------------|
+| 🔘 0       | 23      | 429       | 3,031         | 758          | 3,789         |
+| 🟡 1+      | 26      | 131       | 1,722         | 431          | 2,153         |
+| 🟠 2+      | 27      | 483       | 507           | 127          | 634           |
+| 🔴 3+      | 31      | 156       | 2,691         | 673          | 3,364         |
+| **Total**  | **107** | **1,199** | **7,951**     | **1,989**    | **9,940**     |
+
+**Variant 2: HER2-IHC-40x-WSI **(Patch-Level Split)
+> Patches extracted first, then partitioned 80/20 *after* extraction (higher patch count due to expanded ROI coverage).
+
+| HER2 Class | WSIs    | ROIs      | Train Patches | Test Patches | Total Patches |
+|------------|---------|-----------|---------------|--------------|---------------|
+| 🔘 0       | 23      | 429       | 3,031         | 758          | 3,789         |
+| 🟡 1+      | 26      | 131       | 2,151         | 538          | 2,689         |
+| 🟠 2+      | 27      | 483       | 905           | 226          | 1,131         |
+| 🔴 3+      | 31      | 156       | 2,710         | 678          | 3,388         |
+| **Total**  | **107** | **1,199** | **8,797**     | **2,200**    | **10,997**    |
+
+> **ℹ️ Note**: Class 2+ (Equivocal) is underrepresented (~6–10% of patches). Consider ordinal regression, class-weighted
+> loss, or focal loss to address imbalance. Variant 1 (WSI-level split) is recommended for rigorous generalization
+> evaluation.
+
+#### 🔧 Preprocessing & Quality Control Protocol
+
+1. **ROI Selection**: Manual tumor region annotation by board-certified pathologists using Cytomine.
+2. **Color Histogram Filtering**: HSV-based filtering to exclude non-tumor tissue, background, and low-quality patches.
+3. **Intensity Normalization**: Global intensity normalization applied across all patches to reduce staining
+   variability.
+4. **Patch Extraction**: Adaptive sliding-window extraction of 1024×1024 pixel patches from annotated ROIs.
+5. **Quality Assurance**: Expert review of sampled patches to verify label consistency and image quality.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for HER2 IHC scoring automation
+- ✅ High-resolution 40× patches (1024×1024) enable fine-grained membrane staining pattern analysis
+- ✅ Two split strategies support research on data leakage prevention and generalization robustness
+- ✅ Ordinal class structure enables investigation of monotonic loss functions and ordinal regression architectures
+- ✅ Includes original WSIs (.svs) and ROI masks for reproducible patch regeneration
+- 📚 Required to cite the original *Data in Brief* publication and Zenodo repository in derivative works
+- 🔐 Distributed under CC BY-SA 4.0; attribution and share-alike conditions apply for redistribution
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                                                      |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**       | Class 2+ is sparse; apply class-weighted cross-entropy, focal loss, or oversampling                                                 |
+| **📊 Ordinal Structure**     | Classes represent ordered severity; consider ordinal regression or monotonic constraints                                            |
+| **🧪 Split Strategy**        | Prefer Variant 1 (WSI-level split) for patient-independent evaluation; Variant 2 may inflate performance due to patch-level leakage |
+| **🎨 Stain Variability**     | Apply additional stain normalization (e.g., Macenko) if integrating external cohorts                                                |
+| **🔐 Ethical Compliance**    | Dataset contains de-identified human tissue; adhere to institutional review requirements                                            |
+| **🧭 Domain Generalization** | Single-region sourcing (Malaysia); validate on geographically diverse cohorts before clinical deployment                            |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Select variant**: Choose Variant 1 (`her2-ihc-40x-patch.zip`) for rigorous evaluation; Variant 2 for maximum patch
+   availability.
+2. **Organize directory structure**: Arrange patches into class-labeled subfolders within `Train/` and `Test/`
+   directories.
+3. **Standardize input**: Confirm uniform 1024×1024 dimensions; resize if model architecture requires smaller inputs (
+   e.g., 512×512).
+4. **Color normalization**: Apply stain normalization (e.g., Macenko or Vahadane) to mitigate inter-slide IHC staining
+   variability.
+5. **Ordinal-aware augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering;
+   preserve membrane staining integrity.
+6. **Stratified mini-batching**: Ensure each training batch contains samples from all four HER2 classes to stabilize
+   ordinal learning.
+7. **Evaluation metrics**: Report per-class precision/recall, weighted kappa for ordinal agreement, and macro-averaged
+   F1-score; include confusion matrices to assess 2+ misclassification patterns.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://doi.org/10.5281/zenodo.15179608
+- **Preprocessing Code**: https://github.com/seraju77/HER2-IHC-40x-data-preprocessing
+- **Related Publications**:
+    - Nabi et al. (2025). "Explainable deep learning models for HER2 IHC scoring in breast cancer diagnosis."
+      *Informatics in Medicine Unlocked*, 101700.
+    - Wolff et al. (2018). "Human Epidermal Growth Factor Receptor 2 Testing in Breast Cancer: ASCO/CAP Guideline
+      Update." *Journal of Clinical Oncology*.
+- **Related Datasets**:
+    - [BACH](https://bach.grand-challenge.org/) (Breast cancer histology classification)
+    - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histological-images/) (Breast tumor microscopy
+      images)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{nabi2025her2,
+    title = {HER2-IHC-40x: A High-Resolution Histopathology Dataset for HER2 IHC Scoring in Breast Cancer},
+    author = {Nabi, Md Serajun and Fauzi, Mohammad Faizal Ahmad and Rehman, Zaka Ur and Karim, Hezerul Bin Abdul and Cheah, Phaik Leng and Chiew, Seow Fan and Looi, Lai Meng},
+    journal = {Data in Brief},
+    pages = {111922},
+    year = {2025},
+    publisher = {Elsevier},
+    doi = {10.1016/j.dib.2025.111922}
+}
+
+@dataset{nabi2025her2zenodo,
+    author = {Nabi, Md Serajun and Fauzi, Mohammad Faizal Ahmad and Karim, Hezerul Bin Abdul and Cheah, Phaik Leng and Chiew, Seow Fan and Looi, Lai Meng and Multimedia University},
+    title = {HER2-IHC-40x: High-Resolution Histopathology Image Dataset for HER2 Scoring in Breast Cancer},
+    year = {2025},
+    publisher = {Zenodo},
+    version = {v1},
+    doi = {10.5281/zenodo.15179608},
+    url = {https://doi.org/10.5281/zenodo.15179608}
 }
 ```
 
@@ -809,4 +1250,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: April 12, 2026*
+*🕒 Last Updated: May 08, 2026*
