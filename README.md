@@ -1,21 +1,27 @@
 # Medical AI Datasets Repository
 
+![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation-blue)
+![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification-blue)
+
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                               | Organ                     | Tasks                                                | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                  | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                   | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
-| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                   | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
-| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                         | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
-| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                        | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
-| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                            | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
-| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                   | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
-| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                   | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
-| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                   | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
-| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                            | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
-| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                            | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
+| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
+| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
+| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
+| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
+| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
+| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
+| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
+| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
+| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
+| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
+| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
+| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026 | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -1510,16 +1516,466 @@ If you use this dataset, please cite:
     url = {https://doi.org/10.5281/zenodo.2530835}
 }
 
-@article{kather2019naturecancer,
-    title = {Pan-cancer image-based detection of clinically actionable genetic alterations},
-    author = {Kather, Jakob Nikolas and Heij, Lara R and Grabsch, Heike I and Loeffler, Clemens and Echle, Alexander and Muti, Halima S and Krause, Jeremias and Niehues, Jakob M and Sommer, Kai A and Bankhead, Peter and others},
-    journal = {Nature Cancer},
-    volume = {1},
-    number = {8},
-    pages = {789--799},
-    year = {2020},
-    publisher = {Nature Publishing Group},
+@article{kather2020pan,
+    title={Pan-cancer image-based detection of clinically actionable genetic alterations},
+    author={Kather, Jakob Nikolas and Heij, Lara R and Grabsch, Heike I and Loeffler, Chiara and Echle, Amelie and Muti, Hannah Sophie and Krause, Jeremias and Niehues, Jan M and Sommer, Kai AJ and Bankhead, Peter and others},
+    journal={Nature cancer},
+    volume={1},
+    number={8},
+    pages={789--799},
+    year={2020},
+    publisher={Nature Publishing Group US New York},
     doi = {10.1038/s43018-020-0087-4}
+}
+```
+
+---
+
+### 🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading
+
+**Study**: Gornale, S., & Patravali, P. (2020). Digital Knee X-ray Images. Mendeley Data, V1.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                           |
+|-------------------------|-----------------------------------------------------------------------------------|
+| **📛 Title**            | Digital Knee X-ray Images: Knee Osteoarthritis Grading                            |
+| **🔗 Source**           | https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images                  |
+| **🦴 Target Organ**     | Knee Joint                                                                        |
+| **📅 Last Accessed**    | May 24, 2026                                                                      |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (Kellgren–Lawrence Grading)                            |
+| **📐 Image Size**       | Variable (8-bit grayscale; original acquisition via PROTEC PRS 500E)              |
+| **📁 Data Format**      | JPEG/PNG (.jpg/.png); annotations in filenames or `Digital Knee X-ray Images.csv` |
+| **👥 Demographics**     | ❌ Not included (de-identified clinical images)                                    |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                            |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                           |
+|---------------------------|-------------------------------------------------------------------|
+| **🖼️ Total Images**      | 1,650 digital knee X-ray images                                   |
+| **🏥 Imaging Modality**   | Radiographic X-ray (anteroposterior knee views)                   |
+| **🎨 Color Format**       | Grayscale, 8-bit depth                                            |
+| **📦 Total Size**         | ~121.67 MB (compressed)                                           |
+| **🏫 Source Institution** | Rani Channamma University, India                                  |
+| **👨‍⚕️ Annotation**      | Dual-expert labeling using Kellgren–Lawrence (K&L) grading system |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Ordinal multiclass classification of knee osteoarthritis severity
+- **Number of Classes**: 5️⃣ (ordered severity scale per Kellgren–Lawrence criteria) [[9]]
+
+| K&L Grade | Label    | Description                                                                  | Image Count (MedicalExpert-I) |
+|-----------|----------|------------------------------------------------------------------------------|-------------------------------|
+| 🔘 0      | Normal   | No radiographic features of OA                                               | 514                           |
+| 🟡 1      | Doubtful | Doubtful joint space narrowing, possible osteophytes                         | 477                           |
+| 🟠 2      | Mild     | Definite osteophytes, possible joint space narrowing                         | 232                           |
+| 🔴 3      | Moderate | Multiple osteophytes, definite joint space narrowing, sclerosis              | 221                           |
+| ⚫ 4       | Severe   | Large osteophytes, marked joint space narrowing, severe sclerosis, deformity | 206                           |
+
+**📊 Annotation Protocol**:
+
+- Each image manually labeled by **two independent medical experts** using the Kellgren–Lawrence grading system [[2]]
+- Annotations stored either in image filenames or in the companion metadata file `Digital Knee X-ray Images.csv`
+- Dataset includes two expert annotation directories: `MedicalExpert-I` and `MedicalExpert-II` for inter-rater
+  reliability studies
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking ordinal classification models for automated OA severity grading
+- ✅ Dual-expert annotations enable research on annotation uncertainty and consensus modeling
+- ✅ Includes cartilage region-of-interest (ROI) extraction methodology based on pixel density analysis [[5]]
+- ✅ Organized directory structure enables direct integration with standard deep learning data loaders
+- 📚 Required to cite the original Mendeley Data repository (DOI: 10.17632/t9ndx37v5h.1) in publications [[14]]
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                             |
+|------------------------------|--------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**       | Grades 0–1 dominate (~60%); consider stratified sampling or class-weighted loss            |
+| **🧪 Ordinal Structure**     | Grades represent ordered severity; consider ordinal regression or monotonic constraints    |
+| **📐 Resolution Handling**   | Images vary in dimensions; apply uniform resizing prior to model ingestion                 |
+| **🔐 Ethical Compliance**    | Dataset contains de-identified patient images; adhere to institutional review requirements |
+| **🧭 Domain Generalization** | Single-region sourcing (India); validate on external cohorts for clinical deployment       |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load directory structure**: Utilize framework-native utilities (e.g., `torchvision.datasets.ImageFolder`) to ingest
+   grade-labeled subfolders.
+2. **Standardize input format**: Convert all images to fixed resolution (e.g., 224×224 or 512×512) while preserving
+   aspect ratio.
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide statistics.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and mild intensity jittering; avoid transformations
+   that distort anatomical landmarks.
+5. **Ordinal encoding**: Encode K&L grades as ordered integers (0–4) or use one-hot vectors with ordinal constraints.
+6. **Stratified evaluation**: Report per-grade precision, recall, F1-score, and ordinal-aware metrics (e.g., weighted
+   kappa, mean absolute error).
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images
+- **Mendeley Data **(Primary Source): https://data.mendeley.com/datasets/t9ndx37v5h/1 [[5]]
+- **Related Publications**:
+    - Gornale, S. S., Patravali, P. U., & Hiremath, P. S. (2020). A Comprehensive Digital Knee X-ray Image Dataset for
+      the Assessment of Osteoarthritis. *JSM Biomedical Imaging Data Papers*.
+    - Kellgren, J. H., & Lawrence, J. S. (1957). Radiological assessment of osteo-arthrosis. *Annals of the Rheumatic
+      Diseases*.
+- **Related Datasets**:
+    - [Knee Osteoarthritis Dataset with KL Grading - 2018](https://www.kaggle.com/datasets/tommyngx/knee-osteoarthritis-dataset-with-kl-grading-2018)
+    - [Multi-Class Knee Osteoporosis X-Ray Dataset](https://www.kaggle.com/datasets/mohamedgobara/multi-class-knee-osteoporosis-x-ray-dataset)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{gornale2020digitalknee,
+    author = {Gornale, Shivanand and Patravali, Pooja},
+    title = {Digital Knee X-ray Images},
+    year = {2020},
+    publisher = {Mendeley Data},
+    version = {1},
+    doi = {10.17632/t9ndx37v5h.1},
+    url = {https://doi.org/10.17632/t9ndx37v5h.1}
+}
+```
+
+---
+
+### 👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy: Unified Dataset
+
+**Study**: Canipek, A. S., et al. (2024). Eyepacs, Aptos, Messidor Diabetic Retinopathy. Kaggle.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------|
+| **📛 Title**            | Eyepacs, Aptos, Messidor Diabetic Retinopathy: Unified Dataset                         |
+| **🔗 Source**           | https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy |
+| **👁️ Target Organ**    | Retina / Fundus                                                                        |
+| **📅 Last Accessed**    | May 24, 2026                                                                           |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (Diabetic Retinopathy Grading)                              |
+| **📐 Image Size**       | 600 × 600 pixels (uniformly resized; original sources variable)                        |
+| **📁 Data Format**      | JPEG (.jpg); labels encoded in directory structure                                     |
+| **👥 Demographics**     | ❌ Not included (de-identified clinical fundus images)                                  |
+| **🔄 Train/Test Split** | ✅ Yes (80% Train / 10% Validation / 10% Test; random stratified split)                 |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                                                            |
+|----------------------------|--------------------------------------------------------------------|
+| **🖼️ Total Images**       | 143,669 fundus photographs (after Jan 2024 augmentation)           |
+| **🔬 Imaging Modality**    | Color fundus photography (retinal imaging)                         |
+| **🎨 Color Format**        | RGB, 8-bit per channel                                             |
+| **📦 Total Size**          | ~3.8 GB (compressed; reduced from 18.5 GB via resizing)            |
+| **🏥 Source Institutions** | Multi-source: EyePACS, APTOS 2019, Messidor consortium             |
+| **👨‍⚕️ Annotation**       | Expert ophthalmologist-graded diabetic retinopathy severity labels |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Ordinal multiclass classification of diabetic retinopathy (DR) severity
+- **Number of Classes**: 5️⃣ (ordered severity scale per clinical DR grading standards)
+
+| DR Grade | Label            | Description                                        | Clinical Interpretation             |
+|----------|------------------|----------------------------------------------------|-------------------------------------|
+| 🔘 0     | No DR            | No visible signs of diabetic retinopathy           | Normal retinal appearance           |
+| 🟡 1     | Mild DR          | Microaneurysms only                                | Early non-proliferative changes     |
+| 🟠 2     | Moderate DR      | Microaneurysms + hemorrhages/exudates              | Moderate non-proliferative DR       |
+| 🔴 3     | Severe DR        | Extensive hemorrhages, venous beading, IRMA        | Severe non-proliferative DR         |
+| ⚫ 4      | Proliferative DR | Neovascularization, vitreous/preretinal hemorrhage | Vision-threatening proliferative DR |
+
+**📊 Dataset Distribution **(Post-Augmentation)
+
+| Split         | Percentage | Approx. Image Count | Purpose                               |
+|---------------|------------|---------------------|---------------------------------------|
+| 🟢 Train      | 80%        | ~114,935            | Model training and development        |
+| 🟡 Validation | 10%        | ~14,367             | Hyperparameter tuning, early stopping |
+| 🔴 Test       | 10%        | ~14,367             | Final performance evaluation          |
+| **Total**     | **100%**   | **143,669**         | —                                     |
+
+> **ℹ️ Note**: Class distribution reflects real-world clinical prevalence (No DR and Mild DR typically dominate).
+> Stratified sampling or class-weighted loss functions are recommended during training.
+
+#### 🔧 Preprocessing & Augmentation Protocol (Jan 2024 Update)
+
+1. **Source Integration**: Images aggregated from EyePACS, APTOS 2019, APTOS Gaussian Filtered, and Messidor databases.
+2. **Uniform Resizing**: All images resized to 600×600 pixels to standardize input dimensions and reduce storage
+   footprint.
+3. **Manual Data Augmentation**: Applied geometric and photometric transformations to increase dataset size by ~55%.
+4. **Stratified Splitting**: Random 80:10:10 train/val/test split preserved post-augmentation to maintain class balance.
+5. **Directory Organization**: Images organized into class-labeled subdirectories within `train/`, `val/`, and `test/`
+   folders.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for automated diabetic retinopathy screening
+- ✅ Large-scale, multi-source composition supports research on domain generalization across imaging protocols
+- ✅ Pre-resized and augmented format reduces preprocessing overhead during model development
+- ✅ Predefined stratified splits enable reproducible benchmarking and fair model comparison
+- 📚 Required to cite both this Kaggle repository **and** all original source datasets in publications
+- ⚠️ **Critical**: Users must review and comply with the licenses and terms of use of each original dataset (EyePACS,
+  APTOS, Messidor) before commercial or clinical deployment
+
+#### ⚠️ Usage Considerations
+
+| Aspect                        | Recommendation                                                                                                                |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**        | No DR and Mild DR classes typically dominate; apply class-weighted loss or focal loss                                         |
+| **🎨 Source Heterogeneity**   | Images originate from multiple devices/protocols; consider domain adaptation techniques                                       |
+| **🧪 Ordinal Structure**      | DR grades represent ordered severity; consider ordinal regression or monotonic constraints                                    |
+| **🔐 Licensing Compliance**   | Messidor database has specific usage restrictions; verify terms at official source before redistribution                      |
+| **🧭 Clinical Translation**   | Model performance on this curated dataset may not directly translate to real-world screening; validate on prospective cohorts |
+| **📦 Augmentation Awareness** | Augmented samples are derived from original images; ensure train/test splits prevent leakage of augmented variants            |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load directory structure**: Utilize framework-native utilities (e.g., `torchvision.datasets.ImageFolder`) to ingest
+   class-labeled subfolders.
+2. **Standardize input format**: Confirm uniform 600×600 dimensions; resize if model architecture requires different
+   input sizes.
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using ImageNet statistics if using
+   pretrained backbones.
+4. **Augmentation **(training only): Incorporate additional rotation, flipping, color jittering, and CutMix/MixUp to
+   further improve generalization.
+5. **Ordinal encoding**: Encode DR grades as ordered integers (0–4) or use one-hot vectors with ordinal constraints.
+6. **Stratified evaluation**: Report per-class precision, recall, F1-score, and ordinal-aware metrics (e.g., weighted
+   kappa, quadratic weighted kappa).
+7. **Source-aware validation **(optional): If source metadata is available, evaluate cross-source generalization by
+   holding out one source for testing.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy
+- **Original Data Sources**:
+    - EyePACS / Kaggle Diabetic Retinopathy
+      Detection: https://www.kaggle.com/competitions/diabetic-retinopathy-detection
+    - APTOS 2019 Blindness Detection: https://www.kaggle.com/competitions/aptos2019-blindness-detection
+    - Messidor Database: https://www.adcis.net/en/third-party/messidor/
+- **Related Publications**:
+    - Decencière, E., et al. (2014). Feedback on a publicly distributed database: the Messidor database. *Image
+      Analysis & Stereology*, 33(3), 231–234.
+    - Gulshan, V., et al. (2016). Development and Validation of a Deep Learning Algorithm for Detection of Diabetic
+      Retinopathy in Retinal Fundus Photographs. *JAMA*.
+- **Related Datasets**:
+    - [IDRiD: Diabetic Retinopathy – Grading](https://www.kaggle.com/datasets/sovitrath/idrid-diabetic-retinopathy-grading)
+    - [APTOS 2019 Blindness Detection](https://www.kaggle.com/competitions/aptos2019-blindness-detection)
+    - [DR_MASTER: Multi-Source DR Grading Dataset](https://www.kaggle.com/datasets/harshitkulkarni07/dr-master-multi-source-dr-grading-dataset)
+
+#### 📚 Citation
+
+If you use this dataset, please cite **both** this unified repository **and** all original source datasets:
+
+```bibtex
+@dataset{canipek2024eyepacsaptosmessidor,
+    author = {Çakan, Metehan and Aktuğ, Aleyna},
+    title = {Eyepacs, Aptos, Messidor Diabetic Retinopathy},
+    year = {2024},
+    publisher = {Kaggle},
+    url = {https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy},
+    note = {Accessed: May 24, 2026}
+}
+
+@article{decenciere2014feedback,
+  title={Feedback on a publicly distributed image database: the Messidor database},
+  author={Decenci{\`e}re, Etienne and Zhang, Xiwei and Cazuguel, Guy and Lay, Bruno and Cochener, B{\'e}atrice and Trone, Caroline and Gain, Philippe and Ord{\'o}{\~n}ez-Varela, John-Richard and Massin, Pascale and Erginay, Ali and others},
+  journal={Image Analysis \& Stereology},
+  pages={231--234},
+  year={2014}
+}
+
+@misc{eyepacs2015,
+    title = {EyePACS: A Platform for Diabetic Retinopathy Screening},
+    author = {EyePACS},
+    year = {2015},
+    url = {https://www.eyepacs.com/},
+    note = {Accessed: May 24, 2026}
+}
+
+@misc{aptos2019,
+    title = {APTOS 2019 Blindness Detection},
+    author = {Asia Pacific Tele-Ophthalmology Society},
+    year = {2019},
+    publisher = {Kaggle},
+    url = {https://www.kaggle.com/competitions/aptos2019-blindness-detection},
+    note = {Accessed: May 24, 2026}
+}
+```
+
+---
+
+### 👁️ IDRiD: Diabetic Retinopathy – Grading (Indian Dataset)
+
+**Study**: Porwal, P., Pachade, S., Kamble, R., Kokare, M., Deshmukh, G., Sahasrabuddhe, V., & Meriaudeau, F. (2018).
+Indian Diabetic Retinopathy Image Dataset (IDRiD). IEEE DataPort.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                               |
+|-------------------------|---------------------------------------------------------------------------------------|
+| **📛 Title**            | IDRiD: Diabetic Retinopathy – Grading (Indian Dataset)                                |
+| **🔗 Source**           | https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid |
+| **👁️ Target Organ**    | Retina / Fundus                                                                       |
+| **📅 Last Accessed**    | May 24, 2026                                                                          |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization                          |
+| **📐 Image Size**       | 4288 × 2848 pixels (native); 50º field of view                                        |
+| **📁 Data Format**      | JPG (fundus images), TIFF (segmentation masks), CSV (labels)                          |
+| **👥 Demographics**     | ❌ Not included (de-identified clinical images from Indian population)                 |
+| **🔄 Train/Test Split** | ✅ Yes (Grading: 413 Train / 103 Test; Segmentation: variable split)                   |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                                             |
+|---------------------------|-------------------------------------------------------------------------------------|
+| **🖼️ Total Images**      | 516 color fundus photographs (Disease Grading task)                                 |
+| **🔬 Imaging Modality**   | Color fundus photography (retinal imaging)                                          |
+| **🎨 Color Format**       | RGB, high-resolution (4288 × 2848 pixels)                                           |
+| **📦 Total Size**         | ~962 MB compressed (three ZIP archives: Segmentation, Grading, Localization)        |
+| **🏥 Source Institution** | Medical research centers in India                                                   |
+| **👨‍⚕️ Annotation**      | Expert ophthalmologist-annotated lesions, severity grades, and anatomical landmarks |
+
+#### 🏷️ Classification Task Details (Disease Grading)
+
+- **Task Type**: Ordinal multiclass classification of diabetic retinopathy (DR) and diabetic macular edema (DME)
+  severity
+- **Number of Classes**:
+    - **DR Severity**: 5️⃣ ordinal grades (0–4)
+    - **DME Severity**: 3️⃣ ordinal grades (0–2)
+
+**📊 Diabetic Retinopathy (DR) Severity Grades**:
+
+| Grade | Label            | Description                                        |
+|-------|------------------|----------------------------------------------------|
+| 🔘 0  | No DR            | No visible signs of diabetic retinopathy           |
+| 🟡 1  | Mild DR          | Microaneurysms only                                |
+| 🟠 2  | Moderate DR      | Microaneurysms + hemorrhages/exudates              |
+| 🔴 3  | Severe DR        | Extensive hemorrhages, venous beading, IRMA        |
+| ⚫ 4   | Proliferative DR | Neovascularization, vitreous/preretinal hemorrhage |
+
+**📊 Diabetic Macular Edema (DME) Severity Grades**:
+
+| Grade | Label    | Description                 |
+|-------|----------|-----------------------------|
+| 🔘 0  | No DME   | No macular edema present    |
+| 🟡 1  | Presence | Macular edema present       |
+| 🟠 2  | Scarring | Macular edema with scarring |
+
+**📊 Dataset Distribution **(Grading Task)
+
+| Split     | Image Count | Purpose                        |
+|-----------|-------------|--------------------------------|
+| 🟢 Train  | 413         | Model training and development |
+| 🔴 Test   | 103         | Final performance evaluation   |
+| **Total** | **516**     | —                              |
+
+#### 🎭 Segmentation Task Details
+
+- **Task Type**: Binary semantic segmentation of retinal lesions and anatomical structures
+- **Annotation Targets**:
+    - 🩸 Microaneurysms (MA)
+    - 🔴 Haemorrhages (HE)
+    - 💎 Hard Exudates (EX)
+    - ☁️ Soft Exudates / Cotton Wool Spots (SE)
+    - ⚪ Optic Disc (OD)
+
+**📊 Segmentation Dataset Distribution**:
+
+| Component        | Image Count | Format | Description                  |
+|------------------|-------------|--------|------------------------------|
+| Fundus Images    | 81          | JPG    | High-resolution color images |
+| Lesion Masks     | 81          | TIFF   | Pixel-level binary masks     |
+| Optic Disc Masks | 81          | TIFF   | Pixel-level binary masks     |
+
+> **ℹ️ Note**: Segmentation masks are provided as single-channel TIFF files with white foreground (lesion/structure) on
+> black background.
+
+#### 📍 Localization Task Details
+
+- **Task Type**: Keypoint detection / coordinate regression for anatomical landmarks
+- **Annotation Targets**:
+    - 🎯 Optic Disc Center (x, y coordinates)
+    - 🎯 Fovea Center (x, y coordinates)
+
+**📊 Localization Dataset Distribution**:
+
+| Component            | Image Count | Format | Description                    |
+|----------------------|-------------|--------|--------------------------------|
+| Fundus Images        | 516         | JPG    | High-resolution color images   |
+| Landmark Coordinates | 516         | CSV    | Pixel coordinates for OD/Fovea |
+
+#### 💡 Usage Notes
+
+- ✅ First publicly available retinal dataset representative of Indian population demographics
+- ✅ Only dataset providing pixel-level annotations for both DR lesions **and** normal retinal structures
+- ✅ Multi-task design supports joint learning of classification, segmentation, and localization
+- ✅ High-resolution native images (4288×2848) enable research on fine-grained lesion detection
+- ✅ Official train/test splits enable reproducible benchmarking across research groups
+- 📚 Required to cite the original IEEE DataPort repository and associated publications
+- 🔐 Distributed under IEEE DataPort Open Access terms; verify usage rights before commercial deployment
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                      |
+|------------------------------|-----------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**       | DR grades 0–2 typically dominate; apply stratified sampling or class-weighted loss                  |
+| **📐 Resolution Handling**   | Native 4288×2848 images require substantial memory; consider patch-based processing or downsampling |
+| **🧪 Multi-Task Learning**   | Tasks share input images but have independent labels; design architectures accordingly              |
+| **🔐 Licensing Compliance**  | Verify IEEE DataPort terms; original challenge data may have specific usage restrictions            |
+| **🧭 Domain Generalization** | Indian population representation is valuable but may require validation on other ethnic cohorts     |
+| **🎨 Annotation Format**     | Segmentation masks use TIFF format; ensure proper library support for loading multi-channel masks   |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Download and extract**: Obtain all three ZIP archives (Segmentation, Grading, Localization) from IEEE DataPort.
+2. **Parse metadata**: Load CSV label files to map image filenames to DR grade, DME grade, and landmark coordinates.
+3. **Standardize resolution**: Resize high-resolution images to model-compatible dimensions (e.g., 512×512 or 1024×1024)
+   while preserving aspect ratio.
+4. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide statistics;
+   consider CLAHE for contrast enhancement.
+5. **Load segmentation masks**: Use libraries supporting TIFF format (e.g., `tifffile`, `Pillow`) to read binary
+   annotation masks.
+6. **Coordinate normalization**: Convert landmark coordinates from pixel space to normalized [0, 1] range if required by
+   model architecture.
+7. **Stratified evaluation**: Report per-class metrics for DR/DME grading; compute Dice/IoU for segmentation; measure
+   Euclidean error for localization.
+
+#### 🔗 Associated Resources
+
+- **IEEE DataPort Repository**: https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid
+- **Kaggle Mirror**: https://www.kaggle.com/datasets/mariaherrerot/idrid-dataset
+- **Grand Challenge Website**: https://idrid.grand-challenge.org/
+- **ISBI 2018 Challenge**: https://biomedicalimaging.org/2018/challenges/
+- **Data Descriptor Publication**: Porwal, P., et al. (2018). "IDRiD: Diabetic Retinopathy Segmentation and Grading
+  Challenge." *Medical Image Analysis*.
+- **Related Datasets**:
+    - [Messidor-2](https://www.adcis.net/en/third-party/messidor/) (French cohort, DR grading)
+    - [RFMiD](https://ieee-dataport.org/documents/retinal-fundus-multi-disease-image-dataset-rfmid) (Multi-disease
+      retinal dataset)
+    - [APTOS 2019](https://www.kaggle.com/competitions/aptos2019-blindness-detection) (Blindness detection challenge)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{porwal2018idrid,
+    author = {Porwal, Prasanna and Pachade, Samiksha and Kamble, Ravi and Kokare, Manesh and Deshmukh, Girish and Sahasrabuddhe, Vivek and Meriaudeau, Fabrice},
+    title = {Indian Diabetic Retinopathy Image Dataset (IDRiD)},
+    year = {2018},
+    publisher = {IEEE DataPort},
+    doi = {10.21227/H25W98},
+    url = {https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid}
+}
+
+@article{porwal2020idrid,
+    title={Idrid: Diabetic retinopathy--segmentation and grading challenge},
+    author={Porwal, Prasanna and Pachade, Samiksha and Kokare, Manesh and Deshmukh, Girish and Son, Jaemin and Bae, Woong and Liu, Lihong and Wang, Jianzong and Liu, Xinhui and Gao, Liangxin and others},
+    journal={Medical image analysis},
+    volume={59},
+    pages={101561},
+    year={2020},
+    publisher={Elsevier},
+    doi = {10.1016/j.media.2019.101561}
 }
 ```
 
@@ -1559,4 +2015,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: May 08, 2026*
+*🕒 Last Updated: May 24, 2026*
