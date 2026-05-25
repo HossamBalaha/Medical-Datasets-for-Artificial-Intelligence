@@ -5,23 +5,24 @@
 
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
-| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
-| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
-| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
-| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
-| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
-| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
-| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
-| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
-| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
-| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
-| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
-| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026 | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
+| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed     | Quick Link                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026   | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026   | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026   | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026   | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
+| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026   | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
+| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
+| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026   | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
+| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
+| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026   | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
+| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
+| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
+| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
+| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026   | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
+| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026   | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
+| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026   | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
+| [🦠 Paratuberculosis Histopathology Images](#-paratuberculosis-histopathology-images-dataset)                                                         | 🐄 Intestine (Veterinary) | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Paratuberculosis-Positive)                                                                           | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zjhymwjtxv/3)                                        |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -1976,6 +1977,127 @@ If you use this dataset, please cite:
     year={2020},
     publisher={Elsevier},
     doi = {10.1016/j.media.2019.101561}
+}
+```
+
+---
+
+### 🦠 Paratuberculosis Histopathology Images Dataset
+
+**Study**: Hananeh, W., & Fraiwan, M. (2025). A dataset of histopathology images of paratuberculosis disease. Mendeley
+Data, V3.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                       |
+|-------------------------|-----------------------------------------------------------------------------------------------|
+| **📛 Title**            | Paratuberculosis Histopathology Images Dataset                                                |
+| **🔗 Source**           | https://data.mendeley.com/datasets/zjhymwjtxv/3                                               |
+| **🐄 Target Organ**     | Intestinal Tissue (Veterinary Pathology)                                                      |
+| **📅 Last Accessed**    | May 24, 2026                                                                                |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification (Normal vs. Infected)                                               |
+| **📐 Image Size**       | Variable (histopathology slides; standardization recommended)                                 |
+| **📁 Data Format**      | Image files (format unspecified; typical: JPG/PNG); optional scale-bar variants in `ImagesS/` |
+| **👥 Demographics**     | ❌ Not included (veterinary tissue samples; de-identified)                                     |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                                        |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                                     |
+|---------------------------|-----------------------------------------------------------------------------|
+| **🖼️ Total Images**      | 366 histopathology images of intestinal tissue                              |
+| **🔬 Imaging Modality**   | Brightfield histopathology (H&E-stained tissue sections)                    |
+| **🎨 Color Format**       | RGB (typical for histopathology)                                            |
+| **📦 Total Size**         | ~28.6 MB (compressed)                                                       |
+| **🏫 Source Institution** | Jordan University of Science and Technology, Faculty of Veterinary Medicine |
+| **👨‍⚕️ Annotation**      | Expert veterinary pathologist-labeled binary classes                        |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification of paratuberculosis infection status in intestinal tissue
+- **Number of Classes**: 2️⃣
+
+| Class Label | Description                                                          | Image Count | Clinical Interpretation                    |
+|-------------|----------------------------------------------------------------------|-------------|--------------------------------------------|
+| ✅ Negative  | Normal intestinal tissue                                             | 157         | No evidence of paratuberculosis            |
+| ⚠️ Positive | Tissue infected with *Mycobacterium avium* subsp. *paratuberculosis* | 209         | Histopathological signs of Johne's disease |
+
+**📊 Dataset Distribution**:
+
+| Class     | Image Count | Percentage |
+|-----------|-------------|------------|
+| Negative  | 157         | ~42.9%     |
+| Positive  | 209         | ~57.1%     |
+| **Total** | **366**     | **100%**   |
+
+**🔬 Additional Resource: Scale-Bar Variants**
+
+- The `ImagesS/` subdirectory contains identical images with an overlaid scale bar to clarify magnification level
+- Useful for research requiring explicit spatial calibration or multi-scale analysis
+
+#### 💡 Usage Notes
+
+- ✅ First publicly available histopathology dataset dedicated to paratuberculosis (Johne's disease) detection
+- ✅ Binary classification task suitable for benchmarking veterinary diagnostic AI models
+- ✅ Near-balanced class distribution (~43/57) supports stable training without aggressive resampling
+- ✅ Scale-bar variant images enable research on resolution-aware feature extraction
+- ✅ Small dataset size (~366 images) ideal for few-shot learning, transfer learning, or data augmentation studies
+- 📚 Required to cite the original Mendeley Data repository (DOI: 10.17632/zjhymwjtxv.3) in publications
+- 🔐 Verify licensing terms on Mendeley Data; attribution typically required under CC BY 4.0
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                                  |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| **🔍 Limited Sample Size** | Small dataset (n=366); employ strong regularization, augmentation, or transfer learning         |
+| **🧪 Class Balance**       | Mild imbalance (~57% positive); consider stratified sampling or class-weighted loss             |
+| **📐 Resolution Variance** | Images may vary in magnification; standardize input dimensions prior to training                |
+| **🔐 Ethical Compliance**  | Veterinary tissue samples; adhere to institutional animal research guidelines                   |
+| **🧭 Domain Specificity**  | Focused on paratuberculosis in ruminants; generalizability to other species requires validation |
+| **🎨 Stain Variability**   | Apply stain normalization (e.g., Macenko method) if integrating external cohorts                |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Download and extract**: Obtain dataset from Mendeley Data; choose between standard images or `ImagesS/` scale-bar
+   variants based on research needs.
+2. **Organize directory structure**: Arrange images into class-labeled subfolders (e.g., `Negative/`, `Positive/`) for
+   framework-native data loading.
+3. **Standardize geometry**: Resize images to uniform dimensions (e.g., 224×224 or 512×512) while preserving aspect
+   ratio.
+4. **Color normalization**: Apply stain normalization to mitigate inter-slide H&E staining variability.
+5. **Augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering; preserve
+   histological feature integrity.
+6. **Stratified splitting**: Partition data with stratification to maintain class balance across train/validation/test
+   sets.
+7. **Evaluation metrics**: Report sensitivity, specificity, AUC-ROC, and F1-score; include confusion matrices to assess
+   diagnostic performance.
+
+#### 🔗 Associated Resources
+
+- **Mendeley Data Repository**: https://data.mendeley.com/datasets/zjhymwjtxv/3
+- **Institutional Affiliation**: Jordan University of Science and Technology, Faculty of Veterinary Medicine
+- **Related Publications**:
+    - Hananeh, W., & Fraiwan, M. (2025). "A dataset of histopathology images of paratuberculosis disease." *Mendeley
+      Data*, V3.
+    - Relevant veterinary pathology literature on Johne's disease diagnosis and histopathological features.
+- **Related Datasets**:
+    - [Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset) (human histopathology
+      classification)
+    - [CRC-HGD-v1](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset) (colorectal grading)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{hananeh2025paratuberculosis,
+    author = {Hananeh, Wael and Fraiwan, Mohammad},
+    title = {A dataset of histopathology images of paratuberculosis disease},
+    year = {2025},
+    publisher = {Mendeley Data},
+    version = {3},
+    doi = {10.17632/zjhymwjtxv.3},
+    url = {https://data.mendeley.com/datasets/zjhymwjtxv/3}
 }
 ```
 
