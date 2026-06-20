@@ -1,28 +1,30 @@
 # Medical AI Datasets Repository
 
 ![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation-blue)
-![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification-blue)
+![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification%20%7C%20COVID--19%20%7C%20CT%20%7C%20Brain%20Tumor%20%7C%20MRI-blue)
 
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed     | Quick Link                                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026   | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026   | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026   | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
-| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026   | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
-| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026   | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
-| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
-| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026   | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
-| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
-| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026   | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
-| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
-| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
-| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026   | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
-| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026   | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
-| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026   | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
-| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026   | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
+| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
+| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
+| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
+| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
+| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
+| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
+| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
+| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
+| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
+| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
+| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
+| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026 | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
 | [🦠 Paratuberculosis Histopathology Images](#-paratuberculosis-histopathology-images-dataset)                                                         | 🐄 Intestine (Veterinary) | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Paratuberculosis-Positive)                                                                           | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zjhymwjtxv/3)                                        |
+| [🫁 COVIDx CT: Large-Scale Chest CT for COVID-19](#-covidx-ct-a-large-scale-chest-ct-dataset-for-covid-19-detection)                                  | 🫁 Lungs / Chest          | 🏷️ Classification, 📍 Localization                          | 3️⃣ Multiclass (Normal, Pneumonia, COVID-19)                                                                             | ✅ Train/Val/Test                           | 📅 Jun 20, 2026 | [🔗 Source](https://www.kaggle.com/datasets/haydengunraj/covidx-ct)                                 |
+| [🧠 Brain Tumor Dataset (Jun Cheng)](#-brain-tumor-dataset-jun-cheng)                                                                                 | 🧠 Brain                  | 🏷️ Classification                                           | 3️⃣ Multiclass (Meningioma, Glioma, Pituitary)                                                                           | ✅ Cross-validation (cvind.mat)             | 📅 Jun 20, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.1512427)                                            |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -1518,14 +1520,14 @@ If you use this dataset, please cite:
 }
 
 @article{kather2020pan,
-    title={Pan-cancer image-based detection of clinically actionable genetic alterations},
-    author={Kather, Jakob Nikolas and Heij, Lara R and Grabsch, Heike I and Loeffler, Chiara and Echle, Amelie and Muti, Hannah Sophie and Krause, Jeremias and Niehues, Jan M and Sommer, Kai AJ and Bankhead, Peter and others},
-    journal={Nature cancer},
-    volume={1},
-    number={8},
-    pages={789--799},
-    year={2020},
-    publisher={Nature Publishing Group US New York},
+    title = {Pan-cancer image-based detection of clinically actionable genetic alterations},
+    author = {Kather, Jakob Nikolas and Heij, Lara R and Grabsch, Heike I and Loeffler, Chiara and Echle, Amelie and Muti, Hannah Sophie and Krause, Jeremias and Niehues, Jan M and Sommer, Kai AJ and Bankhead, Peter and others},
+    journal = {Nature cancer},
+    volume = {1},
+    number = {8},
+    pages = {789--799},
+    year = {2020},
+    publisher = {Nature Publishing Group US New York},
     doi = {10.1038/s43018-020-0087-4}
 }
 ```
@@ -1778,11 +1780,11 @@ If you use this dataset, please cite **both** this unified repository **and** al
 }
 
 @article{decenciere2014feedback,
-  title={Feedback on a publicly distributed image database: the Messidor database},
-  author={Decenci{\`e}re, Etienne and Zhang, Xiwei and Cazuguel, Guy and Lay, Bruno and Cochener, B{\'e}atrice and Trone, Caroline and Gain, Philippe and Ord{\'o}{\~n}ez-Varela, John-Richard and Massin, Pascale and Erginay, Ali and others},
-  journal={Image Analysis \& Stereology},
-  pages={231--234},
-  year={2014}
+    title = {Feedback on a publicly distributed image database: the Messidor database},
+    author = {Decenci{\`e}re, Etienne and Zhang, Xiwei and Cazuguel, Guy and Lay, Bruno and Cochener, B{\'e}atrice and Trone, Caroline and Gain, Philippe and Ord{\'o}{\~n}ez-Varela, John-Richard and Massin, Pascale and Erginay, Ali and others},
+    journal = {Image Analysis \& Stereology},
+    pages = {231--234},
+    year = {2014}
 }
 
 @misc{eyepacs2015,
@@ -1969,13 +1971,13 @@ If you use this dataset, please cite:
 }
 
 @article{porwal2020idrid,
-    title={Idrid: Diabetic retinopathy--segmentation and grading challenge},
-    author={Porwal, Prasanna and Pachade, Samiksha and Kokare, Manesh and Deshmukh, Girish and Son, Jaemin and Bae, Woong and Liu, Lihong and Wang, Jianzong and Liu, Xinhui and Gao, Liangxin and others},
-    journal={Medical image analysis},
-    volume={59},
-    pages={101561},
-    year={2020},
-    publisher={Elsevier},
+    title = {Idrid: Diabetic retinopathy--segmentation and grading challenge},
+    author = {Porwal, Prasanna and Pachade, Samiksha and Kokare, Manesh and Deshmukh, Girish and Son, Jaemin and Bae, Woong and Liu, Lihong and Wang, Jianzong and Liu, Xinhui and Gao, Liangxin and others},
+    journal = {Medical image analysis},
+    volume = {59},
+    pages = {101561},
+    year = {2020},
+    publisher = {Elsevier},
     doi = {10.1016/j.media.2019.101561}
 }
 ```
@@ -1994,7 +1996,7 @@ Data, V3.
 | **📛 Title**            | Paratuberculosis Histopathology Images Dataset                                                |
 | **🔗 Source**           | https://data.mendeley.com/datasets/zjhymwjtxv/3                                               |
 | **🐄 Target Organ**     | Intestinal Tissue (Veterinary Pathology)                                                      |
-| **📅 Last Accessed**    | May 24, 2026                                                                                |
+| **📅 Last Accessed**    | May 24, 2026                                                                                  |
 | **🎯 Supported Tasks**  | 🏷️ Binary Classification (Normal vs. Infected)                                               |
 | **📐 Image Size**       | Variable (histopathology slides; standardization recommended)                                 |
 | **📁 Data Format**      | Image files (format unspecified; typical: JPG/PNG); optional scale-bar variants in `ImagesS/` |
@@ -2103,6 +2105,221 @@ If you use this dataset, please cite:
 
 ---
 
+### 🫁 COVIDx CT: A Large-Scale Chest CT Dataset for COVID-19 Detection
+
+**Study**: Gunraj, H., Wang, L., & Wong, A. (2020). COVIDNet-CT: A Tailored Deep Convolutional Neural Network Design for
+Detection of COVID-19 Cases From Chest CT Images. *Frontiers in Medicine*, 7, 1025. & Gunraj, H., Sabri, A., Koff, D., &
+Wong, A. (2022). COVID-Net CT-2: Enhanced Deep Neural Networks for Detection of COVID-19 From Chest CT Images Through
+Bigger, More Diverse Learning. *Frontiers in Medicine*, 8, 729287.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                  |
+|-------------------------|----------------------------------------------------------|
+| **📛 Title**            | COVIDx CT (COVIDx CT-3A / CT-3B)                         |
+| **🔗 Source**           | https://www.kaggle.com/datasets/hgunraj/covidxct         |
+| **🫁 Target Organ**     | Lungs / Chest                                            |
+| **📅 Last Accessed**    | June 20, 2026                                            |
+| **🎯 Supported Tasks**  | 🏷️ Classification, 📍 Localization                      |
+| **📐 Image Size**       | Variable (CT slices)                                     |
+| **📁 Data Format**      | Images (PNG/JPG) and TXT label files with bounding boxes |
+| **👥 Demographics**     | ❌ Not included (de-identified)                           |
+| **🔄 Train/Test Split** | ✅ Yes (Train/Val/Test)                                   |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                                                                            |
+|----------------------------|------------------------------------------------------------------------------------|
+| **🖼️ Total Images**       | 425,024 CT slices (CT-3A) / 431,205 CT slices (CT-3B) from 5,312 / 6,068 patients  |
+| **🔬 Imaging Modality**    | Computed Tomography (CT)                                                           |
+| **🎨 Color Format**        | Grayscale                                                                          |
+| **📦 Variants**            | "A" (confirmed diagnoses) and "B" (includes weakly verified cases, train set only) |
+| **🏥 Source Institutions** | Multi-source (CNCB, TCIA, LIDC-IDRI, Radiopaedia, MosMedData, STOIC, etc.)         |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification
+- **Number of Classes**: 3️⃣
+- ✅ Normal
+- 🫁 Pneumonia
+- 🦠 COVID-19
+
+#### 📍 Localization Task Details
+
+- **Task Type**: Bounding box localization for the body region
+- **Annotation Format**: `filename class xmin ymin xmax ymax` in TXT files (classes are zero-indexed: Normal=0,
+  Pneumonia=1, COVID-19=2)
+
+**📊 Dataset Distribution (CT-3A Image Count)**:
+| Split | Normal | Pneumonia | COVID-19 | Total |
+|-------|--------|-----------|----------|---------|
+| Train | 35,996 | 26,970 | 294,552 | 357,518 |
+| Val | 17,570 | 8,008 | 8,147 | 33,725 |
+| Test | 17,922 | 7,965 | 7,894 | 33,781 |
+
+> **ℹ️ Note**: The "B" variant adds weakly verified cases exclusively to the training set (300,733 COVID-19 images).
+> Validation and testing sets remain identical to the "A" variant.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for COVID-19 detection and localization from chest CT
+- ✅ Large-scale, multi-source composition supports research on domain generalization across diverse CT protocols
+- ✅ Bounding box annotations enable joint classification and localization (object detection) tasks
+- ✅ Predefined train/val/test splits enable reproducible benchmarking
+- 📚 Required to cite the original *Frontiers in Medicine* publications when using this dataset
+- 🔐 Distributed under CC BY-NC-SA 4.0; verify constituent dataset licenses for commercial use
+
+#### ⚠️ Usage Considerations
+
+| Aspect                        | Recommendation                                                                                                       |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **🔍 Severe Class Imbalance** | COVID-19 class heavily dominates the training set; apply class-weighted loss, focal loss, or undersampling           |
+| **📦 Variant Selection**      | Use "A" variant for strictly confirmed diagnoses; use "B" variant to maximize training data diversity                |
+| **🎨 Source Heterogeneity**   | Images originate from multiple global institutions; consider domain adaptation or stain/intensity normalization      |
+| **📐 Resolution Variance**    | CT slices vary in dimensions and slice thickness; standardize input dimensions (e.g., 224x224 or 512x512)            |
+| **🔐 Licensing Compliance**   | Aggregated from multiple sources (e.g., MosMedData is CC BY-NC-ND 3.0); ensure downstream use respects all licenses  |
+| **🧭 Clinical Translation**   | Model performance on this curated dataset may not directly translate to real-world screening; validate prospectively |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Parse metadata**: Read `{train,val,test}_COVIDx_CT-3A.txt` to map image filenames to classes and bounding box
+   coordinates.
+2. **Standardize geometry**: Resize CT slices to uniform dimensions while preserving aspect ratio; consider windowing (
+   e.g., Hounsfield units) if raw DICOM/HU data is reconstructed.
+3. **Handle bounding boxes**: Scale bounding box coordinates proportionally to match the resized image dimensions.
+4. **Intensity normalization**: Apply standard CT windowing (e.g., lung window or mediastinal window) and scale pixel
+   values to [0, 1] or [-1, 1].
+5. **Class-aware augmentation **(training only): Incorporate rotation, flipping, and elastic deformations; apply
+   stronger augmentation to minority classes (Normal, Pneumonia).
+6. **Stratified evaluation**: Report per-class precision, recall, F1-score, and mAP (mean Average Precision) for
+   bounding box localization.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/haydengunraj/covidx-ct
+- **GitHub Repository**: https://github.com/haydengunraj/COVIDNet-CT (for dataset generation scripts and models)
+- **Related Datasets**:
+    - [COVID-19 Lung CT Scans](https://www.kaggle.com/datasets/luisblanche/covid19-lung-ct-scans)
+    - [MosMedData](https://www.kaggle.com/datasets/mikhailma/covid19-ct-scans)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{gunraj2020covidnet,
+    title = {Covidnet-ct: A tailored deep convolutional neural network design for detection of covid-19 cases from chest ct images},
+    author = {Gunraj, Hayden and Wang, Linda and Wong, Alexander},
+    journal = {Frontiers in medicine},
+    volume = {7},
+    pages = {608525},
+    year = {2020},
+    publisher = {Frontiers}
+}
+
+@article{gunraj2022covid,
+    title = {Covid-net ct-2: Enhanced deep neural networks for detection of covid-19 from chest ct images through bigger, more diverse learning},
+    author = {Gunraj, Hayden and Sabri, Ali and Koff, David and Wong, Alexander},
+    journal = {Frontiers in Medicine},
+    volume = {8},
+    pages = {729287},
+    year = {2022},
+    publisher = {Frontiers Media SA}
+}
+```
+
+---
+
+### 🧠 Brain Tumor Dataset (Jun Cheng)
+
+**Study**: Cheng, J. (2024). brain tumor dataset. Figshare.
+
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                       |
+|-------------------------|---------------------------------------------------------------|
+| **📛 Title**            | Brain Tumor Dataset                                           |
+| **🔗 Source**           | https://doi.org/10.6084/m9.figshare.1512427                   |
+| **🧠 Target Organ**     | Brain                                                         |
+| **📅 Last Accessed**    | June 20, 2026                                                 |
+| **🎯 Supported Tasks**  | 🏷️ Classification                                            |
+| **📐 Image Size**       | Variable (original .mat files; standardization recommended)   |
+| **📁 Data Format**      | .mat files (MATLAB), convertible to JPG/PNG via provided code |
+| **👥 Demographics**     | ❌ Not included (de-identified)                                |
+| **🔄 Train/Test Split** | ✅ Yes (Cross-validation indices provided in `cvind.mat`)      |
+
+#### 📊 Dataset Composition
+
+| Category                | Details                                                        |
+|-------------------------|----------------------------------------------------------------|
+| **🖼️ Total Images**    | 3,064 T1-weighted contrast-enhanced MRI scans                  |
+| **🏥 Imaging Modality** | T1-weighted contrast-enhanced Magnetic Resonance Imaging (MRI) |
+| **🎨 Color Format**     | Grayscale                                                      |
+| **📦 Total Size**       | ~838.77 MB (compressed across 4 ZIP archives)                  |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification
+- **Number of Classes**: 3️⃣
+- 🧠 Meningioma
+- 🧠 Glioma
+- 🧠 Pituitary tumor
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking convolutional neural networks (CNNs) and transfer learning architectures
+- ✅ Cross-validation indices (`cvind.mat`) enable reproducible k-fold cross-validation
+- ✅ Images are stored in .mat format; requires MATLAB or Python (e.g., `scipy.io.loadmat`) to load
+- ✅ Provided MATLAB code can convert .mat files to standard image formats (e.g., JPG)
+- 📚 Required to cite the original Figshare repository when using this dataset in publications
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution or adaptation
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                      |
+|----------------------------|-------------------------------------------------------------------------------------|
+| **📦 Data Format**         | Images are stored as .mat files; ensure appropriate libraries are installed to load |
+| **🔍 Class Distribution**  | Verify class balance across the 3 tumor types; consider class-weighted loss         |
+| **📐 Resolution Variance** | Original scans may vary in dimensions; apply uniform resizing prior to training     |
+| **🧪 Validation Strategy** | Utilize the provided `cvind.mat` for standardized cross-validation benchmarking     |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load .mat files**: Use `scipy.io.loadmat` in Python or native MATLAB functions to extract image data.
+2. **Convert formats **(optional): Use the provided MATLAB script or a Python equivalent to save images as JPG/PNG.
+3. **Standardize input format**: Convert all images to a consistent color space (single-channel grayscale) and fixed
+   resolution (e.g., 224x224 or 256x256).
+4. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+5. **Cross-validation splitting**: Load `cvind.mat` to assign images to specific folds for training and validation.
+6. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+7. **Stratified evaluation**: Report per-class metrics (precision, recall, F1-score) to assess performance across tumor
+   subtypes.
+
+#### 🔗 Associated Resources
+
+- **Figshare Repository**: https://doi.org/10.6084/m9.figshare.1512427
+- **Related Datasets**:
+    - [Brain Tumor MRI Dataset (Glioma, Meningioma, Pituitary, No Tumor)](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{cheng2024braintumor,
+    author = {Cheng, Jun},
+    title = {brain tumor dataset},
+    year = {2024},
+    publisher = {Figshare},
+    doi = {10.6084/m9.figshare.1512427},
+    url = {https://doi.org/10.6084/m9.figshare.1512427}
+}
+```
+
+---
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
@@ -2137,4 +2354,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: May 24, 2026*
+*🕒 Last Updated: June 20, 2026*
