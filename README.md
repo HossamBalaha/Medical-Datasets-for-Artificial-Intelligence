@@ -1,7 +1,7 @@
 # Medical AI Datasets Repository
 
 ![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation-blue)
-![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification%20%7C%20COVID--19%20%7C%20CT%20%7C%20Brain%20Tumor%20%7C%20MRI-blue)
+![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification%20%7C%20COVID--19%20%7C%20CT%20%7C%20Brain%20Tumor%20%7C%20MRI%20%7C%20Tuberculosis%20%7C%20OCT-blue)
 
 ## 📋 Dataset Summary
 
@@ -25,6 +25,9 @@
 | [🦠 Paratuberculosis Histopathology Images](#-paratuberculosis-histopathology-images-dataset)                                                         | 🐄 Intestine (Veterinary) | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Paratuberculosis-Positive)                                                                           | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zjhymwjtxv/3)                                        |
 | [🫁 COVIDx CT: Large-Scale Chest CT for COVID-19](#-covidx-ct-a-large-scale-chest-ct-dataset-for-covid-19-detection)                                  | 🫁 Lungs / Chest          | 🏷️ Classification, 📍 Localization                          | 3️⃣ Multiclass (Normal, Pneumonia, COVID-19)                                                                             | ✅ Train/Val/Test                           | 📅 Jun 20, 2026 | [🔗 Source](https://www.kaggle.com/datasets/haydengunraj/covidx-ct)                                 |
 | [🧠 Brain Tumor Dataset (Jun Cheng)](#-brain-tumor-dataset-jun-cheng)                                                                                 | 🧠 Brain                  | 🏷️ Classification                                           | 3️⃣ Multiclass (Meningioma, Glioma, Pituitary)                                                                           | ✅ Cross-validation (cvind.mat)             | 📅 Jun 20, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.1512427)                                            |
+| [🫁 Sakha-TB](#-sakha-tb)                                                                                                                             | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](#)                                                                                      |
+| [🫁 Tuberculosis (TB) Chest X-ray Database](#-tuberculosis-tb-chest-x-ray-database)                                                                   | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-database)     |
+| [👁️🫁 Labeled OCT and Chest X-Ray Images](#-labeled-optical-coherence-tomography-oct-and-chest-x-ray-images-for-classification)                      | 👁️ Eye / 🫁 Lungs        | 🏷️ Multiclass Classification                                | 4️⃣ Multiclass (CNV, DME, DRUSEN, NORMAL)                                                                                | ✅ Train/Test                               | 📅 Jun 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/rscbjbr9sj/2)                                        |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -2320,6 +2323,300 @@ If you use this dataset, please cite:
 
 ---
 
+### 🫁 Sakha-TB
+
+**Study**: Pchelintsev, Ya, Khvostikov, A, Buchatskaia, O, Nikiforova, N, Shepeleva, L, Prokopev, E, Parolina, L, &
+Krylov, A. (2022). Robustness Analysis of Chest X-Ray Computer Tuberculosis Diagnosis. *Computational Mathematics and
+Modeling*, 33(4), 472-486.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                   |
+|-------------------------|---------------------------------------------------------------------------|
+| **📛 Title**            | Sakha-TB                                                                  |
+| **🔗 Source**           | https://imaging.cs.msu.ru/en/research/TB/Sakha-TB                         |
+| **🫁 Target Organ**     | Lungs / Chest                                                             |
+| **📅 Last Accessed**    | June 24, 2026                                                             |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification                                                 |
+| **📐 Image Size**       | Variable (16-bit and 8-bit PNG)                                           |
+| **📁 Data Format**      | PNG (Full: DICOM converted; Compressed: cropped, downsampled, normalized) |
+| **👥 Demographics**     | ✅ Balanced by age and gender (to some extent)                             |
+| **🔄 Train/Test Split** | ❌ Not provided (400 Normal, 400 TB)                                       |
+
+#### 📊 Dataset Composition
+
+| Category                | Details                                                                                                                                              |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **🖼️ Total Images**    | 800 frontal chest X-rays                                                                                                                             |
+| **🏥 Imaging Modality** | Radiographic X-ray (Frontal)                                                                                                                         |
+| **🎨 Color Format**     | Grayscale (16-bit and 8-bit)                                                                                                                         |
+| **📦 Variants**         | • Full version (8.73 GB): DICOM converted to PNG with bit depth preserved<br>• Compressed version (0.27 GB): Cropped, downsampled, normalized, 8-bit |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification (Tuberculosis vs. Normal)
+- **Number of Classes**: 2️⃣
+- 🫁 Tuberculosis
+- ✅ Normal
+
+**📊 Dataset Distribution**:
+| Class | Image Count |
+|---|---|
+| ✅ Normal | 400 |
+| 🫁 Tuberculosis | 400 |
+| **Total** | **800** |
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for TB screening from chest X-rays
+- ✅ Includes both full-resolution (16-bit) and compressed (8-bit) variants for different computational constraints
+- ✅ Balanced class distribution supports stable training without aggressive resampling
+- 📚 Required to cite the original *Computational Mathematics and Modeling* publication when using this dataset
+- 🔐 Distributed under Creative Commons Attribution 4.0 International license
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                                            |
+|----------------------------|-----------------------------------------------------------------------------------------------------------|
+| **📦 Data Format**         | Full version requires handling 16-bit PNGs; ensure libraries support high bit-depth                       |
+| **🔍 Class Balance**       | Perfectly balanced (1:1 ratio); standard cross-entropy is sufficient                                      |
+| **📐 Resolution Variance** | Compressed version is downsampled; verify if resolution is sufficient for fine-grained feature extraction |
+| **🔐 Licensing**           | CC BY 4.0; attribution required for redistribution or adaptation                                          |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Select variant**: Choose the full version (16-bit) for maximum detail or the compressed version (8-bit) for faster
+   iteration.
+2. **Standardize input format**: Convert all images to a consistent color space (single-channel grayscale) and fixed
+   resolution (e.g., 224x224 or 512x512).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+5. **Stratified evaluation**: Report per-class metrics (precision, recall, F1-score, AUC-ROC) to assess diagnostic
+   performance.
+
+#### 🔗 Associated Resources
+
+- **Full Version Download**: OneDrive | Yandex Disk (8.73 GB)
+- **Compressed Version Download**: OneDrive | Yandex Disk (0.27 GB)
+- **Institutional Affiliation**: Laboratory of Mathematical Methods of Image Processing, Lomonosov Moscow State
+  University
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{pchelintsev2022robustness,
+  title={Robustness Analysis of Chest X-Ray Computer Tuberculosis Diagnosis},
+  author={Pchelintsev, Ya and Khvostikov, A and Buchatskaia, O and Nikiforova, N and Shepeleva, L and Prokopev, E and Parolina, L and Krylov, A},
+  journal={Computational Mathematics and Modeling},
+  volume={33},
+  number={4},
+  pages={472--486},
+  year={2022},
+  publisher={Springer}
+}
+```
+
+---
+
+### 🫁 Tuberculosis (TB) Chest X-ray Database
+
+**Study**: Rahman, T., Khandakar, A., Kadir, M. A., Islam, K. R., Islam, K. F., Mahbub, Z. B., Ayari, M. A., &
+Chowdhury, M. E. H. (2020). Reliable Tuberculosis Detection using Chest X-ray with Deep Learning, Segmentation and
+Visualization. *IEEE Access*, 8, 191586-191601.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                           |
+|-------------------------|-----------------------------------------------------------------------------------|
+| **📛 Title**            | Tuberculosis (TB) Chest X-ray Database                                            |
+| **🔗 Source**           | https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset |
+| **🫁 Target Organ**     | Lungs / Chest                                                                     |
+| **📅 Last Accessed**    | June 24, 2026                                                                     |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification                                                         |
+| **📐 Image Size**       | Variable (Chest X-rays)                                                           |
+| **📁 Data Format**      | Images (folders), metadata.xlsx                                                   |
+| **👥 Demographics**     | ❌ Not included                                                                    |
+| **🔄 Train/Test Split** | ❌ Not provided (700 public TB, 2800 NIAID TB, 3500 Normal)                        |
+
+#### 📊 Dataset Composition
+
+| Category                | Details                                                                            |
+|-------------------------|------------------------------------------------------------------------------------|
+| **🖼️ Total Images**    | 4,200 publicly accessible chest X-rays                                             |
+| **🏥 Imaging Modality** | Radiographic X-ray (Frontal)                                                       |
+| **🎨 Color Format**     | Grayscale / RGB (scan-dependent)                                                   |
+| **📦 Sources**          | NLM (Montgomery, Shenzhen), Belarus Set, NIAID TB Portal, RSNA Pneumonia Challenge |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification (Tuberculosis vs. Normal)
+- **Number of Classes**: 2️⃣
+- 🫁 Tuberculosis
+- ✅ Normal
+
+**📊 Dataset Distribution**:
+
+| Class           | Image Count | Notes                                                         |
+|-----------------|-------------|---------------------------------------------------------------|
+| ✅ Normal        | 3,500       | Aggregated from multiple sources                              |
+| 🫁 Tuberculosis | 700         | Publicly accessible; 2,800 more available via NIAID agreement |
+| **Total**       | **4,200**   | —                                                             |
+
+#### 💡 Usage Notes
+
+- ✅ Largest publicly available TB Chest X-ray database for benchmarking deep learning models
+- ✅ Aggregated from multiple global institutions (NLM, Belarus, NIAID, RSNA) supports domain generalization studies
+- ✅ Includes metadata files for image references and provenance tracking
+- 📚 Required to cite the original *IEEE Access* publication when using this dataset
+- 🔐 Data files © Original Authors; verify specific terms for each constituent source
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                                             |
+|----------------------------|------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**     | Severe imbalance (3500 Normal vs. 700 TB); apply class-weighted loss or oversampling                       |
+| **📦 Data Heterogeneity**  | Sourced from multiple databases with varying resolutions and protocols; consider domain adaptation         |
+| **🔐 Licensing**           | Aggregated dataset; ensure compliance with individual source licenses (e.g., NIAID data-sharing agreement) |
+| **🧪 Validation Strategy** | No predefined split; implement patient-aware or source-aware partitioning to prevent data leakage          |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load directory structure**: Utilize framework-native utilities to ingest the `Normal` and `Tuberculosis`
+   subfolders.
+2. **Standardize input format**: Convert all images to a consistent color space (single-channel grayscale) and fixed
+   resolution (e.g., 224x224 or 256x256).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+5. **Stratified evaluation**: Report per-class metrics (precision, recall, F1-score, AUC-ROC) to assess performance
+   given the class imbalance.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset
+- **NIAID TB Portal**: https://tbportals.niaid.nih.gov/download-data (for additional 2,800 TB images)
+- **Related Publications**: Rahman et al., "Reliable Tuberculosis Detection using Chest X-ray with Deep Learning,
+  Segmentation and Visualization," *IEEE Access*, 2020.
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{rahman2020reliable,
+  title={Reliable tuberculosis detection using chest X-ray with deep learning, segmentation and visualization},
+  author={Rahman, Tawsifur and Khandakar, Amith and Kadir, Muhammad Abdul and Islam, Khandaker Rejaul and Islam, Khandakar F and Mazhar, Rashid and Hamid, Tahir and Islam, Mohammad Tariqul and Kashem, Saad and Mahbub, Zaid Bin and others},
+  journal={Ieee Access},
+  volume={8},
+  pages={191586--191601},
+  year={2020},
+  publisher={IEEE}
+}
+```
+
+---
+
+### 👁️🫁 Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification
+
+**Study**: Kermany, D. S., Goldbaum, M., Cai, W., Cordeiro, N. M., Baxter, J. S., et al. (2018). Identifying Medical
+Diagnoses and Treatable Diseases by Image-Based Deep Learning. *Cell*, 172(5), 1122-1131.e9.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                              |
+|-------------------------|--------------------------------------------------------------------------------------|
+| **📛 Title**            | Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification |
+| **🔗 Source**           | https://data.mendeley.com/datasets/rscbjbr9sj/2                                      |
+| **👁️🫁 Target Organ**  | Eye (Retina) / Lungs (Chest)                                                         |
+| **📅 Last Accessed**    | June 24, 2026                                                                        |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification                                                        |
+| **📐 Image Size**       | Variable (OCT and Chest X-rays)                                                      |
+| **📁 Data Format**      | Images in directories                                                                |
+| **👥 Demographics**     | ❌ Not included (independent patients)                                                |
+| **🔄 Train/Test Split** | ✅ Yes (Training and testing sets of independent patients)                            |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                                  |
+|---------------------------|--------------------------------------------------------------------------|
+| **🖼️ Total Images**      | ~108,000 OCT images + Chest X-rays (exact X-ray count varies by version) |
+| **🏥 Imaging Modality**   | Optical Coherence Tomography (OCT) / Radiographic X-ray                  |
+| **🎨 Color Format**       | Grayscale / RGB (scan-dependent)                                         |
+| **🏥 Source Institution** | University of California San Diego                                       |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of retinal diseases (OCT) and chest conditions (X-ray)
+- **Number of Classes **(OCT): 4️⃣
+- 🩸 CNV (Choroidal Neovascularization)
+- 💧 DME (Diabetic Macular Edema)
+- 🟡 DRUSEN
+- ✅ NORMAL
+- **Number of Classes **(X-Ray): 2️⃣ (Normal vs. Pneumonia)
+
+**📊 Dataset Distribution **(OCT)
+
+| Split       | Image Count  | Purpose                                             |
+|-------------|--------------|-----------------------------------------------------|
+| 🟢 Training | ~100,000     | Model training and development                      |
+| 🔴 Testing  | ~8,000       | Final performance evaluation (independent patients) |
+| **Total**   | **~108,000** | —                                                   |
+
+#### 💡 Usage Notes
+
+- ✅ Benchmark dataset for multi-disease image-based deep learning classification
+- ✅ Patient-independent train/test splits ensure rigorous evaluation without data leakage
+- ✅ Supports research on multi-modal or multi-organ diagnostic AI systems
+- 📚 Required to cite the original *Cell* publication and Mendeley Data repository when using this dataset
+- 🔐 Distributed via Mendeley Data; verify usage terms for clinical deployment
+
+#### ⚠️ Usage Considerations
+
+| Aspect                    | Recommendation                                                                                                    |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**    | Verify per-class distribution; apply class-weighted loss or stratified sampling if needed                         |
+| **📦 Data Organization**  | Images are organized by disease label; ensure proper directory parsing for framework-native loaders               |
+| **🧪 Multi-Organ Focus**  | Dataset contains both OCT and X-ray images; separate preprocessing pipelines may be required for each modality    |
+| **🔐 Ethical Compliance** | Dataset contains de-identified clinical imagery; adhere to institutional review requirements for derivative works |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Separate modalities**: Isolate OCT and Chest X-ray directories to apply modality-specific preprocessing.
+2. **Standardize input format**: Convert all images to a consistent color space and fixed resolution (e.g., 224x224 or
+   256x256).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+5. **Stratified evaluation**: Report per-class metrics (precision, recall, F1-score) to assess performance across
+   different disease categories.
+
+#### 🔗 Associated Resources
+
+- **Mendeley Data Repository**: https://data.mendeley.com/datasets/rscbjbr9sj/2
+- **Related Publications**: Kermany et al., "Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep
+  Learning," *Cell*, 2018.
+- **Institutional Affiliation**: University of California San Diego
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{kermany2018labeled,
+  author={Kermany, Daniel and Zhang, Kang and Goldbaum, Michael},
+  title={Labeled Optical Coherence Tomography {(OCT)} and Chest {X-Ray} Images for Classification},
+  year={2018},
+  publisher={Mendeley Data},
+  version={2},
+  doi={10.17632/rscbjbr9sj.2}
+}
+```
+
+---
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
@@ -2354,4 +2651,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: June 20, 2026*
+*🕒 Last Updated: June 24, 2026*
