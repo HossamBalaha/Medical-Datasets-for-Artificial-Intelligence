@@ -28,6 +28,8 @@
 | [🫁 Sakha-TB](#-sakha-tb)                                                                                                                             | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](#)                                                                                      |
 | [🫁 Tuberculosis (TB) Chest X-ray Database](#-tuberculosis-tb-chest-x-ray-database)                                                                   | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-database)     |
 | [👁️🫁 Labeled OCT and Chest X-Ray Images](#-labeled-optical-coherence-tomography-oct-and-chest-x-ray-images-for-classification)                      | 👁️ Eye / 🫁 Lungs        | 🏷️ Multiclass Classification                                | 4️⃣ Multiclass (CNV, DME, DRUSEN, NORMAL)                                                                                | ✅ Train/Test                               | 📅 Jun 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/rscbjbr9sj/2)                                        |
+| [🫁 CheXpert: A Large Chest Radiograph Dataset](#-chexpert-a-large-chest-radiograph-dataset-with-uncertainty-labels-and-expert-comparison)            | 🫁 Lungs / Chest          | 🏷️ Multiclass / Multi-label Classification                  | 14️⃣ Multi-label (14 Observations)                                                                                       | ✅ Train/Val/Test                           | 📅 Jun 26, 2026 | [🔗 Source](https://stanfordmlgroup.github.io/competitions/chexpert/)                               |
+| [🫁 COVID-19 Radiography Database](#-covid-19-radiography-database)                                                                                   | 🫁 Lungs / Chest          | 🏷️ Multiclass Classification, 🎭 Segmentation               | 4️⃣ Multiclass (COVID-19, Lung Opacity, Normal, Viral Pneumonia)                                                         | ❌ No split                                 | 📅 Jun 26, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)            |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -2617,6 +2619,231 @@ If you use this dataset, please cite:
 
 ---
 
+### 🫁 CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison
+
+**Study**: Irvin, J., Rajpurkar, P., Ko, M., Yu, S. C., Ciurea-Ilcus, S., Chute, C., ... & Ng, A. Y. (2019). CheXpert: A
+Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison. *Proceedings of the AAAI Conference on
+Artificial Intelligence*, 33(01), 590-597.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------|
+| **📛 Title**            | CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison |
+| **🔗 Source**           | https://stanfordmlgroup.github.io/competitions/chexpert/                                 |
+| **🫁 Target Organ**     | Lungs / Chest                                                                            |
+| **📅 Last Accessed**    | June 26, 2026                                                                            |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass / Multi-label Classification                                              |
+| **📐 Image Size**       | Variable (Chest X-rays)                                                                  |
+| **📁 Data Format**      | JPEG (.jpg) / DICOM                                                                      |
+| **👥 Demographics**     | ❌ Not included (de-identified)                                                           |
+| **🔄 Train/Test Split** | ✅ Yes (Train / Validation / Test)                                                        |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                        |
+|---------------------------|------------------------------------------------|
+| **🖼️ Total Images**      | 224,316 chest radiographs from 65,240 patients |
+| **🏥 Imaging Modality**   | Radiographic X-ray (Frontal and Lateral views) |
+| **🎨 Color Format**       | Grayscale                                      |
+| **🏥 Source Institution** | Stanford Hospital                              |
+| **📅 Collection Period**  | October 2002 – July 2017                       |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multi-label classification of 14 radiological observations
+- **Number of Classes**: 14️⃣ (No Finding, Enlarged Cardiomediastinum, Cardiomegaly, Lung Opacity, Lung Lesion, Edema,
+  Consolidation, Pneumonia, Atelectasis, Pneumothorax, Pleural Effusion, Pleural Other, Fracture, Support Devices)
+- **Label Types**: Positive (1), Negative (0), Uncertain (-1), or Blank (unmentioned)
+- **Competition Tasks**: 5️⃣ (Atelectasis, Cardiomegaly, Consolidation, Edema, Pleural Effusion)
+
+**📊 Dataset Distribution**:
+
+| Split     | Image Count | Purpose                               |
+|-----------|-------------|---------------------------------------|
+| 🟢 Train  | 223,816     | Model training and development        |
+| 🟡 Valid  | 200         | Hyperparameter tuning                 |
+| 🔴 Test   | 500         | Final performance evaluation (Expert) |
+| **Total** | **224,316** | —                                     |
+
+> **ℹ️ Note**: The training set features uncertainty labels extracted via an automated rule-based labeler from free-text
+> radiology reports. The test set contains strong ground truth from a majority vote of 8 board-certified radiologists.
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for automated chest X-ray interpretation
+- ✅ Features uncertainty labels to handle ambiguous radiology report statements
+- ✅ Includes a radiologist-labeled reference standard evaluation set for rigorous benchmarking
+- ✅ Supports research on multi-label classification and uncertainty modeling in medical imaging
+- 📚 Required to cite the original AAAI publication and Stanford ML Group when using this dataset
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                              |
+|------------------------------|-------------------------------------------------------------------------------------------------------------|
+| **🔍 Label Uncertainty**     | Training labels contain uncertainty; explore approaches like U-Ignore, U-Zeroes, U-Ones, or U-MultiClass    |
+| **🧪 Multi-Label Nature**    | Images can have multiple concurrent pathologies; use appropriate loss functions (e.g., BCE with logits)     |
+| **📐 View Handling**         | Dataset contains both frontal and lateral views; consider view-agnostic or multi-view architectures         |
+| **🔐 Licensing**             | Verify usage terms on the Stanford AIMI website; typically restricted to non-commercial research use        |
+| **🧭 Domain Generalization** | Sourced from a single institution (Stanford Hospital); validate on external cohorts for clinical deployment |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Parse metadata**: Load the provided CSV files to map image paths to the 14 observation labels and uncertainty
+   flags.
+2. **Standardize input format**: Convert all images to a consistent color space (single-channel grayscale) and fixed
+   resolution (e.g., 320x320 or 512x512).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+4. **Handle uncertainty**: Decide on a strategy for uncertain labels (e.g., U-MultiClass treats uncertainty as a
+   separate class).
+5. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+6. **Stratified evaluation**: Report per-class AUC-ROC, sensitivity, and specificity, especially for the 5 competition
+   tasks.
+
+#### 🔗 Associated Resources
+
+- **Stanford ML Group Competition Page**: https://stanfordmlgroup.github.io/competitions/chexpert/
+- **Stanford AIMI Dataset**: https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x
+- **Test Set Labels & Links**: https://github.com/rajpurkarlab/cheXpert-test-set-labels
+- **CheXpert Labeler**: https://github.com/stanfordmlgroup/chexpert-labeler
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@inproceedings{irvin2019chexpert,
+  title={Chexpert: A large chest radiograph dataset with uncertainty labels and expert comparison},
+  author={Irvin, Jeremy and Rajpurkar, Pranav and Ko, Michael and Yu, Yifan and Ciurea-Ilcus, Silviana and Chute, Chris and Marklund, Henrik and Haghgoo, Behzad and Ball, Robyn and Shpanskaya, Katie and others},
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  volume={33},
+  number={01},
+  pages={590--597},
+  year={2019}
+}
+```
+
+---
+
+### 🫁 COVID-19 Radiography Database
+
+**Study**: Chowdhury, M. E. H., Rahman, T., Khandakar, A., Mazhar, R., Kadir, M. A., Mahbub, Z. B., ... & Islam, M. T. (
+2020). Can AI help in screening Viral and COVID-19 pneumonia?. *IEEE Access*, 8, 132665-132676.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                     |
+|-------------------------|-----------------------------------------------------------------------------|
+| **📛 Title**            | COVID-19 Radiography Database                                               |
+| **🔗 Source**           | https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database |
+| **🫁 Target Organ**     | Lungs / Chest                                                               |
+| **📅 Last Accessed**    | June 26, 2026                                                               |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification, 🎭 Segmentation                              |
+| **📐 Image Size**       | 299 × 299 pixels (fixed)                                                    |
+| **📁 Data Format**      | PNG (.png) for images and masks, XLSX (.xlsx) for metadata                  |
+| **👥 Demographics**     | ❌ Not included (de-identified)                                              |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                      |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                                                  |
+|----------------------------|----------------------------------------------------------|
+| **🖼️ Total Images**       | 21,165 chest X-ray images                                |
+| **🏥 Imaging Modality**    | Radiographic X-ray                                       |
+| **🎨 Color Format**        | PNG (Grayscale / RGB)                                    |
+| **🏥 Source Institutions** | Qatar University, University of Dhaka, and collaborators |
+| **📦 Total Size**          | ~806.84 MB                                               |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of lung conditions
+- **Number of Classes**: 4️⃣
+- 🦠 COVID-19
+- 🫁 Lung Opacity (Non-COVID lung infection)
+- ✅ Normal
+- 🦠 Viral Pneumonia
+
+**📊 Dataset Distribution**:
+
+| Class              | Image Count | Description                                 |
+|--------------------|-------------|---------------------------------------------|
+| 🦠 COVID-19        | 3,616       | Positive cases of SARS-CoV-2 infection      |
+| ✅ Normal           | 10,192      | Healthy lung scans                          |
+| 🫁 Lung Opacity    | 6,012       | Non-COVID lung infections (e.g., bacterial) |
+| 🦠 Viral Pneumonia | 1,345       | Viral pneumonia cases                       |
+| **Total**          | **21,165**  | —                                           |
+
+#### 🎭 Segmentation Task Details
+
+- **Task Type**: Binary semantic segmentation of lung regions
+- **Annotation Targets**: Ground-truth lung segmentation masks for the entire dataset
+- **Format**: PNG masks corresponding to the chest X-ray images
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking deep learning models for COVID-19 and pneumonia detection
+- ✅ Includes ground-truth lung segmentation masks for joint classification and segmentation tasks
+- ✅ Winner of the COVID-19 Dataset Award by the Kaggle Community
+- ✅ Fixed 299×299 resolution simplifies preprocessing for standard CNN architectures
+- 📚 Required to cite the original *IEEE Access* publications when using this dataset
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                               |
+|------------------------------|--------------------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**       | Normal class heavily dominates; apply class-weighted loss, focal loss, or undersampling                      |
+| **🧪 Multi-Class Nature**    | Distinguishing between COVID-19, Viral Pneumonia, and other Lung Opacities requires careful feature learning |
+| **📐 Resolution**            | Images are fixed at 299×299; ensure model input layers match or resize accordingly                           |
+| **🔐 Licensing**             | Data files © Original Authors; verify specific terms for commercial or clinical deployment                   |
+| **🧭 Domain Generalization** | Aggregated from multiple global sources; validate on external cohorts for clinical deployment                |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load directory structure**: Utilize framework-native utilities to ingest the `COVID`, `Lung_Opacity`, `Normal`, and
+   `Viral Pneumonia` subfolders.
+2. **Standardize input format**: Confirm uniform 299×299 dimensions; convert to single-channel grayscale if desired.
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide mean and standard
+   deviation.
+4. **Load segmentation masks**: Align lung mask PNGs with their corresponding X-ray images for segmentation tasks.
+5. **Augmentation **(training only): Incorporate rotation, flipping, and intensity jittering to improve model
+   generalization.
+6. **Stratified evaluation**: Report per-class precision, recall, F1-score, and AUC-ROC to assess performance given the
+   class imbalance.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database
+- **Related Dataset**: COVID-QU-Ex Dataset (33,920 images with lung masks)
+- **Related Publications**:
+    - Chowdhury, M. E. H., et al. (2020). "Can AI help in screening Viral and COVID-19 pneumonia?" *IEEE Access*.
+    - Rahman, T., et al. (2020). "Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest
+      X-ray Images."
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{chowdhury2020can,
+  title={Can AI help in screening viral and COVID-19 pneumonia?},
+  author={Chowdhury, Muhammad EH and Rahman, Tawsifur and Khandakar, Amith and Mazhar, Rashid and Kadir, Muhammad Abdul and Mahbub, Zaid Bin and Islam, Khandakar Reajul and Khan, Muhammad Salman and Iqbal, Atif and Al Emadi, Nasser and others},
+  journal={Ieee Access},
+  volume={8},
+  pages={132665--132676},
+  year={2020},
+  publisher={IEEE}
+}
+@article{rahman2021exploring,
+  title={Exploring the effect of image enhancement techniques on COVID-19 detection using chest X-ray images},
+  author={Rahman, Tawsifur and Khandakar, Amith and Qiblawey, Yazan and Tahir, Anas and Kiranyaz, Serkan and Kashem, Saad Bin Abul and Islam, Mohammad Tariqul and Al Maadeed, Somaya and Zughaier, Susu M and Khan, Muhammad Salman and others},
+  journal={Computers in biology and medicine},
+  volume={132},
+  pages={104319},
+  year={2021},
+  publisher={Elsevier}
+}
+```
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
@@ -2651,4 +2878,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: June 24, 2026*
+*🕒 Last Updated: June 26, 2026*
