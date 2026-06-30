@@ -1,35 +1,42 @@
 # Medical AI Datasets Repository
 
 ![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation-blue)
-![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification%20%7C%20COVID--19%20%7C%20CT%20%7C%20Brain%20Tumor%20%7C%20MRI%20%7C%20Tuberculosis%20%7C%20OCT-blue)
+![Tags](https://img.shields.io/badge/tags-Medical%20Imaging%20%7C%20Classification%20%7C%20Segmentation%20%7C%20Knee%20%7C%20Osteoarthritis%20%7C%20X--ray%20%7C%20Retina%20%7C%20Diabetic%20Retinopathy%20%7C%20Fundus%20Photography%20%7C%20Ordinal%20Classification%20%7C%20COVID--19%20%7C%20CT%20%7C%20Brain%20Tumor%20%7C%20MRI%20%7C%20Tuberculosis%20%7C%20OCT%20%7C%20Skin%20%7C%20Heart%20%7C%20Urine%20%7C%20Diabetes-blue)
 
 ## 📋 Dataset Summary
 
-| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
-| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                |
-| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                        |
-| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                           |
-| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                 |
-| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                        |
-| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                 |
-| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                        |
-| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                 |
-| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection) |
-| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                |
-| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                 |
-| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                 |
-| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                       |
-| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy) |
-| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026 | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)  |
-| [🦠 Paratuberculosis Histopathology Images](#-paratuberculosis-histopathology-images-dataset)                                                         | 🐄 Intestine (Veterinary) | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Paratuberculosis-Positive)                                                                           | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zjhymwjtxv/3)                                        |
-| [🫁 COVIDx CT: Large-Scale Chest CT for COVID-19](#-covidx-ct-a-large-scale-chest-ct-dataset-for-covid-19-detection)                                  | 🫁 Lungs / Chest          | 🏷️ Classification, 📍 Localization                          | 3️⃣ Multiclass (Normal, Pneumonia, COVID-19)                                                                             | ✅ Train/Val/Test                           | 📅 Jun 20, 2026 | [🔗 Source](https://www.kaggle.com/datasets/haydengunraj/covidx-ct)                                 |
-| [🧠 Brain Tumor Dataset (Jun Cheng)](#-brain-tumor-dataset-jun-cheng)                                                                                 | 🧠 Brain                  | 🏷️ Classification                                           | 3️⃣ Multiclass (Meningioma, Glioma, Pituitary)                                                                           | ✅ Cross-validation (cvind.mat)             | 📅 Jun 20, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.1512427)                                            |
-| [🫁 Sakha-TB](#-sakha-tb)                                                                                                                             | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](#)                                                                                      |
-| [🫁 Tuberculosis (TB) Chest X-ray Database](#-tuberculosis-tb-chest-x-ray-database)                                                                   | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-database)     |
-| [👁️🫁 Labeled OCT and Chest X-Ray Images](#-labeled-optical-coherence-tomography-oct-and-chest-x-ray-images-for-classification)                      | 👁️ Eye / 🫁 Lungs        | 🏷️ Multiclass Classification                                | 4️⃣ Multiclass (CNV, DME, DRUSEN, NORMAL)                                                                                | ✅ Train/Test                               | 📅 Jun 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/rscbjbr9sj/2)                                        |
-| [🫁 CheXpert: A Large Chest Radiograph Dataset](#-chexpert-a-large-chest-radiograph-dataset-with-uncertainty-labels-and-expert-comparison)            | 🫁 Lungs / Chest          | 🏷️ Multiclass / Multi-label Classification                  | 14️⃣ Multi-label (14 Observations)                                                                                       | ✅ Train/Val/Test                           | 📅 Jun 26, 2026 | [🔗 Source](https://stanfordmlgroup.github.io/competitions/chexpert/)                               |
-| [🫁 COVID-19 Radiography Database](#-covid-19-radiography-database)                                                                                   | 🫁 Lungs / Chest          | 🏷️ Multiclass Classification, 🎭 Segmentation               | 4️⃣ Multiclass (COVID-19, Lung Opacity, Normal, Viral Pneumonia)                                                         | ❌ No split                                 | 📅 Jun 26, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)            |
+| Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                            |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------|
+| [🧠 BRISC 2025: Brain Tumor Segmentation & Classification](#-brisc-2025-annotated-dataset-for-brain-tumor-image-segmentation-and-classification)      | 🧠 Brain                  | 🏷️ Classification, 🎭 Segmentation                          | 4️⃣ Multiclass (Classification) / ⚪⚫ Binary (Segmentation)                                                               | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://www.kaggle.com/datasets/briscdataset/brisc2025/)                                  |
+| [🧠 Brain Tumor MRI Dataset](#-brain-tumor-mri-dataset-glioma-meningioma-pituitary-no-tumor)                                                          | 🧠 Brain                  | 🏷️ Classification                                           | 4️⃣ Multiclass (Glioma, Meningioma, Pituitary, No Tumor)                                                                 | ✅ Train/Test                               | 📅 Mar 28, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zwr4ntf94j/4)                                          |
+| [🦴 BTXRD: Bone Tumor X-ray Radiograph Dataset](#-btxrd-bone-tumor-x-ray-radiograph-dataset)                                                          | 🦴 Bone                   | 🏷️ Classification, 🎭 Segmentation, 📍 Localization         | Multiple (see details)                                                                                                   | ❌ No split                                 | 📅 Mar 28, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.27865398)                                             |
+| [🔬 Dartmouth Kidney Cancer Histology Dataset](#-dartmouth-kidney-cancer-histology-dataset)                                                           | 🫘 Kidney                 | 🏷️ Classification                                           | 4️⃣ Multiclass (Renal Oncocytoma, Chromophobe RCC, Clear cell RCC, Papillary RCC)                                        | ✅ Train/Val/Test                           | 📅 Apr 11, 2026 | [🔗 Source](https://bmirds.github.io/KidneyCancer/)                                                   |
+| [🔬 CRC-HGD-v1: Colorectal Cancer Histopathological Grading Dataset](#-crc-hgd-v1-colorectal-cancer-histopathological-grading-dataset)                | 🦴 Colorectal             | 🏷️ Classification (Grading)                                 | 3️⃣ Ordinal Multiclass (Grade I, Grade II, Grade III)                                                                    | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/yfp5sfj47m/2)                                          |
+| [🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology Patches](#-nct-crc-he-100k-100000-histological-images-of-human-colorectal-cancer-and-healthy-tissue) | 🦴 Colorectal             | 🏷️ Multiclass Classification                                | 9️⃣ Multiclass (ADI, BACK, DEB, LYM, MUC, MUS, NORM, STR, TUM)                                                           | ✅ Train/Val                                | 📅 Apr 12, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.1214456)                                                   |
+| [🔬 Histopathological Imaging Database for Oral Cancer Analysis](#-histopathological-imaging-database-for-oral-cancer-analysis)                       | 🗣️ Oral Cavity           | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal Epithelium, OSCC)                                                                                     | ❌ No split                                 | 📅 Apr 11, 2026 | [🔗 Source](https://data.mendeley.com/datasets/ftmp4cvtmb/2)                                          |
+| [🔬 DeepHisto: Glioma Subtype Classification from WSIs](#-deephisto-dataset-for-glioma-subtype-classification-from-whole-slide-images)                | 🧠 Brain                  | 🏷️ Classification                                           | 5️⃣ Multiclass (IDH-mutant oligodendroglioma, IDH-mutant astrocytoma, IDH-wildtype glioblastoma, Normal brain, Necrosis) | ✅ Train/Test (patient-wise)                | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.7941080)                                                   |
+| [🔬 GastroVision: Gastrointestinal Disease Detection](#-gastrovision-gastrointestinal-disease-detection)                                              | 🩺 Gastrointestinal Tract | 🏷️ Classification                                           | 2️⃣7️⃣ Multiclass (Landmarks, abnormalities, polyps, cancer, normal findings)                                            | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection)   |
+| [🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer](#-her2-ihc-40x-high-resolution-histopathology-image-dataset-for-her2-scoring-in-breast-cancer)       | 🫀 Breast                 | 🏷️ Classification                                           | 4️⃣ Ordinal Multiclass (HER2: 0, 1+, 2+, 3+)                                                                             | ✅ Train/Test (80/20, two split strategies) | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.15179608)                                                  |
+| [🔬 MSI-MSS Strong Patches: Microsatellite Status Classification](#-msi-mss-strong-patches-microsatellite-status-classification)                      | 🦴 Colorectal             | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSIMUT_strong, MSS_strong)                                                                                   | ❌ No split (user-defined)                  | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.3692380)                                                   |
+| [🔬 CRC_DX: MSI vs. MSS Classification in GI Cancer](#-crc_dx-msi-vs-mss-classification-in-gastrointestinal-cancer)                                   | 🦴 Colorectal / Gastric   | 🏷️ Binary Classification                                    | 2️⃣ Binary (MSS, MSIMUT)                                                                                                 | ✅ Train/Test (patient-wise, ~70/30)        | 📅 May 08, 2026 | [🔗 Source](https://doi.org/10.5281/zenodo.2530835)                                                   |
+| [🦴 Digital Knee X-ray Images: Knee Osteoarthritis Grading](#-digital-knee-x-ray-images-knee-osteoarthritis-grading)                                  | 🦴 Knee                   | 🏷️ Classification (Ordinal Grading)                         | 5️⃣ Ordinal Multiclass (K&L Grades 0–4: Normal, Doubtful, Mild, Moderate, Severe)                                        | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images)                         |
+| [👁️ Eyepacs, Aptos, Messidor Diabetic Retinopathy](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)                                    | 👁️ Retina                | 🏷️ Ordinal Classification (DR Grading)                      | 5️⃣ Ordinal Multiclass (DR Grades 0–4: None, Mild, Moderate, Severe, Proliferative)                                      | ✅ Train/Val/Test (80/10/10)                | 📅 May 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy)   |
+| [👁️ IDRiD: Diabetic Retinopathy – Grading](#-idrid-diabetic-retinopathy-grading-indian-dataset)                                                      | 👁️ Retina                | 🏷️ Ordinal Classification, 🎭 Segmentation, 📍 Localization | 5️⃣ DR Severity + 3️⃣ DME Severity (Ordinal Multiclass)                                                                  | ✅ Train/Test (413/103 for grading)         | 📅 May 24, 2026 | [🔗 Source](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid)    |
+| [🦠 Paratuberculosis Histopathology Images](#-paratuberculosis-histopathology-images-dataset)                                                         | 🐄 Intestine (Veterinary) | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Paratuberculosis-Positive)                                                                           | ❌ No split (user-defined)                  | 📅 May 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zjhymwjtxv/3)                                          |
+| [🫁 COVIDx CT: Large-Scale Chest CT for COVID-19](#-covidx-ct-a-large-scale-chest-ct-dataset-for-covid-19-detection)                                  | 🫁 Lungs / Chest          | 🏷️ Classification, 📍 Localization                          | 3️⃣ Multiclass (Normal, Pneumonia, COVID-19)                                                                             | ✅ Train/Val/Test                           | 📅 Jun 20, 2026 | [🔗 Source](https://www.kaggle.com/datasets/haydengunraj/covidx-ct)                                   |
+| [🧠 Brain Tumor Dataset (Jun Cheng)](#-brain-tumor-dataset-jun-cheng)                                                                                 | 🧠 Brain                  | 🏷️ Classification                                           | 3️⃣ Multiclass (Meningioma, Glioma, Pituitary)                                                                           | ✅ Cross-validation (cvind.mat)             | 📅 Jun 20, 2026 | [🔗 Source](https://doi.org/10.6084/m9.figshare.1512427)                                              |
+| [🫁 Sakha-TB](#-sakha-tb)                                                                                                                             | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](#)                                                                                        |
+| [🫁 Tuberculosis (TB) Chest X-ray Database](#-tuberculosis-tb-chest-x-ray-database)                                                                   | 🫁 Lungs / Chest          | 🏷️ Binary Classification                                    | 2️⃣ Binary (Normal, Tuberculosis)                                                                                        | ❌ No split                                 | 📅 Jun 24, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-database)       |
+| [👁️🫁 Labeled OCT and Chest X-Ray Images](#-labeled-optical-coherence-tomography-oct-and-chest-x-ray-images-for-classification)                      | 👁️ Eye / 🫁 Lungs        | 🏷️ Multiclass Classification                                | 4️⃣ Multiclass (CNV, DME, DRUSEN, NORMAL)                                                                                | ✅ Train/Test                               | 📅 Jun 24, 2026 | [🔗 Source](https://data.mendeley.com/datasets/rscbjbr9sj/2)                                          |
+| [🫁 CheXpert: A Large Chest Radiograph Dataset](#-chexpert-a-large-chest-radiograph-dataset-with-uncertainty-labels-and-expert-comparison)            | 🫁 Lungs / Chest          | 🏷️ Multiclass / Multi-label Classification                  | 14️⃣ Multi-label (14 Observations)                                                                                       | ✅ Train/Val/Test                           | 📅 Jun 26, 2026 | [🔗 Source](https://stanfordmlgroup.github.io/competitions/chexpert/)                                 |
+| [🫁 COVID-19 Radiography Database](#-covid-19-radiography-database)                                                                                   | 🫁 Lungs / Chest          | 🏷️ Multiclass Classification, 🎭 Segmentation               | 4️⃣ Multiclass (COVID-19, Lung Opacity, Normal, Viral Pneumonia)                                                         | ❌ No split                                 | 📅 Jun 26, 2026 | [🔗 Source](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)              |
+| [👁️ Ocular Disease Recognition (ODIR-5K)](#-ocular-disease-recognition-odir-5k)                                                                      | 👁️ Eye (Retina)          | 🏷️ Multiclass / Multi-label Classification                  | 8️⃣ Multi-label (Normal, Diabetes, Glaucoma, Cataract, AMD, Hypertension, Myopia, Other)                                 | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k)              |
+| [🖼️ ISIC 2019: Skin Lesion Analysis](#-isic-2019-skin-lesion-analysis-toward-melanoma-detection)                                                     | 🖼️ Skin                  | 🏷️ Multiclass Classification                                | 8️⃣ Multiclass (MEL, NV, BCC, AK, BKL, DF, VASC, SCC)                                                                    | ✅ Train/Test                               | 📅 Jun 30, 2026 | [🔗 Source](https://challenge.isic-archive.com/data/#2019)                                            |
+| [🧪 Clinical Urine Microscopy](#-clinical-urine-microscopy-for-urinary-tract-infections)                                                              | 🧪 Urine / Cellular       | 🎭 Semantic Segmentation (Binary & Multi-class)              | 7️⃣ Multi-class (Rod, RBC/WBC, Yeast, Miscellaneous, Single EPC, Small/Large EPC sheet)                                  | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://rodare.hzdr.de/record/2473)                                                       |
+| [❤️ Heart Failure Prediction Dataset](#-heart-failure-prediction-dataset)                                                                             | ❤️ Heart / Cardiovascular | 🏷️ Binary Classification                                    | 2️⃣ Binary (Heart Disease, Normal)                                                                                       | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)                     |
+| [❤️ Heart Attack Analysis & Prediction](#-heart-attack-analysis--prediction-dataset)                                                                  | ❤️ Heart / Cardiovascular | 🏷️ Binary Classification                                    | 2️⃣ Binary (Heart Attack, Normal)                                                                                        | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset) |
+| [🖼️ PAD-UFES-20: Skin Lesion Dataset](#-pad-ufes-20-skin-lesion-dataset)                                                                             | 🖼️ Skin                  | 🏷️ Multiclass Classification                                | 6️⃣ Multiclass (BCC, SCC, ACK, SEK, MEL, NEV)                                                                            | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zr7vgbcyr2/1)                                          |
+| [🩸 Diabetes Dataset (AIM '94)](#-diabetes-dataset-aim-94)                                                                                            | 🩸 Blood / Metabolic      | 📊 Time-Series Analysis                                      | N/A (Time-series of glucose/insulin)                                                                                     | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://archive.ics.uci.edu/dataset/34/diabetes)                                          |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -2844,6 +2851,599 @@ If you use this dataset, please cite:
 }
 ```
 
+--- 
+
+### 👁️ Ocular Disease Recognition (ODIR-5K)
+
+**Study**: Larxel. (2020). Ocular Disease Recognition. Kaggle.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                     |
+|-------------------------|-----------------------------------------------------------------------------|
+| **📛 Title**            | Ocular Disease Recognition (ODIR-5K)                                        |
+| **🔗 Source**           | https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k |
+| **👁️ Target Organ**    | Eye (Retina / Fundus)                                                       |
+| **📅 Last Accessed**    | June 30, 2026                                                               |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass / Multi-label Classification                                 |
+| **📐 Image Size**       | Variable (varied camera resolutions)                                        |
+| **📁 Data Format**      | JPEG/PNG (images), CSV (metadata/labels)                                    |
+| **👥 Demographics**     | ✅ Age, Sex (Male 54%, Female 46%)                                           |
+| **🔄 Train/Test Split** | ❌ Not provided (user-defined partitioning recommended)                      |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                             |
+|---------------------------|---------------------------------------------------------------------|
+| **🖼️ Total Images**      | 10,000 color fundus photographs (5,000 patients, left & right eyes) |
+| **🏥 Imaging Modality**   | Color fundus photography                                            |
+| **🎨 Color Format**       | RGB                                                                 |
+| **📦 Total Size**         | ~2.03 GB (compressed)                                               |
+| **🏥 Source Institution** | Shanggong Medical Technology Co., Ltd. (various hospitals in China) |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multi-label classification of ocular diseases
+- **Number of Classes**: 8️⃣
+- ✅ Normal (N)
+- 🍬 Diabetes (D)
+- 👁️ Glaucoma (G)
+- 🌫️ Cataract (C)
+- 🟡 Age related Macular Degeneration (A)
+- 🩸 Hypertension (H)
+- 🔍 Pathological Myopia (M)
+- ⚠️ Other diseases/abnormalities (O)
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking multi-label classification models for ocular disease screening
+- ✅ Includes both left and right eye images for potential bilateral analysis
+- ✅ Contains real-world diagnostic keywords from doctors
+- 📚 Required to cite the original Kaggle repository when using this dataset
+- 🔐 License was not specified on source; verify terms for commercial use
+
+#### ⚠️ Usage Considerations
+
+| Aspect                     | Recommendation                                                                    |
+|----------------------------|-----------------------------------------------------------------------------------|
+| **🔍 Multi-label Nature**  | Patients can have multiple conditions; use appropriate loss functions (e.g., BCE) |
+| **📐 Resolution Variance** | Images captured by various cameras (Canon, Zeiss, Kowa); standardize dimensions   |
+| **🧪 Data Leakage**        | Split by patient ID, not by image, to prevent leakage between train/test sets     |
+| **🔐 Licensing**           | License not explicitly specified; contact authors or assume non-commercial use    |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load metadata**: Parse `full_df.csv` to map image paths to the 8 diagnostic labels.
+2. **Standardize input format**: Convert all images to a consistent color space and fixed resolution (e.g., 224x224).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide statistics.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and color jittering to improve generalization.
+5. **Stratified evaluation**: Report per-class AUC-ROC, sensitivity, and specificity to assess multi-label performance.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k
+- **Related Datasets
+  **: [IDRiD](#-idrid-diabetic-retinopathy-grading-indian-dataset), [EyePACS](#-eyepacs-aptos-messidor-diabetic-retinopathy-unified-dataset)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{larxel2020odir,
+  title={Ocular Disease Recognition},
+  author={Larxel},
+  year={2020},
+  publisher={Kaggle},
+  url={https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k}
+}
+```
+
+---
+
+### 🖼️ ISIC 2019: Skin Lesion Analysis Toward Melanoma Detection
+
+**Study**: Tschandl, P., Rosendahl, C., & Kittler, H. (2018). The HAM10000 dataset... / Codella, N., et al. (2017)... /
+Hernández-Pérez, C., et al. (2024)...
+
+[🔝 Back to Summary](#-dataset-summary)
+| Metadata | Details |
+|-------------------------|-------------------------------------------------------------------------|
+| **📛 Title**            | ISIC 2019: Skin Lesion Analysis Toward Melanoma Detection |
+| **🔗 Source**           | https://challenge.isic-archive.com/data/#2019                           |
+| **🖼️ Target Organ**    | Skin |
+| **📅 Last Accessed**    | June 30, 2026 |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification |
+| **📐 Image Size**       | Variable (dermoscopic and clinical images)                              |
+| **📁 Data Format**      | JPEG (images), CSV (metadata/labels)                                    |
+| **👥 Demographics**     | ✅ Age, Sex, Anatomical site |
+| **🔄 Train/Test Split** | ✅ Yes (25,331 Training / 8,238 Test)                                    |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                              |
+|----------------------------|--------------------------------------|
+| **🖼️ Total Images**       | 33,569 skin lesion images            |
+| **🏥 Imaging Modality**    | Dermoscopic and clinical photography |
+| **🎨 Color Format**        | RGB                                  |
+| **📦 Total Size**          | ~12.7 GB (compressed)                |
+| **🏥 Source Institutions** | BCN-20000, HAM10000, MSK datasets    |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of skin lesions
+- **Number of Classes**: 8️⃣
+- ⚫ Melanoma (MEL)
+- 🟤 Melanocytic nevus (NV)
+- 🟠 Basal cell carcinoma (BCC)
+- 🟡 Actinic keratosis (AK)
+- 🟢 Benign keratosis (BKL)
+- 🔵 Dermatofibroma (DF)
+- 🔴 Vascular lesion (VASC)
+- ⚪ Squamous cell carcinoma (SCC)
+
+#### 💡 Usage Notes
+
+- ✅ Benchmark dataset for dermoscopic image classification and melanoma detection
+- ✅ Includes rich metadata (age, sex, anatomical site) for demographic bias analysis
+- ✅ Pre-defined train/test splits enable reproducible benchmarking
+- 📚 Required to cite the original ISIC challenge and constituent datasets (HAM10000, BCN-20000, MSK)
+- 🔐 Distributed under CC-BY-NC; verify terms for commercial use
+
+#### ⚠️ Usage Considerations
+
+| Aspect                        | Recommendation                                                               |
+|-------------------------------|------------------------------------------------------------------------------|
+| **🔍 Severe Class Imbalance** | NV and BKL heavily dominate; apply class-weighted loss or focal loss         |
+| **📐 Resolution Variance**    | Images vary in dimensions; standardize to fixed dimensions prior to training |
+| **🧪 Metadata Integration**   | Leverage age/sex metadata to improve model fairness and generalization       |
+| **🔐 Licensing**              | CC-BY-NC-ND; strictly non-commercial use without explicit permission         |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load metadata**: Parse CSV files to map image IDs to diagnostic labels and demographic features.
+2. **Standardize input format**: Convert all images to a consistent color space and fixed resolution (e.g., 224x224).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using ImageNet statistics.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and color jittering; avoid aggressive distortions.
+5. **Stratified evaluation**: Report per-class AUC-ROC, sensitivity, and specificity, especially for melanoma.
+
+#### 🔗 Associated Resources
+
+- **ISIC Archive**: https://challenge.isic-archive.com/data/#2019
+- **Related Datasets**: [PAD-UFES-20](#-pad-ufes-20-skin-lesion-dataset)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{isic2019skin,
+  title={ISIC 2019: Skin Lesion Analysis Toward Melanoma Detection},
+  author={Tschandl, P. and Rosendahl, C. and Kittler, H. and Codella, N. and others},
+  year={2019},
+  publisher={ISIC Archive},
+  url={https://challenge.isic-archive.com/data/#2019}
+}
+```
+
+---
+
+### 🧪 Clinical Urine Microscopy for Urinary Tract Infections
+
+**Study**: Liou, N., De, T., Urbanski, A., Khasriya, R., Yakimovich, A., & Horsley, H. (2023). Clinical urine microscopy
+for urinary tract infections. RODARE.
+
+[🔝 Back to Summary](#-dataset-summary)
+| Metadata | Details |
+|-------------------------|-------------------------------------------------------------------------|
+| **📛 Title**            | Clinical Urine Microscopy for Urinary Tract Infections |
+| **🔗 Source**           | https://rodare.hzdr.de/record/2473                                      |
+| **🧪 Target Organ**    | Urine / Cellular |
+| **📅 Last Accessed**    | June 30, 2026 |
+| **🎯 Supported Tasks**  | 🎭 Semantic Segmentation (Binary & Multi-class)                         |
+| **📐 Image Size**       | 1392 × 1040 pixels (fixed)                                              |
+| **📁 Data Format**      | 16-bit TIFF (images and masks)                                          |
+| **👥 Demographics**     | ✅ Symptomatic UTI patients |
+| **🔄 Train/Test Split** | ❌ Not provided (300 images total)                                       |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                   |
+|---------------------------|-------------------------------------------|
+| **🖼️ Total Images**      | 300 brightfield microscopy images         |
+| **🏥 Imaging Modality**   | Brightfield microscopy (x20 objective)    |
+| **🎨 Color Format**       | 16-bit RGB                                |
+| **📦 Total Size**         | ~2.3 GB (compressed)                      |
+| **🏥 Source Institution** | Specialist LUTS outpatient clinic, London |
+
+#### 🎭 Segmentation Task Details
+
+- **Task Type**: Binary and multi-class semantic segmentation of urinary cells
+- **Number of Classes**: 7️⃣
+- ⚫ Background (0)
+- 🦠 Rod (1)
+- 🩸 RBC/WBC (2)
+- 🍄 Yeast (3)
+- 🟤 Miscellaneous (4)
+- 🟡 Single EPC (5)
+- 🟠 Small EPC sheet (6)
+- 🔴 Large EPC sheet (7)
+
+#### 💡 Usage Notes
+
+- ✅ First publicly available dataset for automated UTI diagnosis via urine microscopy
+- ✅ Includes both binary (foreground/background) and multi-class segmentation masks
+- ✅ High-resolution 16-bit TIFF images preserve fine cellular details
+- 📚 Required to cite the original RODARE repository when using this dataset
+- 🔐 Distributed under CC BY 4.0; attribution required for redistribution
+
+#### ⚠️ Usage Considerations
+
+| Aspect                        | Recommendation                                                               |
+|-------------------------------|------------------------------------------------------------------------------|
+| **🔍 Severe Class Imbalance** | Background dominates; EPC sheets are rare; use appropriate loss functions    |
+| **📐 High Resolution**        | 1392x1040 images require substantial memory; consider patch-based processing |
+| **🎨 16-bit Format**          | Ensure libraries support 16-bit TIFF loading; normalize to 8-bit if needed   |
+| **🧪 Clinical Translation**   | Validate on external cohorts before clinical deployment                      |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load TIFF files**: Use libraries supporting 16-bit TIFF (e.g., `tifffile`, `Pillow`).
+2. **Standardize resolution**: Resize or extract patches to model-compatible dimensions (e.g., 512x512).
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide statistics.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and elastic deformations; preserve cellular
+   integrity.
+5. **Stratified evaluation**: Report Dice/IoU for each class, especially for rare classes like EPC sheets.
+
+#### 🔗 Associated Resources
+
+- **RODARE Repository**: https://rodare.hzdr.de/record/2473
+- **Related Publications**: Liou, N., et al. (2023). "Clinical urine microscopy for urinary tract infections."
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{liou2023urine,
+  title={Clinical urine microscopy for urinary tract infections},
+  author={Liou, Natasha and De, Trina and Urbanski, Adrian and Khasriya, Rajvinder and Yakimovich, Artur and Horsley, Harry},
+  year={2023},
+  publisher={RODARE},
+  doi={10.14278/rodare.2473},
+  url={https://rodare.hzdr.de/record/2473}
+}
+```
+
+---
+
+### ❤️ Heart Failure Prediction Dataset
+
+**Study**: fedesoriano. (2021). Heart Failure Prediction Dataset. Kaggle.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                              |
+|-------------------------|----------------------------------------------------------------------|
+| **📛 Title**            | Heart Failure Prediction Dataset                                     |
+| **🔗 Source**           | https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction |
+| **❤️ Target Organ**     | Heart / Cardiovascular                                               |
+| **📅 Last Accessed**    | June 30, 2026                                                        |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification                                            |
+| **📐 Image Size**       | N/A (Tabular data)                                                   |
+| **📁 Data Format**      | CSV                                                                  |
+| **👥 Demographics**     | ✅ Age, Sex                                                           |
+| **🔄 Train/Test Split** | ❌ Not provided (918 observations)                                    |
+
+#### 📊 Dataset Composition
+
+| Category                   | Details                                                           |
+|----------------------------|-------------------------------------------------------------------|
+| **📊 Total Instances**     | 918 observations                                                  |
+| **🔢 Features**            | 11 clinical features + 1 target variable                          |
+| **📦 Total Size**          | ~35.92 kB                                                         |
+| **🏥 Source Institutions** | Cleveland, Hungarian, Switzerland, Long Beach VA, Stalog datasets |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification of heart disease presence
+- **Number of Classes**: 2️⃣
+- ✅ Normal (0)
+- ⚠️ Heart Disease (1)
+
+#### 💡 Usage Notes
+
+- ✅ Largest combined heart disease dataset available for research (5 UCI datasets merged)
+- ✅ Includes comprehensive clinical features (ECG, cholesterol, angina, etc.)
+- ✅ Suitable for benchmarking tabular machine learning models
+- 📚 Required to cite the original Kaggle repository and UCI sources
+- 🔐 Database: Open Database, Contents: © Original Authors
+
+#### ⚠️ Usage Considerations
+
+| Aspect                      | Recommendation                                                                  |
+|-----------------------------|---------------------------------------------------------------------------------|
+| **🔍 Feature Scaling**      | Normalize numerical features (e.g., Age, Cholesterol) for distance-based models |
+| **🧪 Categorical Encoding** | One-hot encode categorical variables (e.g., ChestPainType, RestingECG)          |
+| **📐 Missing Values**       | Verify handling of missing cholesterol values in original UCI sources           |
+| **🔐 Licensing**            | Open Database License; verify terms for commercial use                          |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load CSV**: Parse `heart.csv` using pandas or similar libraries.
+2. **Handle missing values**: Impute or drop missing cholesterol values if present.
+3. **Encode categoricals**: Convert categorical features to numerical representations.
+4. **Scale features**: Apply StandardScaler or MinMaxScaler to numerical features.
+5. **Stratified splitting**: Implement stratified k-fold cross-validation to maintain class balance.
+6. **Evaluation metrics**: Report accuracy, precision, recall, F1-score, and AUC-ROC.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
+- **UCI Source**: https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{fedesoriano2021heart,
+  title={Heart Failure Prediction Dataset},
+  author={fedesoriano},
+  year={2021},
+  publisher={Kaggle},
+  url={https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction}
+}
+```
+
+---
+
+### ❤️ Heart Attack Analysis & Prediction Dataset
+
+**Study**: Hina Ismail, et al. (2022). Heart Attack Analysis & Prediction Dataset. Kaggle.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------|
+| **📛 Title**            | Heart Attack Analysis & Prediction Dataset                                               |
+| **🔗 Source**           | https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset |
+| **❤️ Target Organ**     | Heart / Cardiovascular                                                                   |
+| **📅 Last Accessed**    | June 30, 2026                                                                            |
+| **🎯 Supported Tasks**  | 🏷️ Binary Classification                                                                |
+| **📐 Image Size**       | N/A (Tabular data)                                                                       |
+| **📁 Data Format**      | CSV                                                                                      |
+| **👥 Demographics**     | ✅ Age, Sex                                                                               |
+| **🔄 Train/Test Split** | ❌ Not provided (303 observations)                                                        |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                  |
+|---------------------------|----------------------------------------------------------|
+| **📊 Total Instances**    | 303 observations                                         |
+| **🔢 Features**           | 14 clinical features + 1 target variable                 |
+| **📦 Total Size**         | ~11.32 kB                                                |
+| **🏥 Source Institution** | Cleveland Clinic Foundation (UCI Heart Disease Database) |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Binary classification of heart attack risk
+- **Number of Classes**: 2️⃣
+- ✅ Less chance of heart attack (0)
+- ⚠️ More chance of heart attack (1)
+
+#### 💡 Usage Notes
+
+- ✅ Classic dataset for benchmarking binary classification algorithms in healthcare
+- ✅ Includes key cardiovascular indicators (cholesterol, ECG, thalassemia, etc.)
+- ✅ Small dataset size ideal for educational purposes and quick prototyping
+- 📚 Required to cite the original Kaggle repository
+- 🔐 CC0: Public Domain
+
+#### ⚠️ Usage Considerations
+
+| Aspect                   | Recommendation                                                                       |
+|--------------------------|--------------------------------------------------------------------------------------|
+| **🔍 Small Sample Size** | 303 instances may lead to overfitting; use strong regularization or cross-validation |
+| **🧪 Class Imbalance**   | Verify class distribution; apply class weighting if necessary                        |
+| **📐 Feature Selection** | Remove highly correlated features to reduce multicollinearity                        |
+| **🔐 Licensing**         | Public Domain; free for any use                                                      |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load CSV**: Parse `heart.csv` using pandas.
+2. **Encode categoricals**: One-hot encode `cp`, `rest_ecg`, `thal`, etc.
+3. **Scale features**: Apply StandardScaler to numerical features.
+4. **Cross-validation**: Use stratified k-fold cross-validation due to small dataset size.
+5. **Evaluation metrics**: Report accuracy, precision, recall, F1-score, and AUC-ROC.
+
+#### 🔗 Associated Resources
+
+- **Kaggle Repository**: https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset
+- **Related Datasets**: [Heart Failure Prediction](#-heart-failure-prediction-dataset)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{hinaismail2022heart,
+  title={Heart Attack Analysis & Prediction Dataset},
+  author={Hina Ismail},
+  year={2022},
+  publisher={Kaggle},
+  url={https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset}
+}
+```
+
+---
+
+### 🖼️ PAD-UFES-20: Skin Lesion Dataset
+
+**Study**: Pacheco, A. G. C., et al. (2020). PAD-UFES-20: a skin lesion dataset composed of patient data and clinical
+images collected from smartphones. Mendeley Data.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                         |
+|-------------------------|-------------------------------------------------|
+| **📛 Title**            | PAD-UFES-20: Skin Lesion Dataset                |
+| **🔗 Source**           | https://data.mendeley.com/datasets/zr7vgbcyr2/1 |
+| **🖼️ Target Organ**    | Skin                                            |
+| **📅 Last Accessed**    | June 30, 2026                                   |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification                   |
+| **📐 Image Size**       | Variable (smartphone cameras)                   |
+| **📁 Data Format**      | PNG (images), CSV (metadata)                    |
+| **👥 Demographics**     | ✅ Age, Skin type, Location, Diameter            |
+| **🔄 Train/Test Split** | ❌ Not provided (2,298 images)                   |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                               |
+|---------------------------|-------------------------------------------------------|
+| **🖼️ Total Images**      | 2,298 skin lesion images                              |
+| **🏥 Imaging Modality**   | Smartphone clinical photography                       |
+| **🎨 Color Format**       | RGB                                                   |
+| **📦 Total Size**         | ~3.35 GB (compressed)                                 |
+| **🏥 Source Institution** | Universidade Federal do Espírito Santo (UFES), Brazil |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of skin lesions
+- **Number of Classes**: 6️⃣
+- ⚫ Basal Cell Carcinoma (BCC)
+- 🔴 Squamous Cell Carcinoma (SCC)
+- 🟡 Actinic Keratosis (ACK)
+- 🟤 Seborrheic Keratosis (SEK)
+- 🟠 Melanoma (MEL)
+- 🟢 Nevus (NEV)
+
+#### 💡 Usage Notes
+
+- ✅ Unique dataset captured using everyday smartphone devices (real-world conditions)
+- ✅ Includes rich clinical metadata (22 features per sample)
+- ✅ Biopsy-proven labels for malignant classes (BCC, SCC, MEL)
+- 📚 Required to cite the original Mendeley Data repository
+- 🔐 Verify usage terms on Mendeley Data; typically CC BY 4.0
+
+#### ⚠️ Usage Considerations
+
+| Aspect                      | Recommendation                                                                  |
+|-----------------------------|---------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**      | Verify per-class distribution; apply class-weighted loss if needed              |
+| **📐 Resolution Variance**  | Smartphone images vary in quality; standardize dimensions and apply enhancement |
+| **🧪 Metadata Integration** | Leverage clinical features (age, location) to improve model performance         |
+| **🔐 Ethical Compliance**   | Dataset contains patient data; adhere to institutional review requirements      |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Load metadata**: Parse CSV to map image paths to diagnostic labels and clinical features.
+2. **Standardize input format**: Convert all images to a consistent color space and fixed resolution.
+3. **Apply intensity normalization**: Scale pixel values to [0, 1] or standardize using dataset-wide statistics.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and color jittering to simulate varied lighting.
+5. **Stratified evaluation**: Report per-class precision, recall, F1-score, and confusion matrices.
+
+#### 🔗 Associated Resources
+
+- **Mendeley Data Repository**: https://data.mendeley.com/datasets/zr7vgbcyr2/1
+- **Related Datasets**: [ISIC 2019](#-isic-2019-skin-lesion-analysis-toward-melanoma-detection)
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@article{pacheco2020pad,
+  title={PAD-UFES-20: A skin lesion dataset composed of patient data and clinical images collected from smartphones},
+  author={Pacheco, Andre GC and Lima, Gustavo R and Salomao, Amanda S and Krohling, Breno and Biral, Igor P and De Angelo, Gabriel G and Alves Jr, F{\'a}bio CR and Esgario, Jos{\'e} GM and Simora, Alana C and Castro, Pedro BC and others},
+  journal={Data in brief},
+  volume={32},
+  pages={106221},
+  year={2020},
+  publisher={Elsevier}
+}
+```
+
+---
+
+### 🩸 Diabetes Dataset (AIM '94)
+
+**Study**: Kahn, M. Diabetes [Dataset]. UCI Machine Learning Repository.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                         |
+|-------------------------|-------------------------------------------------|
+| **📛 Title**            | Diabetes Dataset (AIM '94)                      |
+| **🔗 Source**           | https://archive.ics.uci.edu/dataset/34/diabetes |
+| **🩸 Target Organ**     | Blood / Metabolic                               |
+| **📅 Last Accessed**    | June 30, 2026                                   |
+| **🎯 Supported Tasks**  | 📊 Time-Series Analysis, 🏷️ Classification     |
+| **📐 Image Size**       | N/A (Tabular time-series data)                  |
+| **📁 Data Format**      | TXT / CSV                                       |
+| **👥 Demographics**     | ❌ Not specified                                 |
+| **🔄 Train/Test Split** | ❌ Not provided (Single patient record)          |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                              |
+|---------------------------|------------------------------------------------------|
+| **📊 Total Instances**    | 1 (Patient record with multiple time-series entries) |
+| **🔢 Features**           | 4 fields (Date, Time, Code, Value)                   |
+| **📦 Total Size**         | ~183.2 KB (compressed)                               |
+| **🏥 Source Institution** | UCI Machine Learning Repository                      |
+
+#### 📊 Time-Series Task Details
+
+- **Task Type**: Time-series analysis of blood glucose and insulin doses
+- **Event Codes**:
+- 💉 33-35: Insulin doses (Regular, NPH, UltraLente)
+- 🩸 48-65: Blood glucose measurements (various times)
+- 🍽️ 66-68: Meal ingestion events
+- 🏃 69-71: Exercise activity events
+
+#### 💡 Usage Notes
+
+- ✅ Classic dataset for time-series forecasting and event detection in healthcare
+- ✅ Contains realistic timestamps for electronic records and logical slots for paper records
+- ✅ Suitable for research on irregular time-series and missing data imputation
+- 📚 Required to cite the original UCI Machine Learning Repository
+- 🔐 Licensed under CC BY 4.0; attribution required
+
+#### ⚠️ Usage Considerations
+
+| Aspect                      | Recommendation                                                                   |
+|-----------------------------|----------------------------------------------------------------------------------|
+| **📐 Irregular Timestamps** | Electronic and paper records have different time resolutions; handle accordingly |
+| **🧪 Single Patient**       | Dataset represents a single patient; not suitable for population-level modeling  |
+| **🔍 Event Detection**      | Use sequence models (e.g., LSTMs, Transformers) for event prediction             |
+| **🔐 Licensing**            | CC BY 4.0; free for any use with attribution                                     |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Parse TXT/CSV**: Load the tab-separated file into a pandas DataFrame.
+2. **Datetime parsing**: Convert Date and Time fields into standard datetime objects.
+3. **Handle time slots**: Assign fixed times to paper records (08:00, 12:00, 18:00, 22:00).
+4. **Feature engineering**: Extract hour-of-day, day-of-week, and time-since-last-event features.
+5. **Sequence modeling**: Format data into sequences for RNNs or Transformers; handle missing values via interpolation.
+
+#### 🔗 Associated Resources
+
+- **UCI Repository**: https://archive.ics.uci.edu/dataset/34/diabetes
+- **Related Publications**: Kahn, M. (1994). "Diabetes." UCI Machine Learning Repository.
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{kahn1994diabetes,
+  title={Diabetes},
+  author={Kahn, M.},
+  year={1994},
+  publisher={UCI Machine Learning Repository},
+  doi={10.24432/C5T59G},
+  url={https://archive.ics.uci.edu/dataset/34/diabetes}
+}
+```
+
+---
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
@@ -2878,4 +3478,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: June 26, 2026*
+*🕒 Last Updated: June 29, 2026*
