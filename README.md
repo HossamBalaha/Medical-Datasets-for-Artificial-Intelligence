@@ -79,6 +79,9 @@
 | [❤️ Heart Attack Analysis & Prediction](#-heart-attack-analysis--prediction-dataset)                                                                  | ❤️ Heart / Cardiovascular | 🏷️ Binary Classification                                    | 2️⃣ Binary (Heart Attack, Normal)                                                                                        | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset) |
 | [🖼️ PAD-UFES-20: Skin Lesion Dataset](#-pad-ufes-20-skin-lesion-dataset)                                                                             | 🖼️ Skin                  | 🏷️ Multiclass Classification                                | 6️⃣ Multiclass (BCC, SCC, ACK, SEK, MEL, NEV)                                                                            | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://data.mendeley.com/datasets/zr7vgbcyr2/1)                                          |
 | [🩸 Diabetes Dataset (AIM '94)](#-diabetes-dataset-aim-94)                                                                                            | 🩸 Blood / Metabolic      | 📊 Time-Series Analysis                                      | N/A (Time-series of glucose/insulin)                                                                                     | ❌ No split                                 | 📅 Jun 30, 2026 | [🔗 Source](https://archive.ics.uci.edu/dataset/34/diabetes)                                          |
+| [🫀 Digital Pathology Dataset for Breast Cancer Diagnosis](#-digital-pathology-dataset-for-breast-cancer-diagnosis)                                   | 🫀 Breast                 | 🎭 Segmentation (Tissue Region)                              | N/A (WSI Tissue Segmentation)                                                                                            | ❌ No split                                 | 📅 Jul 03, 2026 | [🔗 Source](https://zenodo.org/records/14131968)                                                      |
+| [🫀 2M Breast Cancer Tumors with HER2 Labels](#-2-million-histological-images-of-breast-cancer-tumors-with-her2-labels)                               | 🫀 Breast                 | 🏷️ Multiclass Classification (HER2 Status)                  | 3️⃣ Multiclass (HER2-negative, HER2-low, HER2-high)                                                                      | ❌ No split                                 | 📅 Jul 03, 2026 | [🔗 Source](https://zenodo.org/records/8383580)                                                       |
+| [🫀 Breast Carcinoma Histological Images (Agios Pavlos)](#-breast-carcinoma-histological-images-agios-pavlos-hospital)                                | 🫀 Breast                 | 🏷️ Ordinal Classification (Tumor Grading)                   | 3️⃣ Ordinal Multiclass (Grade 1, Grade 2, Grade 3)                                                                       | ❌ No split                                 | 📅 Jul 03, 2026 | [🔗 Source](https://zenodo.org/records/834910)                                                        |
 
 > **ℹ️ Note**: This repository is under active development. Additional datasets will be incorporated over time. Click
 > any dataset name above to navigate to its detailed section.
@@ -3486,6 +3489,262 @@ If you use this dataset, please cite:
 
 ---
 
+### 🫀 Digital Pathology Dataset for Breast Cancer Diagnosis
+
+**Study**: Naghshineh Kani, S., Soyak, B. C., Gokce, M., Duyar, Z., Alicikus, H., Yapıcıer, Ö., & Oner, M. U. (2024).
+Digital Pathology Dataset for Breast Cancer Diagnosis [Data set]. Zenodo.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                               |
+|-------------------------|-------------------------------------------------------|
+| **📛 Title**            | Digital Pathology Dataset for Breast Cancer Diagnosis |
+| **🔗 Source**           | https://zenodo.org/records/14131968                   |
+| **🫀 Target Organ**     | Breast                                                |
+| **📅 Last Accessed**    | July 03, 2026                                         |
+| **🎯 Supported Tasks**  | 🎭 Segmentation (Tissue Region)                       |
+| **📐 Image Size**       | Variable (Whole Slide Images)                         |
+| **📁 Data Format**      | .svs (Aperio) in ZIP archives                         |
+| **👥 Demographics**     | ❌ Not included                                        |
+| **🔄 Train/Test Split** | ❌ Not provided                                        |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                              |
+|---------------------------|----------------------------------------------------------------------|
+| **🖼️ Total Slides**      | 235 Whole Slide Images (WSIs)                                        |
+| **🔬 Imaging Modality**   | Brightfield histopathology (H&E and IHC stains)                      |
+| **📦 File Structure**     | 36 ZIP files for H&E (72 slides) + 55 ZIP files for IHC (163 slides) |
+| **🏥 Source Institution** | Bahçeşehir University Medical School, Turkey                         |
+
+#### 🎭 Segmentation Task Details
+
+- **Task Type**: Binary/Multi-class tissue region segmentation
+- **Annotation Targets**: Tissue regions vs. background in H&E and IHC stained slides
+- **Associated Code
+  **: [Tissue Region Segmentation Code](https://github.com/sepidehnaghshineh/Tissue-region-segmentation-in-HE-and-IHC-stained-pathology-slides)
+
+#### 💡 Usage Notes
+
+- ✅ High-quality IHC and H&E WSIs provided in standard .svs format
+- ✅ Suitable for benchmarking tissue region segmentation algorithms across different staining modalities
+- ✅ Includes associated Python code for tissue region segmentation using deep learning
+- 📚 Required to cite the original Zenodo repository when using this dataset
+- 🔐 Distributed under CC BY 4.0; attribution required
+
+#### ⚠️ Usage Considerations
+
+| Aspect                    | Recommendation                                                                            |
+|---------------------------|-------------------------------------------------------------------------------------------|
+| **📦 Large File Sizes**   | WSIs are massive; ensure adequate storage and use libraries like `OpenSlide` or `libvips` |
+| **🎨 Stain Variability**  | Dataset includes both H&E and IHC; models may need to handle stain-specific features      |
+| **🔐 Ethical Compliance** | Approved by Bahçeşehir University Clinical Research IRB (Approval No: 2022-10/03)         |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archives**: Unzip the 91 ZIP files containing the .svs WSIs.
+2. **Load WSIs**: Use `OpenSlide` or `tifffile` to read the high-resolution .svs images.
+3. **Tissue detection**: Apply thresholding or the provided deep learning model to mask out background/glass regions.
+4. **Patch extraction**: Extract overlapping or non-overlapping tiles for training segmentation models.
+5. **Evaluation**: Compute Dice/IoU scores for tissue vs. background segmentation.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://zenodo.org/records/14131968
+- **Code Repository
+  **: https://github.com/sepidehnaghshineh/Tissue-region-segmentation-in-HE-and-IHC-stained-pathology-slides
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{naghshinehkani2024digital,
+  author = {Naghshineh Kani, Sepideh and Soyak, Burak Can and Gokce, Melih and Duyar, Zeynep and Alicikus, Hasan and Yapıcıer, Özlem and Oner, Mustafa Umit},
+  title = {Digital Pathology Dataset for Breast Cancer Diagnosis},
+  year = {2024},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.14131968},
+  url = {https://doi.org/10.5281/zenodo.14131968}
+}
+```
+
+---
+
+### 🫀 2 Million Histological Images of Breast Cancer Tumors with HER2 Labels
+
+**Study**: Valieris, R., Martins, L., Defelicibus, A., Osorio, C. A. B. T., & Bueno, A. P. (2023). 2 million
+histological images of breast cancer tumors with her2 labels [Data set]. Zenodo.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                                |
+|-------------------------|------------------------------------------------------------------------|
+| **📛 Title**            | 2 Million Histological Images of Breast Cancer Tumors with HER2 Labels |
+| **🔗 Source**           | https://zenodo.org/records/8383580                                     |
+| **🫀 Target Organ**     | Breast                                                                 |
+| **📅 Last Accessed**    | July 03, 2026                                                          |
+| **🎯 Supported Tasks**  | 🏷️ Multiclass Classification (HER2 Status)                            |
+| **📐 Image Size**       | 256 × 256 pixels (at 0.5 µm/pixel)                                     |
+| **📁 Data Format**      | Image patches (ZIP)                                                    |
+| **👥 Demographics**     | ❌ Not included (N = 504 patients)                                      |
+| **🔄 Train/Test Split** | ❌ Not provided                                                         |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                     |
+|---------------------------|-------------------------------------------------------------|
+| **🖼️ Total Patches**     | 2,051,877 image patches                                     |
+| **🔬 Imaging Modality**   | Brightfield histopathology (H&E stained, 40x magnification) |
+| **🏥 Source Institution** | A. C. Camargo Cancer Center (ACCCC), Brazil                 |
+| **📦 Total Size**         | ~35.6 GB (compressed)                                       |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Multiclass classification of HER2 status based on H&E morphology
+- **Number of Classes**: 3️⃣
+- 🔵 HER2-negative (IHC 0)
+- 🟡 HER2-low (IHC 1+ or IHC 2+ / ISH-)
+- 🔴 HER2-high (IHC 3+ or IHC 2+ / ISH+)
+
+#### 💡 Usage Notes
+
+- ✅ Massive scale (2M+ patches) suitable for training deep learning models from scratch or self-supervised learning
+- ✅ Focuses on the clinically relevant "HER2-low" category, which is a newer target for antibody-drug conjugates
+- ✅ Patches are pre-filtered to contain only tumor regions and their microenvironment using a ConvNext-tiny model
+- 📚 Required to cite the original Zenodo repository and the associated journal article
+- 🔐 Distributed under CC BY 4.0; attribution required
+
+#### ⚠️ Usage Considerations
+
+| Aspect                    | Recommendation                                                                                      |
+|---------------------------|-----------------------------------------------------------------------------------------------------|
+| **🔍 Class Imbalance**    | Verify distribution across HER2-negative, low, and high; apply class weighting if needed            |
+| **📦 Large Dataset**      | 35.6 GB requires significant storage; consider streaming data or using efficient data loaders       |
+| **🧪 Patch-Level Focus**  | Patches are 256x256; whole-slide inference requires Multiple Instance Learning (MIL) or aggregation |
+| **🔐 Ethical Compliance** | Approved by the ethics committee of the Fundação Antônio Prudente                                   |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archive**: Unzip the 35.6 GB `dataset.zip` file.
+2. **Organize by label**: Arrange patches into class-labeled subfolders (`HER2-negative`, `HER2-low`, `HER2-high`).
+3. **Standardize input**: Confirm 256×256 dimensions; apply intensity normalization.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and color jittering; preserve morphological
+   integrity.
+5. **Stratified splitting**: Implement patient-aware or slide-aware partitioning to prevent data leakage.
+6. **Evaluation metrics**: Report macro-averaged F1-score, AUC-ROC, and confusion matrices, especially for the HER2-low
+   class.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://zenodo.org/records/8383580
+- **Code Repository**: https://github.com/tojallab/wsi-mil
+- **Related Publication**: Valieris, R., et al. "2 million histological images of breast cancer tumors with HER2
+  labels." *Breast Cancer Research* (2024).
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{valieris2023million,
+  author = {Valieris, Renan and Martins, Luan and Defelicibus, Alexandre and Osorio, Cynthia Aparecida Bueno de Toledo and Bueno, Adriana Passos},
+  title = {2 million histological images of breast cancer tumors with her2 labels},
+  year = {2023},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.8383580},
+  url = {https://doi.org/10.5281/zenodo.8383580}
+}
+```
+
+---
+
+### 🫀 Breast Carcinoma Histological Images (Agios Pavlos Hospital)
+
+**Study**: Zioga, C., Kamas, A., Patsiaoura, K., Dimitropoulos, K., Barmpoutis, P., & Grammalidis, N. (2017). Breast
+carcinoma histological images from the Department of Pathology, "Agios Pavlos" General Hospital of Thessaloniki,
+Greece [Data set]. Zenodo.
+[🔝 Back to Summary](#-dataset-summary)
+
+| Metadata                | Details                                                      |
+|-------------------------|--------------------------------------------------------------|
+| **📛 Title**            | Breast Carcinoma Histological Images (Agios Pavlos Hospital) |
+| **🔗 Source**           | https://zenodo.org/records/834910                            |
+| **🫀 Target Organ**     | Breast                                                       |
+| **📅 Last Accessed**    | July 03, 2026                                                |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (Tumor Grading)                   |
+| **📐 Image Size**       | 1280 × 960 pixels                                            |
+| **📁 Data Format**      | Image files (ZIP)                                            |
+| **👥 Demographics**     | 21 patients                                                  |
+| **🔄 Train/Test Split** | ❌ Not provided                                               |
+
+#### 📊 Dataset Composition
+
+| Category                  | Details                                                 |
+|---------------------------|---------------------------------------------------------|
+| **🖼️ Total Images**      | 300 annotated histological images                       |
+| **🔬 Imaging Modality**   | Brightfield histopathology (H&E stained)                |
+| **🏥 Source Institution** | "Agios Pavlos" General Hospital of Thessaloniki, Greece |
+| **📦 Total Size**         | ~373.8 MB (compressed)                                  |
+
+#### 🏷️ Classification Task Details
+
+- **Task Type**: Ordinal multiclass classification of invasive ductal carcinoma grading
+- **Number of Classes**: 3️⃣ (Ordered severity scale)
+- 🟢 Grade 1 (Well differentiated)
+- 🟡 Grade 2 (Moderately differentiated)
+- 🔴 Grade 3 (Poorly differentiated)
+
+#### 💡 Usage Notes
+
+- ✅ Suitable for benchmarking traditional ML and CNN architectures for breast cancer grading
+- ✅ Images are grouped into folders corresponding to grades 1-3
+- ✅ Relatively small dataset size (300 images) ideal for few-shot learning, transfer learning, or data augmentation
+  studies
+- 📚 Required to cite the original Zenodo repository and the associated PLOS ONE publication
+- 🔐 Distributed under CC BY 4.0; attribution required
+
+#### ⚠️ Usage Considerations
+
+| Aspect                       | Recommendation                                                                                 |
+|------------------------------|------------------------------------------------------------------------------------------------|
+| **🔍 Small Sample Size**     | 300 images across 21 patients; employ strong regularization, augmentation, or cross-validation |
+| **🧪 Ordinal Structure**     | Grades represent ordered severity; consider ordinal regression or monotonic constraints        |
+| **📐 Resolution Handling**   | Images are 1280x960; resize to model-compatible dimensions (e.g., 224x224)                     |
+| **🧭 Domain Generalization** | Single-center cohort; validate on external datasets for clinical deployment                    |
+
+#### 💡 Suggested Preprocessing Pipeline
+
+1. **Extract archive**: Unzip the `Dataset.zip` file containing the grade-labeled folders.
+2. **Standardize resolution**: Resize images to a uniform dimension (e.g., 224×224 or 512×512) while preserving aspect
+   ratio.
+3. **Color normalization**: Apply stain normalization (e.g., Macenko method) to mitigate inter-slide H&E variability.
+4. **Augmentation **(training only): Incorporate rotation, flipping, and mild photometric jittering.
+5. **Cross-validation**: Use k-fold cross-validation due to the small dataset size.
+6. **Evaluation metrics**: Report per-class precision/recall, weighted kappa for ordinal agreement, and macro-averaged
+   F1-score.
+
+#### 🔗 Associated Resources
+
+- **Zenodo Repository**: https://zenodo.org/records/834910
+- **Related Publication**: Dimitropoulos, K., et al. "Grading of invasive breast carcinoma through Grassmannian VLAD
+  encoding." *PLOS ONE* (2017).
+
+#### 📚 Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@dataset{zioga2017breast,
+  author = {Zioga, Christina and Kamas, Athanasios and Patsiaoura, Kalliopi and Dimitropoulos, Kosmas and Barmpoutis, Panagiotis and Grammalidis, Nikos},
+  title = {Breast carcinoma histological images from the Department of Pathology, "Agios Pavlos" General Hospital of Thessaloniki, Greece},
+  year = {2017},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.834910},
+  url = {https://doi.org/10.5281/zenodo.834910}
+}
+```
+
+---
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
@@ -3520,4 +3779,4 @@ This repository is prepared by `Hossam Magdy Balaha`. For any questions or inqui
 contact information available on my CV at the following
 link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: June 29, 2026*
+*🕒 Last Updated: July 02, 2026*
