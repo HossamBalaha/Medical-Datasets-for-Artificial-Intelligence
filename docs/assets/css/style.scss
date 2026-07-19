@@ -10,23 +10,21 @@
   padding: 2rem 3rem;
 }
 
-// 2. Make tables horizontally scrollable on all screen sizes
+// 2. Make tables horizontally scrollable and reduce font size
 table {
   display: block;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
   border-collapse: collapse;
+  font-size: 0.85rem; /* Makes the table text slightly smaller (default is usually 1rem) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-// 3. Prevent table text from squishing/wrapping, forcing a clean horizontal scroll instead
+// 3. Prevent table text from squishing/wrapping and adjust padding to match the smaller font
 table th,
 table td {
   white-space: nowrap;
-  padding: 0.75rem 1rem;
-}
-
-// 4. Optional: Add a subtle shadow to the table to indicate it is scrollable
-table {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 0.6rem 0.8rem; /* Slightly reduced padding for a tighter, cleaner look */
+  font-size: 0.85rem; /* Ensures headers and cells are consistently sized */
 }
