@@ -3,28 +3,42 @@
 
 @import "{{ site.theme }}";
 
-// 1. Expand the main content area to use almost the entire screen width
+// 1. Expand the main content area to use the full available screen width
 .main-content {
-  max-width: 95%;
-  width: 95%;
+  max-width: 100%;
+  width: 100%;
   padding: 2rem 3rem;
 }
 
-// 2. Make tables horizontally scrollable and reduce font size
+// 2. Force the table to fit the container width and enable text wrapping
 table {
-  display: block;
+  display: table; /* Reverts to standard table layout instead of block */
   width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  table-layout: fixed; /* Forces columns to respect width constraints and wrap */
   border-collapse: collapse;
-  font-size: 0.85rem; /* Makes the table text slightly smaller (default is usually 1rem) */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-size: 0.85rem; /* Keeps the font slightly compact */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-// 3. Prevent table text from squishing/wrapping and adjust padding to match the smaller font
+// 3. Allow text to wrap in both headers and data cells
 table th,
 table td {
-  white-space: nowrap;
-  padding: 0.6rem 0.8rem; /* Slightly reduced padding for a tighter, cleaner look */
-  font-size: 0.85rem; /* Ensures headers and cells are consistently sized */
+  white-space: normal; /* Allows text to wrap to the next line */
+  padding: 0.75rem;
+  vertical-align: top; /* Keeps multi-line rows aligned neatly at the top */
+  word-break: break-word; /* Ensures long URLs or words break cleanly */
+}
+
+// 4. Optional: Give the first column (Dataset Name) a bit more breathing room
+table th:first-child,
+table td:first-child {
+  width: 25%;
+}
+
+// 5. Optional: Make the "Quick Link" column slightly narrower since it's just a link
+table th:last-child,
+table td:last-child {
+  width: 10%;
+  text-align: center;
 }
