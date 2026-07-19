@@ -1,50 +1,5 @@
 # Medical AI Datasets Repository
 
-<div align="center">
-
-### 🏷️ Tasks
-
-![Classification](https://img.shields.io/badge/🏷️_Classification-4CAF50?style=flat-square)
-![Segmentation](https://img.shields.io/badge/🎭_Segmentation-FF9800?style=flat-square)
-![Ordinal Classification](https://img.shields.io/badge/📊_Ordinal_Classification-8BC34A?style=flat-square)
-![Localization](https://img.shields.io/badge/📍_Localization-00BCD4?style=flat-square)
-![Time-Series](https://img.shields.io/badge/📈_Time--Series-009688?style=flat-square)
-
-### 📡 Modalities
-
-![Medical Imaging](https://img.shields.io/badge/🏥_Medical_Imaging-0288D1?style=flat-square)
-![X-ray](https://img.shields.io/badge/🩻_X--ray-03A9F4?style=flat-square)
-![CT Scan](https://img.shields.io/badge/🧊_CT_Scan-0277BD?style=flat-square)
-![MRI](https://img.shields.io/badge/🧲_MRI-5E35B1?style=flat-square)
-![OCT](https://img.shields.io/badge/👁️_OCT-8E24AA?style=flat-square)
-![Fundus Photography](https://img.shields.io/badge/📸_Fundus-AB47BC?style=flat-square)
-![Histopathology](https://img.shields.io/badge/🔬_Histopathology-9C27B0?style=flat-square)
-![Microscopy](https://img.shields.io/badge/🧫_Microscopy-673AB7?style=flat-square)
-![Clinical Data](https://img.shields.io/badge/📋_Clinical_Data-607D8B?style=flat-square)
-
-### 🫀 Organs & Conditions
-
-![Brain Tumor](https://img.shields.io/badge/🧠_Brain_Tumor-F44336?style=flat-square)
-![Retina](https://img.shields.io/badge/👁️_Retina-E91E63?style=flat-square)
-![Diabetic Retinopathy](https://img.shields.io/badge/🩸_Diabetic_Retinopathy-D81B60?style=flat-square)
-![COVID-19](https://img.shields.io/badge/🦠_COVID--19-D32F2F?style=flat-square)
-![Tuberculosis](https://img.shields.io/badge/🫁_Tuberculosis-C62828?style=flat-square)
-![Pneumonia](https://img.shields.io/badge/🫁_Pneumonia-E53935?style=flat-square)
-![Knee / Osteoarthritis](https://img.shields.io/badge/🦴_Knee_/_Osteoarthritis-795548?style=flat-square)
-![Bone Tumor](https://img.shields.io/badge/🦴_Bone_Tumor-8D6E63?style=flat-square)
-![Skin Lesions](https://img.shields.io/badge/🖼️_Skin_Lesions-FFC107?style=flat-square)
-![Heart Disease](https://img.shields.io/badge/🫀_Heart_Disease-E91E63?style=flat-square)
-![Kidney Cancer](https://img.shields.io/badge/🫘_Kidney_Cancer-FF5722?style=flat-square)
-![Colorectal Cancer](https://img.shields.io/badge/🦴_Colorectal-FF7043?style=flat-square)
-![Oral Cancer](https://img.shields.io/badge/🗣️_Oral_Cancer-E64A19?style=flat-square)
-![Gastrointestinal](https://img.shields.io/badge/🩺_Gastrointestinal-BF360C?style=flat-square)
-![Breast Cancer](https://img.shields.io/badge/🎀_Breast_Cancer-AD1457?style=flat-square)
-![Urine / UTI](https://img.shields.io/badge/🧪_Urine_/_UTI-FFEB3B?style=flat-square)
-![Diabetes](https://img.shields.io/badge/🩸_Diabetes-FF9800?style=flat-square)
-![Veterinary](https://img.shields.io/badge/🐄_Veterinary-558B2F?style=flat-square)
-
-</div>
-
 ## 📋 Dataset Summary
 
 | Dataset                                                                                                                                               | Organ                     | Tasks                                                        | Classes                                                                                                                  | Split                                      | Last Accessed   | Quick Link                                                                                            |
