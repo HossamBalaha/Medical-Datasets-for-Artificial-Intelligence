@@ -3,42 +3,205 @@
 
 @import "{{ site.theme }}";
 
-// 1. Expand the main content area to use the full available screen width
+// ============================================================================
+// Base Styles (Desktop)
+// ============================================================================
+
 .main-content {
-  max-width: 100%;
-  width: 100%;
+  max-width: 95%;
+  width: 95%;
   padding: 2rem 3rem;
 }
 
-// 2. Force the table to fit the container width and enable text wrapping
+// Table Styles
 table {
-  display: table; /* Reverts to standard table layout instead of block */
+  display: table;
   width: 100%;
-  table-layout: fixed; /* Forces columns to respect width constraints and wrap */
+  table-layout: fixed;
   border-collapse: collapse;
-  font-size: 0.85rem; /* Keeps the font slightly compact */
+  font-size: 0.85rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-// 3. Allow text to wrap in both headers and data cells
 table th,
 table td {
-  white-space: normal; /* Allows text to wrap to the next line */
+  white-space: normal;
   padding: 0.75rem;
-  vertical-align: top; /* Keeps multi-line rows aligned neatly at the top */
-  word-break: break-word; /* Ensures long URLs or words break cleanly */
+  vertical-align: top;
+  word-break: break-word;
 }
 
-// 4. Optional: Give the first column (Dataset Name) a bit more breathing room
+// Column width distribution
 table th:first-child,
 table td:first-child {
   width: 25%;
 }
 
-// 5. Optional: Make the "Quick Link" column slightly narrower since it's just a link
 table th:last-child,
 table td:last-child {
   width: 10%;
   text-align: center;
+}
+
+// Badges container
+div[align="center"] {
+  margin-bottom: 2rem;
+}
+
+// ============================================================================
+// Tablet Styles (768px - 1024px)
+// ============================================================================
+
+@media screen and (max-width: 1024px) {
+  .main-content {
+    padding: 1.5rem 2rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.6rem;
+  }
+}
+
+// ============================================================================
+// Mobile Styles (Below 768px)
+// ============================================================================
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  // Make badges wrap properly on mobile
+  div[align="center"] {
+    padding: 0 0.5rem;
+  }
+
+  // Stack badges vertically or in smaller groups
+  div[align="center"] h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  // Make table scrollable horizontally on mobile
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  // Reset table layout for mobile scrolling
+  table th,
+  table td {
+    white-space: nowrap;
+    padding: 0.5rem;
+    min-width: 120px;
+  }
+
+  // Adjust column widths for mobile
+  table th:first-child,
+  table td:first-child {
+    width: auto;
+    min-width: 150px;
+  }
+
+  table th:last-child,
+  table td:last-child {
+    width: auto;
+    min-width: 100px;
+  }
+
+  // Make headings smaller on mobile
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  // Adjust badge sizes on mobile
+  img[src*="img.shields.io"] {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// ============================================================================
+// Small Mobile Styles (Below 480px)
+// ============================================================================
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.4rem;
+    min-width: 100px;
+  }
+
+  table th:first-child,
+  table td:first-child {
+    min-width: 120px;
+  }
+
+  // Further reduce heading sizes
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  // Make badges smaller on very small screens
+  img[src*="img.shields.io"] {
+    transform: scale(0.85);
+    transform-origin: left center;
+    margin: 0.1rem;
+  }
+}
+
+// ============================================================================
+// Print Styles
+// ============================================================================
+
+@media print {
+  table {
+    display: table;
+    width: 100%;
+    overflow-x: visible;
+    font-size: 0.8rem;
+  }
+
+  table th,
+  table td {
+    white-space: normal;
+    word-wrap: break-word;
+  }
 }
