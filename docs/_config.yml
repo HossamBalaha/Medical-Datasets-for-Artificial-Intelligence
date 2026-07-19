@@ -1,4 +1,48 @@
+# ==============================================================================
+# Site Settings
+# ==============================================================================
 title: Medical AI Datasets Repository
-description: A curated collection of medical datasets for AI research.
+description: >-
+  A curated, comprehensive collection of high-quality medical imaging and 
+  clinical datasets designed to support artificial intelligence research, 
+  development, and benchmarking in healthcare.
+
+# The base hostname and protocol for your site.
+# Update 'hossambalaha' and 'your-repository-name' to match your actual GitHub setup.
+url: "https://hossambalaha.github.io"
+baseurl: "/your-repository-name" # Leave as "" (empty string) if your site is hosted at hossambalaha.github.io directly
+
+# ==============================================================================
+# Build Settings
+# ==============================================================================
 theme: jekyll-theme-cayman
 markdown: kramdown
+
+# GitHub Pages natively supported plugins for better SEO and navigation
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ==============================================================================
+# Default Front Matter
+# ==============================================================================
+# This ensures all Markdown files in the docs/ folder are rendered with the theme's default layout
+defaults:
+  - scope:
+      path: "docs" # Applies to everything in the docs folder
+    values:
+      layout: default
+
+# ==============================================================================
+# Exclusions
+# ==============================================================================
+# Prevent Jekyll from processing these files, keeping the build clean and fast
+exclude:
+  - README.md          # The root README is for GitHub, not the Jekyll site
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.v0.md
+  - SplitReadmeToPages.py
