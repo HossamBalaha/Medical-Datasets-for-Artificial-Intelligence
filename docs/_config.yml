@@ -16,6 +16,7 @@ baseurl: "/Medical-Datasets-for-Artificial-Intelligence"
 # ==============================================================================
 theme: jekyll-theme-cayman
 markdown: kramdown
+full-width: true
 
 # GitHub Pages natively supported plugins for better SEO and navigation
 plugins:

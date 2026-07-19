@@ -55,6 +55,8 @@ have been migrated to our dedicated documentation site.
 
 👉 **[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)**
 
+---
+
 ## 🤝 How to Contribute or Request a Dataset
 
 - ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
