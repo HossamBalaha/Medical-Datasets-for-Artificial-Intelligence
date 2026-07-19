@@ -8,9 +8,8 @@ description: >-
   development, and benchmarking in healthcare.
 
 # The base hostname and protocol for your site.
-# Update 'hossambalaha' and 'your-repository-name' to match your actual GitHub setup.
-url: "https://hossambalaha.github.io"
-baseurl: "/your-repository-name" # Leave as "" (empty string) if your site is hosted at hossambalaha.github.io directly
+url: "https://HossamBalaha.github.io"
+baseurl: "/Medical-Datasets-for-Artificial-Intelligence"
 
 # ==============================================================================
 # Build Settings
