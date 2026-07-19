@@ -1,0 +1,32 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// 1. Expand the main content area to use almost the entire screen width
+.main-content {
+  max-width: 95%;
+  width: 95%;
+  padding: 2rem 3rem;
+}
+
+// 2. Make tables horizontally scrollable on all screen sizes
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  border-collapse: collapse;
+}
+
+// 3. Prevent table text from squishing/wrapping, forcing a clean horizontal scroll instead
+table th,
+table td {
+  white-space: nowrap;
+  padding: 0.75rem 1rem;
+}
+
+// 4. Optional: Add a subtle shadow to the table to indicate it is scrollable
+table {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
