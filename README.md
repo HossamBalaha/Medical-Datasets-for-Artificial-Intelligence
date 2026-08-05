@@ -1,7 +1,7 @@
 # Medical AI Datasets Repository
 
 Welcome to the Medical AI Datasets Repository. This project provides streamlined access to high-quality, task-specific
-medical imaging datasets.
+medical imaging and clinical datasets.
 
 <div align="center">
 
@@ -53,15 +53,18 @@ medical imaging datasets.
 Due to the extensive nature of the datasets included, the comprehensive catalog, metadata, and preprocessing guidelines
 have been migrated to our dedicated documentation site.
 
-👉 **[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)**
+👉 *
+*[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)
+**
 
 ---
 
 ## 🤝 How to Contribute or Request a Dataset
 
-- ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure above.
+- ➕ **Add a Dataset**: Submit a pull request with dataset metadata following the structure outlined in the documentation
+  site.
 - 🐛 **Report Issues**: Use the GitHub Issues tab to flag broken links, metadata errors, or accessibility concerns.
-- 💡 **Suggest New Datasets**: Open an issue with the dataset name, DOI/link, tasks, and brief description.
+- 💡 **Suggest New Datasets**: Open an issue with the dataset name, DOI/link, tasks, and a brief description.
 
 ---
 
@@ -80,15 +83,14 @@ have been migrated to our dedicated documentation site.
 
 If you use this repository or any of its listed datasets in your research, please cite both:
 
-1. 🔗 The original dataset source (e.g., the Figshare DOI above)
-2. 📦 This repository (citation details to be added upon formal release)
+1. 🔗 The original dataset source (e.g., the DOI provided in the dataset's documentation page).
+2. 📦 This repository (citation details to be added upon formal release).
 
 ---
 
 ## 📬 Contact
 
 This repository is prepared by `Hossam Magdy Balaha`. For any questions or inquiries, please contact me using the
-contact information available on my CV at the following
-link: https://hossambalaha.github.io/
+contact information available on my CV at the following link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: July 19, 2026*
+*🕒 Last Updated: August 05, 2026*
