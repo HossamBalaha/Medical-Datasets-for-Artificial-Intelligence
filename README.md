@@ -53,9 +53,7 @@ medical imaging and clinical datasets.
 Due to the extensive nature of the datasets included, the comprehensive catalog, metadata, and preprocessing guidelines
 have been migrated to our dedicated documentation site.
 
-👉 *
-*[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)
-**
+👉 **[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)**
 
 ---
 
