@@ -31,7 +31,7 @@
     }
 
     .container {
-        max-width: 1400px;
+        max-width: 95%;
         margin: 0 auto;
         background: white;
         border-radius: 12px;
@@ -183,6 +183,7 @@
     @media screen and (max-width: 768px) {
         .container {
             padding: 15px;
+            max-width: 100%;
         }
 
         h1 {
@@ -209,23 +210,37 @@
     <span class="badge badge-task">🏷️ Classification</span>
     <span class="badge badge-task">🎭 Segmentation</span>
     <span class="badge badge-task">📊 Ordinal Classification</span>
-    <span class="badge badge-task"> Localization</span>
+    <span class="badge badge-task">📍 Localization</span>
     <span class="badge badge-task">📈 Time-Series</span>
     <span class="badge badge-modality">🏥 Medical Imaging</span>
-    <span class="badge badge-modality"> X-ray</span>
+    <span class="badge badge-modality">🩻 X-ray</span>
     <span class="badge badge-modality">🧊 CT Scan</span>
     <span class="badge badge-modality">🧲 MRI</span>
-    <span class="badge badge-modality">️ OCT</span>
+    <span class="badge badge-modality">👁️ OCT</span>
     <span class="badge badge-modality">📸 Fundus</span>
     <span class="badge badge-modality">🔬 Histopathology</span>
-    <span class="badge badge-modality"> Microscopy</span>
+    <span class="badge badge-modality">🧫 Microscopy</span>
     <span class="badge badge-modality">📋 Clinical Data</span>
     <span class="badge badge-organ">🧠 Brain</span>
-    <span class="badge badge-organ">️ Retina</span>
+    <span class="badge badge-organ">👁️ Retina</span>
     <span class="badge badge-organ">🫁 Lungs</span>
     <span class="badge badge-organ">🫀 Breast</span>
-    <span class="badge badge-organ"> Bone</span>
+    <span class="badge badge-organ">🦴 Bone</span>
     <span class="badge badge-organ">🖼️ Skin</span>
+  </div>
+
+  <!-- Overview Section -->
+  <div
+      style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #667eea;">
+    <h2 style="margin-top: 0; color: #333; font-size: 1.5em;">🌐 Overview</h2>
+    <p style="color: #555; line-height: 1.6; margin-bottom: 0;">
+      This repository serves as a curated collection of medical datasets designed to support artificial intelligence
+      research
+      and development in healthcare. It provides researchers, developers, and practitioners with streamlined access to
+      high-quality, task-specific medical imaging datasets for classification, segmentation, localization, and other
+      AI-driven
+      applications.
+    </p>
   </div>
 
   <table id="datasetsTable" class="display responsive nowrap" style="width:100%">
@@ -258,7 +273,7 @@
     </tr>
     <tr>
       <td>2</td>
-      <td><a href="datasets/BTXRD-Bone-Tumor-X-ray-Radiograph-Dataset" class="dataset-link"> BTXRD: Bone Tumor X-ray
+      <td><a href="datasets/BTXRD-Bone-Tumor-X-ray-Radiograph-Dataset" class="dataset-link">🦴 BTXRD: Bone Tumor X-ray
         Radiograph Dataset</a></td>
       <td><abbr title="Skeletal System (Appendicular and Axial)">🦴 Bone</abbr></td>
       <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
@@ -267,14 +282,14 @@
       <td>📍 Localization</td>
       <td>Multiclass</td>
       <td>March 28, 2026</td>
-      <td><a href="https://doi.org/10.6084/m9.figshare.27865398" class="source-link"> Source</a></td>
+      <td><a href="https://doi.org/10.6084/m9.figshare.27865398" class="source-link">🔗 Source</a></td>
     </tr>
     <tr>
       <td>3</td>
       <td><a href="datasets/BRISC-2025-Annotated-Dataset-for-Brain-Tumor-Image-Segmentation-and-Classification"
              class="dataset-link">🧠 BRISC 2025: Brain Tumor Segmentation & Classification</a></td>
       <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
-      <td><abbr title="Magnetic Resonance Imaging (MRI)"> MRI</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-yes">✅</td>
       <td>-</td>
@@ -286,10 +301,10 @@
       <td>4</td>
       <td><a href="datasets/Brain-Tumor-Dataset-(Jun-Cheng)" class="dataset-link">🧠 Brain Tumor Dataset (Jun Cheng)</a>
       </td>
-      <td><abbr title="Central Nervous System"> Brain</abbr></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
       <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
       <td class="check-yes">✅</td>
-      <td class="check-no"></td>
+      <td class="check-no">❌</td>
       <td>-</td>
       <td>Multiclass</td>
       <td>June 20, 2026</td>
@@ -300,7 +315,7 @@
       <td><a href="datasets/Brain-Tumor-MRI-Dataset-(Glioma,-Meningioma,-Pituitary,-No-Tumor)" class="dataset-link">🧠
         Brain Tumor MRI Dataset</a></td>
       <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
-      <td><abbr title="Magnetic Resonance Imaging (MRI)"> MRI</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
       <td>-</td>
@@ -324,7 +339,7 @@
     </tr>
     <tr>
       <td>7</td>
-      <td><a href="datasets/Brain-Tumor-Multimodal-Image-(CT-&-MRI)" class="dataset-link"> Brain Tumor Multimodal Image
+      <td><a href="datasets/Brain-Tumor-Multimodal-Image-(CT-&-MRI)" class="dataset-link">🧠 Brain Tumor Multimodal Image
         (CT & MRI)</a></td>
       <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
       <td><abbr title="Computed Tomography (CT) and Magnetic Resonance Imaging (MRI)">🧊 CT / 🧲 MRI</abbr></td>
@@ -340,7 +355,7 @@
       <td>8</td>
       <td><a href="datasets/DeepHisto-Dataset-for-Glioma-Subtype-Classification-from-Whole-Slide-Images"
              class="dataset-link">🔬 DeepHisto: Glioma Subtype Classification from WSIs</a></td>
-      <td><abbr title="Central Nervous System"> Brain</abbr></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
       <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
@@ -366,7 +381,7 @@
       <td>10</td>
       <td><a href="datasets/2-Million-Histological-Images-of-Breast-Cancer-Tumors-with-HER2-Labels"
              class="dataset-link">🫀 2M Breast Cancer Tumors with HER2 Labels</a></td>
-      <td><abbr title="Mammary Gland / Breast Tissue"> Breast</abbr></td>
+      <td><abbr title="Mammary Gland / Breast Tissue">🫀 Breast</abbr></td>
       <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
@@ -405,7 +420,7 @@
       <td>13</td>
       <td><a href="datasets/HER2-IHC-40x-High-Resolution-Histopathology-Image-Dataset-for-HER2-Scoring-in-Breast-Cancer"
              class="dataset-link">🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer</a></td>
-      <td><abbr title="Mammary Gland / Breast Tissue"> Breast</abbr></td>
+      <td><abbr title="Mammary Gland / Breast Tissue">🫀 Breast</abbr></td>
       <td><abbr title="Histopathology (IHC Stained Slides)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
@@ -416,7 +431,7 @@
     </tr>
     <tr>
       <td>14</td>
-      <td><a href="datasets/CRC_DX-MSI-vs.-MSS-Classification-in-Gastrointestinal-Cancer" class="dataset-link"> CRC_DX:
+      <td><a href="datasets/CRC_DX-MSI-vs.-MSS-Classification-in-Gastrointestinal-Cancer" class="dataset-link">🔬 CRC_DX:
         MSI vs. MSS Classification in GI Cancer</a></td>
       <td><abbr title="Gastrointestinal Tract (Colon / Stomach)">🦴 Colorectal</abbr></td>
       <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
@@ -429,7 +444,7 @@
     </tr>
     <tr>
       <td>15</td>
-      <td><a href="datasets/CRC-HGD-v1-Colorectal-Cancer-Histopathological-Grading-Dataset" class="dataset-link">
+      <td><a href="datasets/CRC-HGD-v1-Colorectal-Cancer-Histopathological-Grading-Dataset" class="dataset-link">🔬
         CRC-HGD-v1: Colorectal Cancer Grading Dataset</a></td>
       <td><abbr title="Gastrointestinal Tract (Colon)">🦴 Colorectal</abbr></td>
       <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
@@ -442,7 +457,7 @@
     </tr>
     <tr>
       <td>16</td>
-      <td><a href="datasets/MSI-MSS-Strong-Patches-Microsatellite-Status-Classification" class="dataset-link"> MSI-MSS
+      <td><a href="datasets/MSI-MSS-Strong-Patches-Microsatellite-Status-Classification" class="dataset-link">🔬 MSI-MSS
         Strong Patches: Microsatellite Status</a></td>
       <td><abbr title="Gastrointestinal Tract (Colon)">🦴 Colorectal</abbr></td>
       <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
@@ -490,15 +505,15 @@
       <td>-</td>
       <td>Multi-label</td>
       <td>June 30, 2026</td>
-      <td><a href="https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k" class="source-link">
+      <td><a href="https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k" class="source-link">🔗
         Source</a></td>
     </tr>
     <tr>
       <td>20</td>
-      <td><a href="datasets/GastroVision-Gastrointestinal-Disease-Detection" class="dataset-link"> GastroVision:
+      <td><a href="datasets/GastroVision-Gastrointestinal-Disease-Detection" class="dataset-link">🔬 GastroVision:
         Gastrointestinal Disease Detection</a></td>
       <td><abbr title="Gastrointestinal Tract (Esophagus, Stomach, Intestines)">🩺 Gastrointestinal</abbr></td>
-      <td><abbr title="White-Light / Narrow-Band Endoscopy"> Endoscopy</abbr></td>
+      <td><abbr title="White-Light / Narrow-Band Endoscopy">🩺 Endoscopy</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
       <td>-</td>
@@ -511,7 +526,7 @@
       <td>21</td>
       <td><a href="datasets/KvasirV2.md" class="dataset-link">🩺 Kvasir v2: A Gastrointestinal Tract Dataset</a></td>
       <td><abbr title="Gastrointestinal Tract (Esophagus, Stomach, Intestines)">🩺 Gastrointestinal</abbr></td>
-      <td><abbr title="White-Light / Narrow-Band Endoscopy"> Endoscopy</abbr></td>
+      <td><abbr title="White-Light / Narrow-Band Endoscopy">🩺 Endoscopy</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
       <td>🔍 Retrieval</td>
@@ -552,7 +567,7 @@
       <td>24</td>
       <td><a href="datasets/Paratuberculosis-Histopathology-Images-Dataset" class="dataset-link">🦠 Paratuberculosis
         Histopathology Images</a></td>
-      <td><abbr title="Veterinary Intestinal Tissue"> Intestinal (Vet)</abbr></td>
+      <td><abbr title="Veterinary Intestinal Tissue">🐄 Intestinal (Vet)</abbr></td>
       <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
@@ -565,14 +580,14 @@
       <td>25</td>
       <td><a href="datasets/Dartmouth-Kidney-Cancer-Histology-Dataset" class="dataset-link">🔬 Dartmouth Kidney Cancer
         Histology Dataset</a></td>
-      <td><abbr title="Renal System (Kidneys)"> Kidney</abbr></td>
+      <td><abbr title="Renal System (Kidneys)">🫘 Kidney</abbr></td>
       <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-no">❌</td>
       <td>-</td>
       <td>Multiclass</td>
       <td>April 11, 2026</td>
-      <td><a href="https://bmirds.github.io/KidneyCancer/" class="source-link"> Source</a></td>
+      <td><a href="https://bmirds.github.io/KidneyCancer/" class="source-link">🔗 Source</a></td>
     </tr>
     <tr>
       <td>26</td>
@@ -599,7 +614,7 @@
       <td>-</td>
       <td>Multi-label</td>
       <td>June 26, 2026</td>
-      <td><a href="https://stanfordmlgroup.github.io/competitions/chexpert/" class="source-link"> Source</a></td>
+      <td><a href="https://stanfordmlgroup.github.io/competitions/chexpert/" class="source-link">🔗 Source</a></td>
     </tr>
     <tr>
       <td>28</td>
@@ -637,7 +652,7 @@
       <td>-</td>
       <td>Binary</td>
       <td>June 24, 2026</td>
-      <td><a href="https://imaging.cs.msu.ru/en/research/TB/Sakha-TB" class="source-link"> Source</a></td>
+      <td><a href="https://imaging.cs.msu.ru/en/research/TB/Sakha-TB" class="source-link">🔗 Source</a></td>
     </tr>
     <tr>
       <td>31</td>
@@ -674,7 +689,7 @@
       <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
       <td class="check-yes">✅</td>
       <td class="check-yes">✅</td>
-      <td> Feature Extraction</td>
+      <td>🔍 Feature Extraction</td>
       <td>Binary</td>
       <td>April 11, 2026</td>
       <td><a href="https://data.mendeley.com/datasets/ftmp4cvtmb/2" class="source-link">🔗 Source</a></td>
@@ -695,7 +710,7 @@
     </tr>
     <tr>
       <td>35</td>
-      <td><a href="datasets/IDRiD-Diabetic-Retinopathy-–-Grading-(Indian-Dataset)" class="dataset-link">️ IDRiD:
+      <td><a href="datasets/IDRiD-Diabetic-Retinopathy-–-Grading-(Indian-Dataset)" class="dataset-link">👁️ IDRiD:
         Diabetic Retinopathy – Grading</a></td>
       <td><abbr title="Eye (Retina / Fundus)">👁️ Retina</abbr></td>
       <td><abbr title="Color Fundus Photography">📸 Fundus</abbr></td>
@@ -744,12 +759,13 @@
       <td>-</td>
       <td>Binary</td>
       <td>Aug 05, 2026</td>
-      <td><a href="https://www.kaggle.com/datasets/drsaeedmohsen/monkeypox-dataset" class="source-link"> Source</a></td>
+      <td><a href="https://www.kaggle.com/datasets/drsaeedmohsen/monkeypox-dataset" class="source-link">🔗 Source</a>
+      </td>
     </tr>
     <tr>
       <td>39</td>
-      <td><a href="datasets/Clinical-Urine-Microscopy-for-Urinary-Tract-Infections" class="dataset-link"> Clinical Urine
-        Microscopy for UTIs</a></td>
+      <td><a href="datasets/Clinical-Urine-Microscopy-for-Urinary-Tract-Infections" class="dataset-link">🧪 Clinical
+        Urine Microscopy for UTIs</a></td>
       <td><abbr title="Urinary System / Cellular">🧪 Urine</abbr></td>
       <td><abbr title="Brightfield Microscopy">🧫 Microscopy</abbr></td>
       <td class="check-no">❌</td>
@@ -757,10 +773,21 @@
       <td>-</td>
       <td>Multiclass</td>
       <td>June 30, 2026</td>
-      <td><a href="https://rodare.hzdr.de/record/2473" class="source-link"> Source</a></td>
+      <td><a href="https://rodare.hzdr.de/record/2473" class="source-link">🔗 Source</a></td>
     </tr>
     </tbody>
   </table>
+
+  <!-- Contact Section -->
+  <div
+      style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 40px; border-left: 4px solid #667eea;">
+    <h2 style="margin-top: 0; color: #333; font-size: 1.5em;">📬 Contact</h2>
+    <p style="color: #555; line-height: 1.6; margin-bottom: 0;">
+      This repository is prepared by <strong>Hossam Magdy Balaha</strong>. For any questions or inquiries, please
+      contact me using the contact information available on my CV at the following link:
+      <a href="https://hossambalaha.github.io/" style="color: #667eea; text-decoration: none; font-weight: 600;">https://hossambalaha.github.io/</a>
+    </p>
+  </div>
 </div>
 
 <script>
