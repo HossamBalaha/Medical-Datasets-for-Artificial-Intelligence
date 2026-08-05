@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical AI Datasets Repository</title>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        padding: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: white;
+    }
+
+    .badge-task { background: #4CAF50; }
+    .badge-modality { background: #0288D1; }
+    .badge-organ { background: #F44336; }
+
+    table.dataTable {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 0.9em;
+    }
+
+    table.dataTable thead th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 3px solid #ddd;
+    }
+
+    table.dataTable tbody td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+    }
+
+    table.dataTable tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    table.dataTable tbody tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        padding: 8px 12px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.95em;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_length select {
+        padding: 8px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_info {
+        padding-top: 15px;
+        color: #666;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 8px 12px;
+        margin: 0 3px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: white;
+        cursor: pointer;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-color: #667eea;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        background: #f0f0f0;
+    }
+
+    .dataset-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .dataset-link:hover {
+        text-decoration: underline;
+    }
+
+    .check-yes {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    .check-no {
+        color: #f44336;
+        font-weight: bold;
+    }
+
+    .source-link {
+        color: #0288D1;
+        text-decoration: none;
+    }
+
+    .source-link:hover {
+        text-decoration: underline;
+    }
+
+    abbr {
+        cursor: help;
+        border-bottom: 1px dotted #666;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        table.dataTable {
+            font-size: 0.8em;
+        }
+
+        table.dataTable thead th,
+        table.dataTable tbody td {
+            padding: 8px;
+        }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🏥 Medical AI Datasets Repository</h1>
+  <p class="subtitle">A curated collection of medical imaging and clinical datasets for AI research</p>
+
+  <div class="badges">
+    <span class="badge badge-task">🏷️ Classification</span>
+    <span class="badge badge-task">🎭 Segmentation</span>
+    <span class="badge badge-task">📊 Ordinal Classification</span>
+    <span class="badge badge-task"> Localization</span>
+    <span class="badge badge-task">📈 Time-Series</span>
+    <span class="badge badge-modality">🏥 Medical Imaging</span>
+    <span class="badge badge-modality"> X-ray</span>
+    <span class="badge badge-modality">🧊 CT Scan</span>
+    <span class="badge badge-modality">🧲 MRI</span>
+    <span class="badge badge-modality">️ OCT</span>
+    <span class="badge badge-modality">📸 Fundus</span>
+    <span class="badge badge-modality">🔬 Histopathology</span>
+    <span class="badge badge-modality"> Microscopy</span>
+    <span class="badge badge-modality">📋 Clinical Data</span>
+    <span class="badge badge-organ">🧠 Brain</span>
+    <span class="badge badge-organ">️ Retina</span>
+    <span class="badge badge-organ">🫁 Lungs</span>
+    <span class="badge badge-organ">🫀 Breast</span>
+    <span class="badge badge-organ"> Bone</span>
+    <span class="badge badge-organ">🖼️ Skin</span>
+  </div>
+
+  <table id="datasetsTable" class="display responsive nowrap" style="width:100%">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Dataset</th>
+      <th>Anatomy</th>
+      <th>Modality</th>
+      <th>Classification</th>
+      <th>Segmentation</th>
+      <th>Others</th>
+      <th>Classes</th>
+      <th>Last Accessed</th>
+      <th>Quick Link</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="datasets/Diabetes-Dataset-(AIM-'94)" class="dataset-link">🩸 Diabetes Dataset (AIM '94)</a></td>
+      <td><abbr title="Metabolic and Endocrine System">🩸 Blood / Metabolic</abbr></td>
+      <td><abbr title="Tabular Clinical Time-Series Data">📋 Tabular</abbr></td>
+      <td class="check-no">❌</td>
+      <td class="check-no">❌</td>
+      <td>📊 Time-Series</td>
+      <td>Time-Series</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://archive.ics.uci.edu/dataset/34/diabetes" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="datasets/BTXRD-Bone-Tumor-X-ray-Radiograph-Dataset" class="dataset-link"> BTXRD: Bone Tumor X-ray
+        Radiograph Dataset</a></td>
+      <td><abbr title="Skeletal System (Appendicular and Axial)">🦴 Bone</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>📍 Localization</td>
+      <td>Multiclass</td>
+      <td>March 28, 2026</td>
+      <td><a href="https://doi.org/10.6084/m9.figshare.27865398" class="source-link"> Source</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="datasets/BRISC-2025-Annotated-Dataset-for-Brain-Tumor-Image-Segmentation-and-Classification"
+             class="dataset-link">🧠 BRISC 2025: Brain Tumor Segmentation & Classification</a></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)"> MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Multiclass / Binary</td>
+      <td>March 28, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/briscdataset/brisc2025/" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="datasets/Brain-Tumor-Dataset-(Jun-Cheng)" class="dataset-link">🧠 Brain Tumor Dataset (Jun Cheng)</a>
+      </td>
+      <td><abbr title="Central Nervous System"> Brain</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no"></td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 20, 2026</td>
+      <td><a href="https://doi.org/10.6084/m9.figshare.1512427" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="datasets/Brain-Tumor-MRI-Dataset-(Glioma,-Meningioma,-Pituitary,-No-Tumor)" class="dataset-link">🧠
+        Brain Tumor MRI Dataset</a></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)"> MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>March 28, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/zwr4ntf94j/4" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="datasets/Brain-Tumor-MRI-Dataset-(Nickparvar)" class="dataset-link">🧠 Brain Tumor MRI Dataset
+        (Nickparvar)</a></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>July 19, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset" class="source-link">🔗
+        Source</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="datasets/Brain-Tumor-Multimodal-Image-(CT-&-MRI)" class="dataset-link"> Brain Tumor Multimodal Image
+        (CT & MRI)</a></td>
+      <td><abbr title="Central Nervous System">🧠 Brain</abbr></td>
+      <td><abbr title="Computed Tomography (CT) and Magnetic Resonance Imaging (MRI)">🧊 CT / 🧲 MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>July 19, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/murtozalikhon/brain-tumor-multimodal-image-ct-and-mri"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><a href="datasets/DeepHisto-Dataset-for-Glioma-Subtype-Classification-from-Whole-Slide-Images"
+             class="dataset-link">🔬 DeepHisto: Glioma Subtype Classification from WSIs</a></td>
+      <td><abbr title="Central Nervous System"> Brain</abbr></td>
+      <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>May 08, 2026</td>
+      <td><a href="https://doi.org/10.5281/zenodo.7941080" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><a href="datasets/DigitalMammographyDataset.md" class="dataset-link">🩻 Digital Mammography Dataset for Breast
+        Cancer (DMID)</a></td>
+      <td><abbr title="Mammary Gland / Breast Tissue">🫀 Breast</abbr></td>
+      <td><abbr title="Digital Mammography (X-ray)">🩻 Mammography</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>Aug 05, 2026</td>
+      <td><a href="https://doi.org/10.6084/m9.figshare.24522883" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="datasets/2-Million-Histological-Images-of-Breast-Cancer-Tumors-with-HER2-Labels"
+             class="dataset-link">🫀 2M Breast Cancer Tumors with HER2 Labels</a></td>
+      <td><abbr title="Mammary Gland / Breast Tissue"> Breast</abbr></td>
+      <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>July 03, 2026</td>
+      <td><a href="https://zenodo.org/records/8383580" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="datasets/Breast-Carcinoma-Histological-Images-(Agios-Pavlos-Hospital)" class="dataset-link">🫀 Breast
+        Carcinoma Histological Images</a></td>
+      <td><abbr title="Mammary Gland / Breast Tissue">🫀 Breast</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Ordinal</td>
+      <td>July 03, 2026</td>
+      <td><a href="https://zenodo.org/records/834910" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="datasets/Digital-Pathology-Dataset-for-Breast-Cancer-Diagnosis" class="dataset-link">🫀 Digital
+        Pathology Dataset for Breast Cancer</a></td>
+      <td><abbr title="Mammary Gland / Breast Tissue">🫀 Breast</abbr></td>
+      <td><abbr title="Histopathology (H&E and IHC Whole Slide Images)">🔬 Histopathology</abbr></td>
+      <td class="check-no">❌</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>July 03, 2026</td>
+      <td><a href="https://zenodo.org/records/14131968" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="datasets/HER2-IHC-40x-High-Resolution-Histopathology-Image-Dataset-for-HER2-Scoring-in-Breast-Cancer"
+             class="dataset-link">🔬 HER2-IHC-40x: HER2 Scoring in Breast Cancer</a></td>
+      <td><abbr title="Mammary Gland / Breast Tissue"> Breast</abbr></td>
+      <td><abbr title="Histopathology (IHC Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Ordinal</td>
+      <td>May 08, 2026</td>
+      <td><a href="https://doi.org/10.5281/zenodo.15179608" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><a href="datasets/CRC_DX-MSI-vs.-MSS-Classification-in-Gastrointestinal-Cancer" class="dataset-link"> CRC_DX:
+        MSI vs. MSS Classification in GI Cancer</a></td>
+      <td><abbr title="Gastrointestinal Tract (Colon / Stomach)">🦴 Colorectal</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>May 08, 2026</td>
+      <td><a href="https://doi.org/10.5281/zenodo.2530835" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><a href="datasets/CRC-HGD-v1-Colorectal-Cancer-Histopathological-Grading-Dataset" class="dataset-link">
+        CRC-HGD-v1: Colorectal Cancer Grading Dataset</a></td>
+      <td><abbr title="Gastrointestinal Tract (Colon)">🦴 Colorectal</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Ordinal</td>
+      <td>April 11, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/yfp5sfj47m/2" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><a href="datasets/MSI-MSS-Strong-Patches-Microsatellite-Status-Classification" class="dataset-link"> MSI-MSS
+        Strong Patches: Microsatellite Status</a></td>
+      <td><abbr title="Gastrointestinal Tract (Colon)">🦴 Colorectal</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>May 08, 2026</td>
+      <td><a href="https://doi.org/10.5281/zenodo.3692380" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><a href="datasets/NCT-CRC-HE-100K-100,000-Histological-Images-of-Human-Colorectal-Cancer-and-Healthy-Tissue"
+             class="dataset-link">🔬 NCT-CRC-HE-100K: Colorectal Cancer Histology</a></td>
+      <td><abbr title="Gastrointestinal Tract (Colon)">🦴 Colorectal</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>🔍 Retrieval</td>
+      <td>Multiclass</td>
+      <td>April 11, 2026</td>
+      <td><a href="https://doi.org/10.5281/zenodo.1214456" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><a href="datasets/Labeled-Optical-Coherence-Tomography-(OCT)-and-Chest-X-Ray-Images-for-Classification"
+             class="dataset-link">👁️🫁 Labeled OCT and Chest X-Ray Images</a></td>
+      <td><abbr title="Eye (Retina) and Respiratory System (Lungs)">👁️🫁 Eye / Lungs</abbr></td>
+      <td><abbr title="Optical Coherence Tomography (OCT) and Radiographic X-ray">👁️ OCT / 🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 24, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/rscbjbr9sj/2" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="datasets/Ocular-Disease-Recognition-(ODIR-5K)" class="dataset-link">👁️ Ocular Disease Recognition
+        (ODIR-5K)</a></td>
+      <td><abbr title="Eye (Retina / Fundus)">👁️ Eye</abbr></td>
+      <td><abbr title="Color Fundus Photography">📸 Fundus</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multi-label</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k" class="source-link">
+        Source</a></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><a href="datasets/GastroVision-Gastrointestinal-Disease-Detection" class="dataset-link"> GastroVision:
+        Gastrointestinal Disease Detection</a></td>
+      <td><abbr title="Gastrointestinal Tract (Esophagus, Stomach, Intestines)">🩺 Gastrointestinal</abbr></td>
+      <td><abbr title="White-Light / Narrow-Band Endoscopy"> Endoscopy</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>May 08, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/orvile/gastrovision-gastrointestinal-disease-detection"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><a href="datasets/KvasirV2.md" class="dataset-link">🩺 Kvasir v2: A Gastrointestinal Tract Dataset</a></td>
+      <td><abbr title="Gastrointestinal Tract (Esophagus, Stomach, Intestines)">🩺 Gastrointestinal</abbr></td>
+      <td><abbr title="White-Light / Narrow-Band Endoscopy"> Endoscopy</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>🔍 Retrieval</td>
+      <td>Multiclass</td>
+      <td>Aug 05, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/plhalvorsen/kvasir-v2-a-gastrointestinal-tract-dataset"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><a href="datasets/Heart-Attack-Analysis-&-Prediction-Dataset" class="dataset-link">❤️ Heart Attack Analysis &
+        Prediction</a></td>
+      <td><abbr title="Cardiovascular System">❤️ Heart</abbr></td>
+      <td><abbr title="Tabular Clinical Data">📋 Tabular</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/sonialikhan/heart-attack-analysis-and-prediction-dataset"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><a href="datasets/Heart-Failure-Prediction-Dataset" class="dataset-link">❤️ Heart Failure Prediction
+        Dataset</a></td>
+      <td><abbr title="Cardiovascular System">❤️ Heart</abbr></td>
+      <td><abbr title="Tabular Clinical Data">📋 Tabular</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction" class="source-link">🔗
+        Source</a></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><a href="datasets/Paratuberculosis-Histopathology-Images-Dataset" class="dataset-link">🦠 Paratuberculosis
+        Histopathology Images</a></td>
+      <td><abbr title="Veterinary Intestinal Tissue"> Intestinal (Vet)</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>May 24, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/zjhymwjtxv/3" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><a href="datasets/Dartmouth-Kidney-Cancer-Histology-Dataset" class="dataset-link">🔬 Dartmouth Kidney Cancer
+        Histology Dataset</a></td>
+      <td><abbr title="Renal System (Kidneys)"> Kidney</abbr></td>
+      <td><abbr title="Histopathology (H&E Whole Slide Images)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>April 11, 2026</td>
+      <td><a href="https://bmirds.github.io/KidneyCancer/" class="source-link"> Source</a></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><a href="datasets/Digital-Knee-X-ray-Images-Knee-Osteoarthritis-Grading" class="dataset-link">🦴 Digital Knee
+        X-ray Images: Knee OA Grading</a></td>
+      <td><abbr title="Skeletal System (Knee Joint)">🦴 Knee</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Ordinal</td>
+      <td>May 24, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/orvile/digital-knee-x-ray-images" class="source-link">🔗 Source</a>
+      </td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><a href="datasets/CheXpert-A-Large-Chest-Radiograph-Dataset-with-Uncertainty-Labels-and-Expert-Comparison"
+             class="dataset-link">🫁 CheXpert: Large Chest Radiograph Dataset</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multi-label</td>
+      <td>June 26, 2026</td>
+      <td><a href="https://stanfordmlgroup.github.io/competitions/chexpert/" class="source-link"> Source</a></td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><a href="datasets/COVID-19-Radiography-Database" class="dataset-link">🫁 COVID-19 Radiography Database</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 26, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database" class="source-link">🔗
+        Source</a></td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><a href="datasets/COVIDx-CT-A-Large-Scale-Chest-CT-Dataset-for-COVID-19-Detection" class="dataset-link">🫁
+        COVIDx CT: Large-Scale Chest CT for COVID-19</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Computed Tomography (CT)">🧊 CT Scan</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>📍 Localization</td>
+      <td>Multiclass</td>
+      <td>June 20, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/hgunraj/covidxct" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><a href="datasets/Sakha-TB" class="dataset-link">🫁 Sakha-TB</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>June 24, 2026</td>
+      <td><a href="https://imaging.cs.msu.ru/en/research/TB/Sakha-TB" class="source-link"> Source</a></td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><a href="datasets/Tuberculosis-(TB)-Chest-X-ray-Database" class="dataset-link">🫁 Tuberculosis (TB) Chest X-ray
+        Database</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Radiographic X-ray Imaging">🩻 X-ray</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>June 24, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="datasets/SarsCov2CtScanDataset.md" class="dataset-link">🫁 SARS-COV-2 Ct-Scan Dataset</a></td>
+      <td><abbr title="Respiratory System (Lungs / Chest)">🫁 Lungs</abbr></td>
+      <td><abbr title="Computed Tomography (CT)">🧊 CT Scan</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>Aug 05, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset" class="source-link">🔗
+        Source</a></td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><a href="datasets/Histopathological-Imaging-Database-for-Oral-Cancer-Analysis" class="dataset-link">🔬
+        Histopathological Imaging Database for Oral Cancer</a></td>
+      <td><abbr title="Oral Cavity (Buccal Mucosa)">🗣️ Oral Cavity</abbr></td>
+      <td><abbr title="Histopathology (H&E Stained Slides)">🔬 Histopathology</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td> Feature Extraction</td>
+      <td>Binary</td>
+      <td>April 11, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/ftmp4cvtmb/2" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><a href="datasets/Eyepacs,-Aptos,-Messidor-Diabetic-Retinopathy-Unified-Dataset" class="dataset-link">👁️
+        Eyepacs, Aptos, Messidor Diabetic Retinopathy</a></td>
+      <td><abbr title="Eye (Retina / Fundus)">👁️ Retina</abbr></td>
+      <td><abbr title="Color Fundus Photography">📸 Fundus</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Ordinal</td>
+      <td>May 24, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><a href="datasets/IDRiD-Diabetic-Retinopathy-–-Grading-(Indian-Dataset)" class="dataset-link">️ IDRiD:
+        Diabetic Retinopathy – Grading</a></td>
+      <td><abbr title="Eye (Retina / Fundus)">👁️ Retina</abbr></td>
+      <td><abbr title="Color Fundus Photography">📸 Fundus</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-yes">✅</td>
+      <td>📍 Localization</td>
+      <td>Ordinal</td>
+      <td>May 24, 2026</td>
+      <td><a href="https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><a href="datasets/ISIC-2019-Skin-Lesion-Analysis-Toward-Melanoma-Detection" class="dataset-link">🖼️ ISIC 2019:
+        Skin Lesion Analysis</a></td>
+      <td><abbr title="Integumentary System (Skin)">🖼️ Skin</abbr></td>
+      <td><abbr title="Dermoscopic and Clinical Photography">🖼️ Dermoscopy</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://challenge.isic-archive.com/data/#2019" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><a href="datasets/PAD-UFES-20-Skin-Lesion-Dataset" class="dataset-link">🖼️ PAD-UFES-20: Skin Lesion
+        Dataset</a></td>
+      <td><abbr title="Integumentary System (Skin)">🖼️ Skin</abbr></td>
+      <td><abbr title="Clinical Smartphone Photography">📱 Clinical Photo</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://data.mendeley.com/datasets/zr7vgbcyr2/1" class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td><a href="datasets/MonkeypoxDetectionDataset.md" class="dataset-link">🖼️ Monkeypox Detection Dataset, 2025</a>
+      </td>
+      <td><abbr title="Integumentary System (Skin)">🖼️ Skin</abbr></td>
+      <td><abbr title="Clinical Photography">📸 Clinical Photo</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Binary</td>
+      <td>Aug 05, 2026</td>
+      <td><a href="https://www.kaggle.com/datasets/drsaeedmohsen/monkeypox-dataset" class="source-link"> Source</a></td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td><a href="datasets/Clinical-Urine-Microscopy-for-Urinary-Tract-Infections" class="dataset-link"> Clinical Urine
+        Microscopy for UTIs</a></td>
+      <td><abbr title="Urinary System / Cellular">🧪 Urine</abbr></td>
+      <td><abbr title="Brightfield Microscopy">🧫 Microscopy</abbr></td>
+      <td class="check-no">❌</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Multiclass</td>
+      <td>June 30, 2026</td>
+      <td><a href="https://rodare.hzdr.de/record/2473" class="source-link"> Source</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function() {
+      $('#datasetsTable').DataTable({
+          responsive: true,
+          pageLength: 25,
+          lengthMenu: [10, 25, 50, 100, -1],
+          order: [[0, 'asc']],
+          columnDefs: [
+              { width: "5%", targets: 0 },
+              { width: "25%", targets: 1 },
+              { width: "15%", targets: 2 },
+              { width: "15%", targets: 3 },
+              { width: "8%", targets: 4 },
+              { width: "8%", targets: 5 },
+              { width: "10%", targets: 6 },
+              { width: "10%", targets: 7 },
+              { width: "10%", targets: 8 },
+              { width: "9%", targets: 9 }
+          ],
+          language: {
+              search: "🔍 Search datasets:",
+              lengthMenu: "Show _MENU_ entries",
+              info: "Showing _START_ to _END_ of _TOTAL_ datasets",
+              infoEmpty: "Showing 0 to 0 of 0 datasets",
+              infoFiltered: "(filtered from _MAX_ total datasets)",
+              paginate: {
+                  first: "««",
+                  last: "»»",
+                  next: "»",
+                  previous: "«"
+              }
+          }
+      });
+  });
+</script>
+</body>
+</html>
