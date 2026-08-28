@@ -4,17 +4,17 @@
 
 [🔝 Back to Summary](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)
 
-| Metadata                | Details                                                                                |
-|-------------------------|----------------------------------------------------------------------------------------|
-| **📛 Title**            | Eyepacs, Aptos, Messidor Diabetic Retinopathy: Unified Dataset                         |
-| **🔗 Source**           | https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy |
-| **👁️ Target Organ**    | Retina / Fundus                                                                        |
-| **📅 Last Accessed**    | May 24, 2026                                                                           |
-| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (Diabetic Retinopathy Grading)                              |
-| **📐 Image Size**       | 600 × 600 pixels (uniformly resized; original sources variable)                        |
-| **📁 Data Format**      | JPEG (.jpg); labels encoded in directory structure                                     |
-| **👥 Demographics**     | ❌ Not included (de-identified clinical fundus images)                                  |
-| **🔄 Train/Test Split** | ✅ Yes (80% Train / 10% Validation / 10% Test; random stratified split)                 |
+| Metadata                | Details                                                                               |
+|-------------------------|---------------------------------------------------------------------------------------|
+| **📛 Title**            | Eyepacs, Aptos, Messidor Diabetic Retinopathy: Unified Dataset                        |
+| **🔗 Source**           | https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathy |
+| **👁️ Target Organ**    | Retina / Fundus                                                                       |
+| **📅 Last Accessed**    | May 24, 2026                                                                          |
+| **🎯 Supported Tasks**  | 🏷️ Ordinal Classification (Diabetic Retinopathy Grading)                             |
+| **📐 Image Size**       | 600 × 600 pixels (uniformly resized; original sources variable)                       |
+| **📁 Data Format**      | JPEG (.jpg); labels encoded in directory structure                                    |
+| **👥 Demographics**     | ❌ Not included (de-identified clinical fundus images)                                 |
+| **🔄 Train/Test Split** | ✅ Yes (80% Train / 10% Validation / 10% Test; random stratified split)                |
 
 #### 📊 Dataset Composition
 
@@ -101,7 +101,7 @@
 
 #### 🔗 Associated Resources
 
-- **Kaggle Repository**: https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy
+- **Kaggle Repository**: https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathy
 - **Original Data Sources**:
     - EyePACS / Kaggle Diabetic Retinopathy
       Detection: https://www.kaggle.com/competitions/diabetic-retinopathy-detection
@@ -127,7 +127,7 @@ If you use this dataset, please cite **both** this unified repository **and** al
     title = {Eyepacs, Aptos, Messidor Diabetic Retinopathy},
     year = {2024},
     publisher = {Kaggle},
-    url = {https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathyy},
+    url = {https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathy},
     note = {Accessed: May 24, 2026}
 }
 
@@ -158,4 +158,3 @@ If you use this dataset, please cite **both** this unified repository **and** al
 ```
 
 ---
-
