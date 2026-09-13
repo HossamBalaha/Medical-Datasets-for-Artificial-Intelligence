@@ -2525,15 +2525,15 @@
       // Define the CamelCase function to format the child row details.
       function FormatChildRow(dataArray) {
         // Declare the variable for the formatted HTML string.
-        let formattedHtml = " < div style = \"padding: 10px;\">";
+        let formattedHtml = " <div style = \"padding: 10px;\">";
         // Add the Others category to the child row.
-        formattedHtml += " < strong > 📌Others: < /strong> " + (dataArray[6] !== "-" ? dataArray[6] : "None") + " < br > ";
+        formattedHtml += " <strong> 📌Others: </strong> " + (dataArray[6] !== "-" ? dataArray[6] : "None") + " <br> ";
         // Add the Classes category to the child row.
-        formattedHtml += " < strong > 🏷️Classes: < /strong> " + dataArray[7] + " < br > ";
+        formattedHtml += " <strong> 🏷️Classes: </strong> " + dataArray[7] + " <br> ";
         // Add the Last Accessed date to the child row.
-        formattedHtml += " < strong > 📅Last Accessed: < /strong> " + dataArray[8] + " < br > ";
+        formattedHtml += " <strong> 📅Last Accessed: </strong> " + dataArray[8] + " <br> ";
         // Close the div element.
-        formattedHtml += " < /div>";
+        formattedHtml += " </div>";
         // Return the formatted HTML string.
         return formattedHtml;
       }
@@ -2761,7 +2761,7 @@
                 // Declare the variable for the source URL.
                 let url = $(this).attr("href");
                 // Append the copy button with the URL data attribute.
-                $(this).after(" < button class = \"copy-link-btn\" data-url=\"" + url + "\" aria-label=\"Copy source link\" title=\"Copy link\">📋</button>");
+                $(this).after(" <button class = \"copy-link-btn\" data-url=\"" + url + "\" aria-label=\"Copy source link\" title=\"Copy link\">📋</button>");
               }
             });
           }
