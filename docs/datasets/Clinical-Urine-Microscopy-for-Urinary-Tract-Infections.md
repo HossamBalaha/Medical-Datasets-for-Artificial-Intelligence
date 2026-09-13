@@ -2,8 +2,8 @@
 
 **Study**: Liou, N., De, T., Urbanski, A., Khasriya, R., Yakimovich, A., & Horsley, H. (2023). Clinical urine microscopy
 for urinary tract infections. RODARE.
-
 [🔝 Back to Summary](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)
+
 | Metadata | Details |
 |-------------------------|-------------------------------------------------------------------------|
 | **📛 Title**            | Clinical Urine Microscopy for Urinary Tract Infections |
@@ -86,4 +86,3 @@ If you use this dataset, please cite:
 ```
 
 ---
-
