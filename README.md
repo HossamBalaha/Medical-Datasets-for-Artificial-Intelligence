@@ -42,6 +42,9 @@ medical imaging and clinical datasets.
 ![Oral Cancer](https://img.shields.io/badge/🗣️_Oral_Cancer-E64A19?style=flat-square)
 ![Gastrointestinal](https://img.shields.io/badge/🩺_Gastrointestinal-BF360C?style=flat-square)
 ![Breast Cancer](https://img.shields.io/badge/🎀_Breast_Cancer-AD1457?style=flat-square)
+![Uterus / Reproductive](https://img.shields.io/badge/🩸_Uterus_/_Reproductive-E91E63?style=flat-square)
+![Ovarian Cancer](https://img.shields.io/badge/🎀_Ovarian_Cancer-9C27B0?style=flat-square)
+![Liver](https://img.shields.io/badge/🫀_Liver-FF5722?style=flat-square)
 ![Urine / UTI](https://img.shields.io/badge/🧪_Urine_/_UTI-FFEB3B?style=flat-square)
 ![Diabetes](https://img.shields.io/badge/🩸_Diabetes-FF9800?style=flat-square)
 ![Veterinary](https://img.shields.io/badge/🐄_Veterinary-558B2F?style=flat-square)
@@ -91,4 +94,4 @@ If you use this repository or any of its listed datasets in your research, pleas
 This repository is prepared by `Hossam Magdy Balaha`. For any questions or inquiries, please contact me using the
 contact information available on my CV at the following link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: August 05, 2026*
+*🕒 Last Updated: September 13, 2026*
