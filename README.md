@@ -12,6 +12,9 @@ medical imaging and clinical datasets.
 ![Ordinal Classification](https://img.shields.io/badge/📊_Ordinal_Classification-8BC34A?style=flat-square)
 ![Localization](https://img.shields.io/badge/📍_Localization-00BCD4?style=flat-square)
 ![Time-Series](https://img.shields.io/badge/📈_Time--Series-009688?style=flat-square)
+![Retrieval](https://img.shields.io/badge/🔍_Retrieval-29B6F6?style=flat-square)
+![Image Translation](https://img.shields.io/badge/🔄_Image_Translation-26C6DA?style=flat-square)
+![Survival Analysis](https://img.shields.io/badge/📈_Survival_Analysis-9CCC65?style=flat-square)
 
 ### 📡 Modalities
 
@@ -24,6 +27,13 @@ medical imaging and clinical datasets.
 ![Histopathology](https://img.shields.io/badge/🔬_Histopathology-9C27B0?style=flat-square)
 ![Microscopy](https://img.shields.io/badge/🧫_Microscopy-673AB7?style=flat-square)
 ![Clinical Data](https://img.shields.io/badge/📋_Clinical_Data-607D8B?style=flat-square)
+![Ultrasound](https://img.shields.io/badge/🔊_Ultrasound-00ACC1?style=flat-square)
+![Endoscopy](https://img.shields.io/badge/🩺_Endoscopy-00897B?style=flat-square)
+![Mammography](https://img.shields.io/badge/🩻_Mammography-546E7A?style=flat-square)
+![Dermoscopy](https://img.shields.io/badge/🖼️_Dermoscopy-8D6E63?style=flat-square)
+![Clinical Photo](https://img.shields.io/badge/📱_Clinical_Photo-7E57C2?style=flat-square)
+![Multimodal](https://img.shields.io/badge/🔄_Multimodal-26A69A?style=flat-square)
+![Genomics](https://img.shields.io/badge/🧬_Genomics-AB47BC?style=flat-square)
 
 ### 🫀 Organs & Conditions
 
@@ -52,6 +62,15 @@ medical imaging and clinical datasets.
 ![Urine / UTI](https://img.shields.io/badge/🧪_Urine_/_UTI-FFEB3B?style=flat-square)
 ![Diabetes](https://img.shields.io/badge/🩸_Diabetes-FF9800?style=flat-square)
 ![Veterinary](https://img.shields.io/badge/🐄_Veterinary-558B2F?style=flat-square)
+![Glaucoma](https://img.shields.io/badge/👁️_Glaucoma-0288D1?style=flat-square)
+![Pancreas](https://img.shields.io/badge/🩺_Pancreas-8D6E63?style=flat-square)
+![Alzheimers Disease](https://img.shields.io/badge/🧠_Alzheimers_Disease-78909C?style=flat-square)
+![Cardiomegaly](https://img.shields.io/badge/❤️_Cardiomegaly-D81B60?style=flat-square)
+![Atelectasis](https://img.shields.io/badge/🫁_Atelectasis-8E24AA?style=flat-square)
+![Monkeypox](https://img.shields.io/badge/🐒_Monkeypox-6D4C41?style=flat-square)
+![Osteosarcoma](https://img.shields.io/badge/🦴_Osteosarcoma-5D4037?style=flat-square)
+![Multi-Cancer](https://img.shields.io/badge/🎗️_Multi_Cancer-E91E63?style=flat-square)
+![GI Findings](https://img.shields.io/badge/🩺_GI_Findings-BF360C?style=flat-square)
 
 </div>
 
@@ -60,7 +79,8 @@ medical imaging and clinical datasets.
 Due to the extensive nature of the datasets included, the comprehensive catalog, metadata, and preprocessing guidelines
 have been migrated to our dedicated documentation site.
 
-👉 **[Access the Full Documentation and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)**
+👉 **[Access the Full Documentation
+and Dataset Catalog Here](https://HossamBalaha.github.io/Medical-Datasets-for-Artificial-Intelligence/)**
 
 ---
 
@@ -98,4 +118,4 @@ If you use this repository or any of its listed datasets in your research, pleas
 This repository is prepared by `Hossam Magdy Balaha`. For any questions or inquiries, please contact me using the
 contact information available on my CV at the following link: https://hossambalaha.github.io/
 
-*🕒 Last Updated: September 13, 2026*
+*🕒 Last Updated: October 07, 2026*
