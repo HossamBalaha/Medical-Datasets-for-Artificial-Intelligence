@@ -64,7 +64,7 @@ medical imaging and clinical datasets.
 ![Veterinary](https://img.shields.io/badge/🐄_Veterinary-558B2F?style=flat-square)
 ![Glaucoma](https://img.shields.io/badge/👁️_Glaucoma-0288D1?style=flat-square)
 ![Pancreas](https://img.shields.io/badge/🩺_Pancreas-8D6E63?style=flat-square)
-![Alzheimers Disease](https://img.shields.io/badge/🧠_Alzheimers_Disease-78909C?style=flat-square)
+![Alzheimer's Disease](https://img.shields.io/badge/🧠_Alzheimers_Disease-78909C?style=flat-square)
 ![Cardiomegaly](https://img.shields.io/badge/❤️_Cardiomegaly-D81B60?style=flat-square)
 ![Atelectasis](https://img.shields.io/badge/🫁_Atelectasis-8E24AA?style=flat-square)
 ![Monkeypox](https://img.shields.io/badge/🐒_Monkeypox-6D4C41?style=flat-square)

@@ -682,7 +682,7 @@
       }
 
       a::after {
-        content: " ("attr(href) ")";
+        content: " (" attr(href) ")";
         font-size: 0.8em;
         color: #666666;
       }
@@ -2771,6 +2771,65 @@
       <td>Oct 06, 2026</td>
       <td><a target="_blank" href="https://zenodo.org/records/6674034" class="source-link">🔗 Source</a></td>
     </tr>
+    <tr>
+      <td>96</td>
+      <td><a target="_blank" href="datasets/Heart-MRI-Left-Atrial-Segmentation-LASC13" class="dataset-link">❤️ Heart
+        MRI: Left Atrial Segmentation (LASC'13)</a></td>
+      <td><abbr title="Cardiovascular System (Heart)">❤️ Heart</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
+      <td class="check-no">❌</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Binary (Left Atrium vs. Background)</td>
+      <td>Nov 10, 2026</td>
+      <td><a target="_blank"
+             href="https://www.kaggle.com/datasets/adarshsng/heart-mri-image-dataset-left-atrial-segmentation"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td><a target="_blank" href="datasets/Noisy-Medical-Document-Images-OCR" class="dataset-link">📄 Noisy Medical
+        Document Images (OCR)</a></td>
+      <td><abbr title="Administrative / Clinical Documents">📄 Clinical Documents</abbr></td>
+      <td><abbr title="Scanned Documents (OCR)">📱 Scanned Documents</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>OCR, NER, Table Extraction</td>
+      <td>Binary (Hospital Bill, Discharge Summary) + Structured Entities</td>
+      <td>Nov 10, 2026</td>
+      <td><a target="_blank" href="https://www.kaggle.com/datasets/devp1866/noisy-medical-document-images-ocr"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td><a target="_blank" href="datasets/Rare-Neurological-Diseases-MRI-Curated" class="dataset-link">🧠 Rare
+        Neurological Diseases MRI (Curated)</a></td>
+      <td><abbr title="Central Nervous System (Brain)">🧠 Brain</abbr></td>
+      <td><abbr title="Magnetic Resonance Imaging (MRI)">🧲 MRI</abbr></td>
+      <td class="check-yes">✅</td>
+      <td class="check-no">❌</td>
+      <td>-</td>
+      <td>Multiclass (5 Rare Diseases: WWS, Pachygyria, Moyamoya, PKAN, Fukuyama)</td>
+      <td>Nov 10, 2026</td>
+      <td><a target="_blank"
+             href="https://www.kaggle.com/datasets/ahsanneural/rare-neurological-diseases-mri-curated-edition"
+             class="source-link">🔗 Source</a></td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td><a target="_blank" href="datasets/CBCT-Liver-and-Liver-Tumor-Segmentation-CBCTLiTS" class="dataset-link">🫀
+        CBCT Liver and Liver Tumor Segmentation (CBCTLiTS)</a></td>
+      <td><abbr title="Digestive System (Liver)">🫀 Liver</abbr></td>
+      <td><abbr title="Cone-Beam Computed Tomography (CBCT) / CT">🧊 CT Scan</abbr></td>
+      <td class="check-no">❌</td>
+      <td class="check-yes">✅</td>
+      <td>-</td>
+      <td>Multiclass (Background, Liver, Liver Tumor)</td>
+      <td>Nov 10, 2026</td>
+      <td><a target="_blank"
+             href="https://www.kaggle.com/datasets/maximiliantschuchnig/cbct-liver-and-liver-tumor-segmentation-train-data"
+             class="source-link">🔗 Source</a></td>
+    </tr>
     </tbody>
   </table>
   <!-- Contact Section -->
@@ -2787,6 +2846,7 @@
 <script>
   // Declare a variable to hold the current active filter.
   let currentActiveFilter = "";
+
   // Define the CamelCase function to show a toast notification.
   function ShowToastNotification(message) {
     // Declare the variable for the toast element.
@@ -2798,16 +2858,17 @@
     // Append the toast to the container.
     document.getElementById("toastContainer").appendChild(toast);
     // Set a timeout to remove the toast after three seconds.
-    setTimeout(function() {
+    setTimeout(function () {
       // Fade out the toast.
       toast.style.opacity = "0";
       // Remove the toast from the DOM after the fade out animation.
-      setTimeout(function() {
+      setTimeout(function () {
         // Remove the toast element.
         toast.remove();
       }, 300);
     }, 3000);
   }
+
   // Define the CamelCase function to format the child row details.
   function FormatChildRow(dataArray) {
     // Declare the variable for the formatted HTML string.
@@ -2823,10 +2884,11 @@
     // Return the formatted HTML string.
     return formattedHtml;
   }
+
   // Define the CamelCase function to initialize the data table.
   function InitializeDataTable() {
     // Define a custom search function for advanced semantic badge filtering.
-    $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+    $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
       // Check if there is an active filter.
       if (currentActiveFilter === "") {
         // Return true to show all rows if no filter is active.
@@ -3012,12 +3074,12 @@
         }
       },
       // Define the initialization callback to inject the clear button and copy links.
-      "initComplete": function() {
+      "initComplete": function () {
         // Append a clear search button to the filter input wrapper.
         $(".dataTables_filter").append(" <button class=\"clear-search-btn\" aria-label=\"Clear search\" type=\"button\">✖</button>");
       },
       // Define the draw callback to highlight search terms, manage clear button, and update counts.
-      "drawCallback": function(settings) {
+      "drawCallback": function (settings) {
         // Declare the variable for the table API instance using the standard DataTables method.
         let tableApi = this.api();
         // Declare the variable for the search input value.
@@ -3041,7 +3103,7 @@
         let totalCount = tableApi.rows().count();
         $("#datasetCount").text(visibleCount + " / " + totalCount + " datasets");
         // Append copy link buttons to source links if they do not already exist.
-        $(".source-link").each(function() {
+        $(".source-link").each(function () {
           // Check if the copy button is already present.
           if ($(this).next(".copy-link-btn").length === 0) {
             // Declare the variable for the source URL.
@@ -3053,7 +3115,7 @@
       }
     });
     // Attach a click event listener to the table for expanding child rows.
-    $("#datasetsTable tbody").on("click", "td.details-control", function() {
+    $("#datasetsTable tbody").on("click", "td.details-control", function () {
       // Declare the variable for the clicked row.
       let clickedRow = $(this).closest("tr");
       // Declare the variable for the row data.
@@ -3072,7 +3134,7 @@
       }
     });
     // Attach a click event listener to the clear search button.
-    $(".dataTables_wrapper").on("click", ".clear-search-btn", function() {
+    $(".dataTables_wrapper").on("click", ".clear-search-btn", function () {
       // Declare the variable for the search input element.
       let searchInput = $(".dataTables_filter input");
       // Clear the value of the search input.
@@ -3083,11 +3145,11 @@
       searchInput.blur();
     });
     // Attach a delegated click event listener to copy link buttons.
-    $("#datasetsTable tbody").on("click", ".copy-link-btn", function() {
+    $("#datasetsTable tbody").on("click", ".copy-link-btn", function () {
       // Declare the variable for the URL to copy.
       let url = $(this).data("url");
       // Write the URL to the clipboard.
-      navigator.clipboard.writeText(url).then(function() {
+      navigator.clipboard.writeText(url).then(function () {
         // Show a success toast notification.
         ShowToastNotification("Link copied to clipboard!");
       });
@@ -3095,6 +3157,7 @@
     // Return the data table instance.
     return dataTableInstance;
   }
+
   // Define the CamelCase function to toggle the theme.
   function ToggleTheme() {
     // Declare the variable for the current theme.
@@ -3118,6 +3181,7 @@
       themeToggleButton.setAttribute("aria-label", "Switch to " + (newTheme === "dark" ? "light" : "dark") + " theme");
     }
   }
+
   // Define the CamelCase function to initialize the theme on load.
   function InitializeTheme() {
     // Declare the variable for the saved theme.
@@ -3129,6 +3193,7 @@
     // Set the data-theme attribute on the document element.
     document.documentElement.setAttribute("data-theme", initialTheme);
   }
+
   // Define the CamelCase function to initialize the font size on load.
   function InitializeFontSize() {
     // Declare the variable for the saved font size.
@@ -3136,6 +3201,7 @@
     // Set the root font size percentage.
     document.documentElement.style.fontSize = savedSize + "%";
   }
+
   // Define the CamelCase function to change the font size.
   function ChangeFontSize(change) {
     // Declare the variable for the current font size.
@@ -3147,6 +3213,7 @@
     // Set the root font size percentage.
     document.documentElement.style.fontSize = newSize + "%";
   }
+
   // Define the CamelCase function to filter the table by a specific keyword.
   function FilterTableByKeyword(keyword) {
     // Update the current active filter variable.
@@ -3160,6 +3227,7 @@
     // Show a toast notification for user feedback.
     ShowToastNotification("Filter applied: " + keyword);
   }
+
   // Define the CamelCase function to reset all filters and table state.
   function ResetAllFilters() {
     // Clear the current active filter variable.
@@ -3179,6 +3247,7 @@
     // Show a toast notification for user feedback.
     ShowToastNotification("All filters cleared");
   }
+
   // Define the CamelCase function to update the reset button state.
   function UpdateResetButtonState() {
     // Declare the variable for the active badges count.
@@ -3194,6 +3263,7 @@
       resetButton.removeClass("is-active");
     }
   }
+
   // Define the CamelCase function to handle the scroll to top visibility and reading progress.
   function UpdateScrollUI() {
     // Declare the variable for the window scroll position.
@@ -3213,6 +3283,7 @@
       $("#scrollToTopBtn").fadeOut();
     }
   }
+
   // Define the CamelCase function to scroll the window to the top.
   function ScrollWindowToTop() {
     // Animate the window scroll position to zero over four hundred milliseconds.
@@ -3220,8 +3291,9 @@
       scrollTop: 0
     }, 400);
   }
+
   // Execute the code when the document is ready.
-  $(document).ready(function() {
+  $(document).ready(function () {
     // Call the function to initialize the theme.
     InitializeTheme();
     // Call the function to initialize the font size.
@@ -3229,22 +3301,22 @@
     // Call the function to initialize the data table.
     InitializeDataTable();
     // Attach a click event listener to the theme toggle button.
-    $("#themeToggle").on("click", function() {
+    $("#themeToggle").on("click", function () {
       // Call the function to toggle the theme.
       ToggleTheme();
     });
     // Attach a click event listener to the decrease font button.
-    $("#decreaseFontBtn").on("click", function() {
+    $("#decreaseFontBtn").on("click", function () {
       // Call the function to decrease the font size by five percent.
       ChangeFontSize(-5);
     });
     // Attach a click event listener to the increase font button.
-    $("#increaseFontBtn").on("click", function() {
+    $("#increaseFontBtn").on("click", function () {
       // Call the function to increase the font size by five percent.
       ChangeFontSize(5);
     });
     // Attach a keyup event listener to the search input for highlighting and clearing badge filters.
-    $(".dataTables_filter input").on("keyup", function() {
+    $(".dataTables_filter input").on("keyup", function () {
       // Declare the variable for the table instance.
       let tableInstance = $("#datasetsTable").DataTable();
       // Declare the variable for the search input value.
@@ -3262,7 +3334,7 @@
       tableInstance.draw();
     });
     // Attach a click event listener to the filter badges.
-    $(".badge").on("click", function() {
+    $(".badge").on("click", function () {
       // Declare the variable for the clicked badge element.
       let clickedBadge = $(this);
       // Declare the variable for the filter keyword.
@@ -3277,7 +3349,7 @@
       UpdateResetButtonState();
     });
     // Attach a keydown event listener to badges for keyboard accessibility.
-    $(".badge").on("keydown", function(event) {
+    $(".badge").on("keydown", function (event) {
       // Check if the pressed key is Enter or Space.
       if (event.key === "Enter" || event.key === " ") {
         // Prevent the default scrolling behavior of the spacebar.
@@ -3287,17 +3359,17 @@
       }
     });
     // Attach a click event listener to the reset filters button.
-    $("#resetFiltersBtn").on("click", function() {
+    $("#resetFiltersBtn").on("click", function () {
       // Call the function to reset all filters.
       ResetAllFilters();
     });
     // Attach a scroll event listener to the window for UI updates.
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
       // Call the function to update scroll UI elements.
       UpdateScrollUI();
     });
     // Attach a click event listener to the scroll to top button.
-    $("#scrollToTopBtn").on("click", function() {
+    $("#scrollToTopBtn").on("click", function () {
       // Call the function to scroll the window to the top.
       ScrollWindowToTop();
     });
